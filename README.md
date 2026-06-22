@@ -2,8 +2,7 @@
 
 This private repository contains the lightweight supporting package for the manuscript and conference submission.
 
-**Paper:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.pdf)  
-**Source:** [main.tex](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.tex)
+**Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.pdf)
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
@@ -11,7 +10,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 
 ## Contents
 
-- `paper/`: LaTeX source and compiled PDF snapshot.
+- `paper/`: compiled PDF manuscript snapshot.
 - `metadata/frozen_benchmark/`: frozen 200-case benchmark metadata and Raw/Structured input matrices.
 - `metadata/candidate_pools/`: 500 real-news candidate pool and 5K synthetic hard-case pool.
 - `rules_and_schema/`: rules, label schema, prompt, and scoring schema snapshot.
