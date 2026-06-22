@@ -2,7 +2,7 @@
 
 This private repository contains the lightweight supporting package for the manuscript and conference submission.
 
-**Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.pdf)
+**Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
