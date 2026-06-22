@@ -1,0 +1,272 @@
+[
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_001",
+    "case_id": "real_news_000001",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_002",
+    "case_id": "real_news_000005",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_003",
+    "case_id": "real_news_000006",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "structured“和”字发音同“活”；“破”字发音同“婆”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_007",
+    "case_id": "real_news_000013",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "raw：“突”字发音同“图”；“受”字发音同“术”；“幅”字发音同“夫”；stuctured“将”同“经”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_008",
+    "case_id": "real_news_000014",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：AI、CEO、PC发音不标准"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_009",
+    "case_id": "real_news_000015",
+    "human_raw_correct": "10",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "Structured音频不完整，“超纯”、“行”发音不标准"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_010",
+    "case_id": "real_news_000018",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured： ARR发音为AERR"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_011",
+    "case_id": "real_news_000019",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：2034发音为203思"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_012",
+    "case_id": "real_news_000022",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "Raw：股发音同狗；器同起；至同济；Structured ：股同故；率同钰"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_013",
+    "case_id": "real_news_000023",
+    "human_raw_correct": "11",
+    "human_structured_correct": "11",
+    "better_pipeline": "tie",
+    "notes": "Raw：苏发音同叔；"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_086",
+    "case_id": "real_news_000007",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "Raw：最后一句话发音模糊；"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_087",
+    "case_id": "real_news_000017",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：“先”发音同“新”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_088",
+    "case_id": "real_news_000024",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "Raw：“否”发音同“福”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_089",
+    "case_id": "real_news_000125",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_090",
+    "case_id": "real_news_000149",
+    "human_raw_correct": "10",
+    "human_structured_correct": "10",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_096",
+    "case_id": "real_news_000193",
+    "human_raw_correct": "9",
+    "human_structured_correct": "10",
+    "better_pipeline": "tie",
+    "notes": "Raw：：润”发音不标准；“协”发音同\"谢\"；Structured：6GW发音模糊"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_098",
+    "case_id": "real_news_000243",
+    "human_raw_correct": "8",
+    "human_structured_correct": "9",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_107",
+    "case_id": "real_news_000301",
+    "human_raw_correct": "10",
+    "human_structured_correct": "9",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_109",
+    "case_id": "real_news_000311",
+    "human_raw_correct": "11",
+    "human_structured_correct": "11",
+    "better_pipeline": "structured",
+    "notes": "Raw：跌发音同低"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_110",
+    "case_id": "real_news_000329",
+    "human_raw_correct": "10",
+    "human_structured_correct": "10",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_121",
+    "case_id": "real_news_000002",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "Raw：多了一段乱码"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_123",
+    "case_id": "real_news_000004",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：“涨幅”多音字错误"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_124",
+    "case_id": "real_news_000008",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "Raw：“改善”发音同“改伤”Structured：改善”发音同“改山”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_125",
+    "case_id": "real_news_000016",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "Structured 、Raw：“增长”、“下降”发音模糊"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_126",
+    "case_id": "real_news_000020",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_128",
+    "case_id": "real_news_000031",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "Raw：“或”发音同“活”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_129",
+    "case_id": "real_news_000037",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：“暴”发音同“不”"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_130",
+    "case_id": "real_news_000056",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_131",
+    "case_id": "real_news_000058",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "raw",
+    "notes": "Structured：百分之十五-百分之十八发音为百分之十五百分之十八"
+  },
+  {
+    "annotator": "iaa_r2",
+    "freeze_id": "P1P2_132",
+    "case_id": "real_news_000064",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "Raw ：“同比”发音为“同皮”；“高质量”发音模糊；Structured：“同比”发音为“同皮”"
+  }
+]

@@ -1,0 +1,20 @@
+# Four-Pipeline Strict-ASR by CDRD Label
+
+| cdrd_label | pipeline | n_cases | asr_mean | delta_vs_raw |
+|---|---|---|---|---|
+| overall | raw | 196 | 0.6121 | 0.0000 |
+| overall | prompt | 196 | 0.6605 | 0.0484 |
+| overall | polynorm | 196 | 0.6698 | 0.0577 |
+| overall | structured | 196 | 0.7826 | 0.1705 |
+| cdrd_entity | raw | 85 | 0.5697 | 0.0000 |
+| cdrd_entity | prompt | 85 | 0.6278 | 0.0581 |
+| cdrd_entity | polynorm | 85 | 0.5985 | 0.0289 |
+| cdrd_entity | structured | 85 | 0.7582 | 0.1885 |
+| cdrd_polyphone | raw | 35 | 0.7333 | 0.0000 |
+| cdrd_polyphone | prompt | 35 | 0.7358 | 0.0026 |
+| cdrd_polyphone | polynorm | 35 | 0.7825 | 0.0492 |
+| cdrd_polyphone | structured | 35 | 0.8211 | 0.0878 |
+| non_cdrd | raw | 76 | 0.6038 | 0.0000 |
+| non_cdrd | prompt | 76 | 0.6623 | 0.0585 |
+| non_cdrd | polynorm | 76 | 0.6976 | 0.0938 |
+| non_cdrd | structured | 76 | 0.7922 | 0.1884 |

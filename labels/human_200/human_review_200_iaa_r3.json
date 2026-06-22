@@ -1,0 +1,272 @@
+[
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_001",
+    "case_id": "real_news_000001",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "raw的2-3读成两至三，而非key risk里的二到三，我觉得也可"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_002",
+    "case_id": "real_news_000005",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "2013至2014年和2013到2014都可"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_003",
+    "case_id": "real_news_000006",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "2023至2025年和二零二三到二零二五年都可"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_007",
+    "case_id": "real_news_000013",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "2026至2028年和二零二六到二零二八年都可"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_008",
+    "case_id": "real_news_000014",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_009",
+    "case_id": "real_news_000015",
+    "human_raw_correct": "10",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_010",
+    "case_id": "real_news_000018",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "不在spans里的：2者读L4-L5级别智能，都读成L4 杠 L5，不应该是至或到吗"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_011",
+    "case_id": "real_news_000019",
+    "human_raw_correct": "12",
+    "human_structured_correct": "11",
+    "better_pipeline": "raw",
+    "notes": "structured最后的百分之六十五、百分之六十七，中间的至没读出来"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_012",
+    "case_id": "real_news_000022",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "raw里预计2030年“增至”1444亿美元，读成“增计”"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_013",
+    "case_id": "real_news_000023",
+    "human_raw_correct": "11",
+    "human_structured_correct": "11",
+    "better_pipeline": "tie",
+    "notes": "都读错：2026笔记本市场量"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_086",
+    "case_id": "real_news_000007",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_087",
+    "case_id": "real_news_000017",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_088",
+    "case_id": "real_news_000024",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_089",
+    "case_id": "real_news_000125",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_090",
+    "case_id": "real_news_000149",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_096",
+    "case_id": "real_news_000193",
+    "human_raw_correct": "11",
+    "human_structured_correct": "12",
+    "better_pipeline": "structured",
+    "notes": "合计规划算力规模约6GW，这句不该是6g瓦？都读成6g w"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_098",
+    "case_id": "real_news_000243",
+    "human_raw_correct": "11",
+    "human_structured_correct": "11",
+    "better_pipeline": "tie",
+    "notes": "一样差，助力八十八伏IP会员数"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_107",
+    "case_id": "real_news_000301",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_109",
+    "case_id": "real_news_000311",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_110",
+    "case_id": "real_news_000329",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_121",
+    "case_id": "real_news_000002",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "raw里还乱码读了一段：所以，以半个字朱秀亲身下的机人说明明预君度曾是一个镜下的细头请防线，从专头温头与柔肌敬子的方权视之而认证一生，最后最重要一点行李便把主体的口增透孝起试图静致撤离孽欲。这不是普通周期性涨价，而是全球AI基建、军用无人机和运营商升级三重共振下的产业结构重新定价。"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_123",
+    "case_id": "real_news_000004",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_124",
+    "case_id": "real_news_000008",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_125",
+    "case_id": "real_news_000016",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": "一样差，同比增长83.11%的增长都读错"
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_126",
+    "case_id": "real_news_000020",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_128",
+    "case_id": "real_news_000031",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_129",
+    "case_id": "real_news_000037",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_130",
+    "case_id": "real_news_000056",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_131",
+    "case_id": "real_news_000058",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  },
+  {
+    "annotator": "iaa_r3",
+    "freeze_id": "P1P2_132",
+    "case_id": "real_news_000064",
+    "human_raw_correct": "12",
+    "human_structured_correct": "12",
+    "better_pipeline": "tie",
+    "notes": ""
+  }
+]

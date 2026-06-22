@@ -1,0 +1,192 @@
+{
+  "rows": 400,
+  "errors": 0,
+  "auto_accuracy_by_pipeline": [
+    {
+      "pipeline": "raw",
+      "count": 196,
+      "mean": 0.6121
+    },
+    {
+      "pipeline": "structured",
+      "count": 196,
+      "mean": 0.7826
+    }
+  ],
+  "per_type": [
+    {
+      "type": "fixed_abbreviation",
+      "pipeline": "raw",
+      "count": 156,
+      "mean": 0.7371794871794872
+    },
+    {
+      "type": "fixed_abbreviation",
+      "pipeline": "structured",
+      "count": 156,
+      "mean": 0.7884615384615384
+    },
+    {
+      "type": "generation_label",
+      "pipeline": "raw",
+      "count": 21,
+      "mean": 0.7142857142857143
+    },
+    {
+      "type": "generation_label",
+      "pipeline": "structured",
+      "count": 21,
+      "mean": 0.9523809523809523
+    },
+    {
+      "type": "military_model_hyphen",
+      "pipeline": "raw",
+      "count": 27,
+      "mean": 0.25925925925925924
+    },
+    {
+      "type": "military_model_hyphen",
+      "pipeline": "structured",
+      "count": 27,
+      "mean": 0.8148148148148148
+    },
+    {
+      "type": "percentage",
+      "pipeline": "raw",
+      "count": 315,
+      "mean": 0.819047619047619
+    },
+    {
+      "type": "percentage",
+      "pipeline": "structured",
+      "count": 315,
+      "mean": 0.8666666666666667
+    },
+    {
+      "type": "quantity_number",
+      "pipeline": "raw",
+      "count": 37,
+      "mean": 0.6216216216216216
+    },
+    {
+      "type": "quantity_number",
+      "pipeline": "structured",
+      "count": 37,
+      "mean": 0.8108108108108109
+    },
+    {
+      "type": "quarter_finance",
+      "pipeline": "raw",
+      "count": 7,
+      "mean": 0.14285714285714285
+    },
+    {
+      "type": "quarter_finance",
+      "pipeline": "structured",
+      "count": 7,
+      "mean": 1.0
+    },
+    {
+      "type": "quarter_product",
+      "pipeline": "raw",
+      "count": 6,
+      "mean": 0.3333333333333333
+    },
+    {
+      "type": "quarter_product",
+      "pipeline": "structured",
+      "count": 6,
+      "mean": 0.5
+    },
+    {
+      "type": "range_hyphen",
+      "pipeline": "raw",
+      "count": 19,
+      "mean": 0.0
+    },
+    {
+      "type": "range_hyphen",
+      "pipeline": "structured",
+      "count": 19,
+      "mean": 0.3157894736842105
+    },
+    {
+      "type": "sports_score_colon",
+      "pipeline": "raw",
+      "count": 33,
+      "mean": 0.42424242424242425
+    },
+    {
+      "type": "sports_score_colon",
+      "pipeline": "structured",
+      "count": 33,
+      "mean": 0.7878787878787878
+    },
+    {
+      "type": "sports_score_hyphen",
+      "pipeline": "raw",
+      "count": 114,
+      "mean": 0.4824561403508772
+    },
+    {
+      "type": "sports_score_hyphen",
+      "pipeline": "structured",
+      "count": 114,
+      "mean": 0.7368421052631579
+    },
+    {
+      "type": "tech_unit",
+      "pipeline": "raw",
+      "count": 118,
+      "mean": 0.3644067796610169
+    },
+    {
+      "type": "tech_unit",
+      "pipeline": "structured",
+      "count": 118,
+      "mean": 0.6864406779661016
+    },
+    {
+      "type": "year_bare",
+      "pipeline": "raw",
+      "count": 16,
+      "mean": 1.0
+    },
+    {
+      "type": "year_bare",
+      "pipeline": "structured",
+      "count": 16,
+      "mean": 0.75
+    },
+    {
+      "type": "year_range_hyphen",
+      "pipeline": "raw",
+      "count": 15,
+      "mean": 0.0
+    },
+    {
+      "type": "year_range_hyphen",
+      "pipeline": "structured",
+      "count": 15,
+      "mean": 0.8
+    },
+    {
+      "type": "year_with_suffix",
+      "pipeline": "raw",
+      "count": 238,
+      "mean": 0.8109243697478992
+    },
+    {
+      "type": "year_with_suffix",
+      "pipeline": "structured",
+      "count": 238,
+      "mean": 0.8445378151260504
+    }
+  ],
+  "human_only_counts": {
+    "foreign_name_pronunciation|raw": 0,
+    "foreign_name_pronunciation|structured": 0,
+    "polyphone_disambiguation|raw": 0,
+    "polyphone_disambiguation|structured": 0
+  }
+}

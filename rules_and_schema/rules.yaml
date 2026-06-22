@@ -1,0 +1,575 @@
+version: "0.2.1"
+name: "CN-NewsTTS Reading Rules"
+description: "Structured taxonomy derived from tts-prompt-v5.md (v3 + v4 + sports-paragraph priority + business reading policy)."
+updated: "2026-05-30"
+
+global_policies:
+  preserve_meaning: true
+  preserve_pause_tags: true
+  pause_tag_pattern: "<#\\d+(\\.\\d{1,2})?#>"
+  output_style: "tts_spoken_text"
+  one_pronunciation_for_one_context: true
+  use_pronunciation_dict_for_foreign_names: true
+  digit_one_reading:
+    per_digit_context: "幺"
+    quantity_context: "一"
+    examples:
+      - raw: "2021年"
+        spoken: "二零二幺年"
+      - raw: "911（车型）"
+        spoken: "九幺幺"
+      - raw: "1万台"
+        spoken: "一万台"
+
+business_reading_policy:
+  abbreviations:
+    AI: "A I"
+    GDP: "G D P"
+    NBA: "N B A"
+    IPO: "I P O"
+    CEO: "C E O"
+    NAND: "南德"
+    DRAM: "D R A M"
+    HBM: "H B M"
+    VIP: "V I P"
+    88VIP: "八十八VIP"
+  generation_labels:
+    "80后": "八零后"
+    "90后": "九零后"
+    "00后": "零零后"
+    "10后": "一零后"
+  quarter_policy:
+    finance_context: "第一季度/第二季度/第三季度/第四季度"
+    product_context: "Q一/Q二/Q三/Q四"
+  foreign_names:
+    control_method: "pronunciation_dict"
+    keep_text_unchanged: true
+
+domains:
+  - auto
+  - finance
+  - tech
+  - sports
+  - international
+  - military
+  - entertainment
+  - society
+  - general
+
+categories:
+  - id: pause_tag_passthrough
+    group: control
+    priority: 100
+    description: "MiniMax pause tags must be preserved exactly."
+    patterns:
+      - "<#0.50#>"
+      - "<#1.00#>"
+    output_rule: "Keep original tag unchanged."
+    examples:
+      - raw: "摧毁12台设备<#0.50#>以军十月"
+        spoken: "摧毁十二台设备<#0.50#>以军十月"
+    wrong_readings:
+      - "删除停顿符"
+      - "替换为句号或逗号"
+
+  - id: year_with_suffix
+    group: number
+    priority: 95
+    description: "Years from 1900 to 2099 followed by 年 are read digit by digit."
+    patterns:
+      - "2025年"
+      - "2026年"
+      - "2015年"
+    output_rule: "Read each digit; 1 is 幺 in digit-by-digit year reading."
+    examples:
+      - raw: "2025年"
+        spoken: "二零二五年"
+      - raw: "2021年"
+        spoken: "二零二幺年"
+    wrong_readings:
+      - "两千零二十五年"
+      - "二零二一年"
+
+  - id: year_bare
+    group: number
+    priority: 90
+    description: "Bare 1900-2099 numbers are read as years when the context clearly indicates a year."
+    context_triggers:
+      positive:
+        - "展望"
+        - "回顾"
+        - "成为关键节点"
+        - "计划"
+        - "目标"
+        - "预测"
+      negative:
+        - "元"
+        - "台"
+        - "辆"
+        - "人"
+        - "万美元"
+    examples:
+      - raw: "展望2025"
+        spoken: "展望二零二五"
+      - raw: "2025成为关键节点"
+        spoken: "二零二五成为关键节点"
+    wrong_readings:
+      - "两千零二十五"
+
+  - id: generation_label
+    group: number
+    priority: 92
+    description: "Chinese cohort labels such as 80后 and 00后 are read digit by digit plus 后."
+    patterns:
+      - "80后"
+      - "90后"
+      - "00后"
+      - "10后"
+    examples:
+      - raw: "80后"
+        spoken: "八零后"
+      - raw: "90后"
+        spoken: "九零后"
+      - raw: "00后"
+        spoken: "零零后"
+      - raw: "10后"
+        spoken: "一零后"
+    wrong_readings:
+      - "八十后"
+      - "九十后"
+      - "幺零后"
+
+  - id: vehicle_model_number
+    group: model
+    priority: 95
+    description: "Automobile brand/model numbers are read digit by digit when not followed by quantity units."
+    context_triggers:
+      positive:
+        - "保时捷"
+        - "问界"
+        - "小米"
+        - "传祺"
+        - "雷克萨斯"
+        - "车型"
+        - "款"
+      negative:
+        - "元"
+        - "台"
+        - "辆"
+        - "万"
+        - "亿"
+    examples:
+      - raw: "保时捷911"
+        spoken: "保时捷九幺幺"
+      - raw: "雷克萨斯GX550"
+        spoken: "雷克萨斯GX五五零"
+      - raw: "Q06"
+        spoken: "Q零六"
+    wrong_readings:
+      - "九百一十一"
+      - "省略前导零"
+
+  - id: quantity_number
+    group: number
+    priority: 88
+    description: "Numbers followed by quantity or money units are read by magnitude, not digit by digit."
+    unit_triggers:
+      - "元"
+      - "台"
+      - "辆"
+      - "万"
+      - "亿"
+      - "人"
+      - "件"
+    examples:
+      - raw: "降价911元"
+        spoken: "降价九百一十一元"
+      - raw: "限量911台"
+        spoken: "限量九百一十一台"
+      - raw: "21440台"
+        spoken: "两万一千四百四十台"
+    wrong_readings:
+      - "九幺幺元"
+      - "九幺幺台"
+
+  - id: decimal_number
+    group: number
+    priority: 86
+    description: "Decimals are read with magnitude integer part plus 点 plus digit-by-digit decimal part."
+    examples:
+      - raw: "3.75亿"
+        spoken: "三点七五亿"
+      - raw: "3.285吨"
+        spoken: "三点二八五吨"
+    wrong_readings:
+      - "三百二十八点五"
+
+  - id: percentage
+    group: symbol
+    priority: 90
+    description: "Percentages are read with 百分之 before the number."
+    patterns:
+      - "%"
+    examples:
+      - raw: "38.5%"
+        spoken: "百分之三十八点五"
+      - raw: "11%"
+        spoken: "百分之十一"
+    wrong_readings:
+      - "百分号"
+      - "三十八点五百分号"
+
+  - id: negative_number
+    group: symbol
+    priority: 85
+    description: "Negative values use 负 as prefix."
+    examples:
+      - raw: "-12%"
+        spoken: "负百分之十二"
+      - raw: "-3℃"
+        spoken: "负三摄氏度"
+    wrong_readings:
+      - "减十二"
+
+  - id: sports_score_colon
+    group: sports
+    priority: 95
+    description: "Colon-delimited sports scores are read as 比, not division or colon."
+    context_triggers:
+      positive:
+        - "比分"
+        - "战胜"
+        - "击败"
+        - "险胜"
+        - "负于"
+        - "总比分"
+        - "比赛"
+    examples:
+      - raw: "8:3"
+        spoken: "八比三"
+      - raw: "3:1"
+        spoken: "三比一"
+    wrong_readings:
+      - "八除三"
+      - "三冒号一"
+
+  - id: sports_score_hyphen
+    group: sports
+    priority: 99
+    description: "Hyphen between two integers in sports context is read as '比'. Paragraph-level decision triumphs over local window."
+    paragraph_triggers:
+      positive:
+        - "比分"
+        - "比赛"
+        - "对阵"
+        - "主场"
+        - "客场"
+        - "半场"
+        - "决赛"
+        - "四分之一决赛"
+        - "八分之一决赛"
+        - "附加赛"
+        - "季后赛"
+        - "联赛"
+        - "总决赛"
+        - "总比分"
+        - "抢七"
+        - "战胜"
+        - "击败"
+        - "险胜"
+        - "负于"
+        - "横扫"
+        - "扳平"
+        - "追平"
+        - "连扳"
+        - "逆转"
+        - "晋级"
+        - "淘汰"
+        - "卫冕"
+        - "夺冠"
+        - "锁定胜局"
+        - "局"
+        - "轮"
+        - "节"
+        - "回合"
+        - "加时"
+        - "点球"
+        - "半场结束"
+        - "绝杀"
+    fallback_when_units_after_hyphen:
+      - "万元"
+      - "元"
+      - "%"
+      - "年"
+      - "天"
+      - "小时"
+    examples:
+      - raw: "比分117-116"
+        spoken: "比分一百一十七比一百一十六"
+      - raw: "王艺迪前三局以11-7、11-5、11-6领先"
+        spoken: "王艺迪前三局以十一比七、十一比五、十一比六领先"
+      - raw: "张本美和4-3逆转"
+        spoken: "张本美和四比三逆转"
+      - raw: "决胜局开场以10-1领先"
+        spoken: "决胜局开场以十比一领先"
+    wrong_readings:
+      - "一百一十七到一百一十六"
+      - "一百一十七负一百一十六"
+      - "十一到七"
+      - "十到一"
+
+  - id: range_hyphen
+    group: symbol
+    priority: 84
+    description: "Ranges using hyphen or tilde are read as 到 outside model/score contexts."
+    examples:
+      - raw: "3~5年"
+        spoken: "三到五年"
+      - raw: "10-20万"
+        spoken: "十到二十万"
+    wrong_readings:
+      - "负"
+      - "减"
+
+  - id: military_model_hyphen
+    group: model
+    priority: 95
+    description: "Hyphen in military/equipment/aircraft model numbers is not spoken; digits are read digit by digit."
+    context_triggers:
+      positive:
+        - "战机"
+        - "导弹"
+        - "装备"
+        - "军机"
+        - "苏-"
+        - "歼-"
+        - "J-"
+        - "F-"
+        - "B-"
+        - "AK-"
+        - "伊尔-"
+        - "运-"
+    examples:
+      - raw: "苏-27"
+        spoken: "苏二七"
+      - raw: "J-20"
+        spoken: "J二零"
+      - raw: "F-35I"
+        spoken: "F三五I"
+      - raw: "AK-47"
+        spoken: "AK四七"
+      - raw: "伊尔-76"
+        spoken: "伊尔七六"
+      - raw: "运-20B"
+        spoken: "运二零B"
+    wrong_readings:
+      - "苏负二十七"
+      - "J负二十"
+      - "F到三十五"
+      - "伊尔负七十六"
+      - "运负二十"
+
+  - id: version_number
+    group: model
+    priority: 82
+    description: "Version numbers are read digit by digit with 点."
+    examples:
+      - raw: "iOS 18.3.2"
+        spoken: "iOS一八点三点二"
+      - raw: "ADS 5.0"
+        spoken: "ADS五点零"
+    wrong_readings:
+      - "一千八百点三"
+
+  - id: quarter_finance
+    group: abbreviation
+    priority: 90
+    description: "Q1-Q4 in financial report contexts are read as quarters."
+    context_triggers:
+      positive:
+        - "财报"
+        - "营收"
+        - "净利"
+        - "利润"
+        - "财季"
+        - "季度"
+        - "同比"
+        - "环比"
+    examples:
+      - raw: "腾讯Q1净利增长"
+        spoken: "腾讯第一季度净利增长"
+      - raw: "公司Q2营收"
+        spoken: "公司第二季度营收"
+    wrong_readings:
+      - "Q一净利"
+
+  - id: quarter_product
+    group: abbreviation
+    priority: 88
+    description: "Q1-Q4 in product/model contexts are read as letter Q plus digit."
+    context_triggers:
+      positive:
+        - "车型"
+        - "产品"
+        - "版本"
+        - "型号"
+        - "发布"
+        - "上市"
+    examples:
+      - raw: "问界Q1车型曝光"
+        spoken: "问界Q一车型曝光"
+      - raw: "新品Q3版本"
+        spoken: "新品Q三版本"
+    wrong_readings:
+      - "第一季度车型"
+
+  - id: fixed_abbreviation
+    group: abbreviation
+    priority: 90
+    description: "Business-fixed abbreviations are spelled letter by letter and not translated."
+    fixed_readings:
+      AI: "A I"
+      GDP: "G D P"
+      NBA: "N B A"
+      IPO: "I P O"
+      CEO: "C E O"
+      NAND: "南德"
+      DRAM: "D R A M"
+      HBM: "H B M"
+      VIP: "V I P"
+      88VIP: "八十八VIP"
+    examples:
+      - raw: "AI短板"
+        spoken: "A I短板"
+      - raw: "GDP增长"
+        spoken: "G D P增长"
+      - raw: "NBA总决赛"
+        spoken: "N B A总决赛"
+      - raw: "NAND闪存"
+        spoken: "南德闪存"
+      - raw: "88VIP会员"
+        spoken: "八十八VIP会员"
+    wrong_readings:
+      - "人工智能"
+      - "国内生产总值"
+      - "美职篮"
+      - "N A N D"
+      - "八十八V I P"
+
+  - id: tech_unit
+    group: unit
+    priority: 86
+    description: "Technical units are normalized to Chinese unit names or preserved according to business policy."
+    examples:
+      - raw: "200km/h"
+        spoken: "两百公里每小时"
+      - raw: "100m²"
+        spoken: "一百平方米"
+      - raw: "40℃"
+        spoken: "四十摄氏度"
+      - raw: "500kW"
+        spoken: "五百千瓦"
+      - raw: "800V"
+        spoken: "八百伏"
+      - raw: "200N·m"
+        spoken: "两百牛米"
+      - raw: "38000Nm"
+        spoken: "三万八千牛米"
+      - raw: "12Wh/km"
+        spoken: "十二瓦时每公里"
+      - raw: "6.5L/100km"
+        spoken: "百公里六点五升"
+    wrong_readings:
+      - "单位大小写被改错"
+      - "逐字母误读物理单位"
+
+  - id: proper_name_boundary
+    group: entity
+    priority: 82
+    description: "Person names, company names, brand names, and adjacent entities should not be split incorrectly."
+    examples:
+      - raw: "侯明昊"
+        spoken: "侯明昊"
+      - raw: "马斯克贝佐斯同日宣布计划"
+        spoken: "马斯克、贝佐斯同日宣布计划"
+    wrong_readings:
+      - "人名中间插入停顿"
+      - "连续专名无停顿导致误切分"
+
+  - id: foreign_name_pronunciation
+    group: entity
+    priority: 92
+    description: "Foreign transliterated names are kept in text and controlled with pronunciation_dict when supported."
+    control_method: "pronunciation_dict"
+    examples:
+      - raw: "查尔斯国王"
+        spoken: "查尔斯国王"
+        pronunciation_dict:
+          tone:
+            - "查尔斯/(cha2)(er3)(si1)"
+      - raw: "特朗普"
+        spoken: "特朗普"
+    wrong_readings:
+      - "zha尔斯"
+      - "按单字多音字拆读"
+
+  - id: polyphone_disambiguation
+    group: polyphone
+    priority: 88
+    description: "Polyphonic characters should be resolved from context."
+    examples:
+      - raw: "银行"
+        spoken: "银行"
+        pinyin: "yin2 hang2"
+      - raw: "行动"
+        spoken: "行动"
+        pinyin: "xing2 dong4"
+      - raw: "增长"
+        spoken: "增长"
+        pinyin: "zeng1 zhang3"
+      - raw: "长期"
+        spoken: "长期"
+        pinyin: "chang2 qi1"
+      - raw: "供应"
+        spoken: "供应"
+        pinyin: "gong1 ying4"
+    wrong_readings:
+      - "忽略上下文"
+
+  - id: title_pause
+    group: punctuation
+    priority: 72
+    description: "Long AI-generated titles should be split at semantic boundaries for better reading rhythm."
+    examples:
+      - raw: "苹果发布全新MacBook Pro搭载M5芯片性能大幅提升"
+        spoken: "苹果发布全新MacBook Pro，搭载M5芯片，性能大幅提升"
+    wrong_readings:
+      - "长标题无停顿"
+
+  - id: quote_book_symbol
+    group: punctuation
+    priority: 70
+    description: "Book title brackets and quotes are not spoken."
+    examples:
+      - raw: "《黑神话》销量破亿"
+        spoken: "黑神话销量破亿"
+    wrong_readings:
+      - "读出书名号"
+
+benchmark_generation:
+  minimum_mvp:
+    synthetic_cases: 5000
+    real_news_gold: 500
+    real_misread_cases: 200
+  paper_scale:
+    synthetic_cases: "30000-100000"
+    real_news_gold: "1000-3000"
+    real_misread_cases: "500-5000"
+  split_policy:
+    train: 0.8
+    dev: 0.1
+    test: 0.1
+  balance_policy:
+    by_category: true
+    by_domain: true
+    include_positive_and_negative_contexts: true

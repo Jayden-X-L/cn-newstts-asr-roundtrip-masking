@@ -1,0 +1,222 @@
+{
+  "rows": 400,
+  "errors": 0,
+  "auto_accuracy_by_pipeline": [
+    {
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 196,
+      "mean": 0.5332
+    },
+    {
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 196,
+      "mean": 0.5994
+    }
+  ],
+  "per_type": [
+    {
+      "type": "fixed_abbreviation",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 156,
+      "mean": 0.8910256410256411
+    },
+    {
+      "type": "fixed_abbreviation",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 156,
+      "mean": 0.8846153846153846
+    },
+    {
+      "type": "generation_label",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 21,
+      "mean": 0.47619047619047616
+    },
+    {
+      "type": "generation_label",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 21,
+      "mean": 0.7142857142857143
+    },
+    {
+      "type": "military_model_hyphen",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 27,
+      "mean": 0.0
+    },
+    {
+      "type": "military_model_hyphen",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 27,
+      "mean": 0.18518518518518517
+    },
+    {
+      "type": "percentage",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 315,
+      "mean": 0.9936507936507937
+    },
+    {
+      "type": "percentage",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 315,
+      "mean": 0.9968253968253968
+    },
+    {
+      "type": "quantity_number",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 37,
+      "mean": 0.0
+    },
+    {
+      "type": "quantity_number",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 37,
+      "mean": 0.0
+    },
+    {
+      "type": "quarter_finance",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 7,
+      "mean": 0.2857142857142857
+    },
+    {
+      "type": "quarter_finance",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 7,
+      "mean": 1.0
+    },
+    {
+      "type": "quarter_product",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 6,
+      "mean": 0.16666666666666666
+    },
+    {
+      "type": "quarter_product",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 6,
+      "mean": 0.3333333333333333
+    },
+    {
+      "type": "range_hyphen",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 19,
+      "mean": 0.21052631578947367
+    },
+    {
+      "type": "range_hyphen",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 19,
+      "mean": 0.05263157894736842
+    },
+    {
+      "type": "sports_score_colon",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 33,
+      "mean": 0.42424242424242425
+    },
+    {
+      "type": "sports_score_colon",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 33,
+      "mean": 0.6363636363636364
+    },
+    {
+      "type": "sports_score_hyphen",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 114,
+      "mean": 0.5
+    },
+    {
+      "type": "sports_score_hyphen",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 114,
+      "mean": 0.9824561403508771
+    },
+    {
+      "type": "tech_unit",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 118,
+      "mean": 0.0
+    },
+    {
+      "type": "tech_unit",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 118,
+      "mean": 0.0
+    },
+    {
+      "type": "year_bare",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 16,
+      "mean": 1.0
+    },
+    {
+      "type": "year_bare",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 16,
+      "mean": 1.0
+    },
+    {
+      "type": "year_range_hyphen",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 15,
+      "mean": 0.0
+    },
+    {
+      "type": "year_range_hyphen",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 15,
+      "mean": 0.0
+    },
+    {
+      "type": "year_with_suffix",
+      "pipeline": "raw",
+      "asr_protocol": "whisper_non_llm",
+      "count": 238,
+      "mean": 0.9915966386554622
+    },
+    {
+      "type": "year_with_suffix",
+      "pipeline": "structured",
+      "asr_protocol": "whisper_non_llm",
+      "count": 238,
+      "mean": 0.9789915966386554
+    }
+  ],
+  "human_only_counts": {
+    "foreign_name_pronunciation|raw": 0,
+    "foreign_name_pronunciation|structured": 0,
+    "polyphone_disambiguation|raw": 0,
+    "polyphone_disambiguation|structured": 0
+  }
+}

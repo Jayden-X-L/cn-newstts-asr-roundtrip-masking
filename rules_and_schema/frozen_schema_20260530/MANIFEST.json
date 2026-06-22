@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-05-30 20:05:20",
+  "purpose": "Frozen P1/P2 schema, CDRD mapping, scorer, rules, and prompt. Do not change for the P1/P2 experiment round.",
+  "files": [
+    {
+      "path": "label_schema.json",
+      "sha256": "c535aa282cb880972f9181d72b4deb8323542a1cad18d2d26abf521f18e61198"
+    },
+    {
+      "path": "cdrd_mapping.yaml",
+      "sha256": "c7169f7fcbfbba728bdcd9652895c6a8ef682e38535ce62270b0b574523a1a5c"
+    },
+    {
+      "path": "rescore_eval.py",
+      "sha256": "319c482353e4a56517c4b009c8883ee50ca4082afaaee74f15b8a12e578d432e"
+    },
+    {
+      "path": "rules.yaml",
+      "sha256": "d3a51e1c50fb0d0a3614f2dfd5147a3e5096d0bdca985665fc572ef7a65e8078"
+    },
+    {
+      "path": "tts-prompt-v5.md",
+      "sha256": "74128e134b9a3e325dfd9a5496be1b09b91ddc5252f12228c32f42de5b0f42dd"
+    }
+  ]
+}

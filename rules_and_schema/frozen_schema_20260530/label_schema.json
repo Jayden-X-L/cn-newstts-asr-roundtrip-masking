@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/cn-newstts/label_schema.json",
+  "title": "CN-NewsTTS Annotation Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "source",
+    "domain",
+    "raw_text",
+    "spoken_text",
+    "risk_spans"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique case id."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["synthetic", "real_news", "real_misread"],
+      "description": "Data source type."
+    },
+    "split": {
+      "type": "string",
+      "enum": ["train", "dev", "test", "unassigned"],
+      "default": "unassigned"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "finance",
+        "tech",
+        "sports",
+        "international",
+        "military",
+        "entertainment",
+        "society",
+        "general"
+      ]
+    },
+    "raw_title": {
+      "type": "string"
+    },
+    "raw_summary": {
+      "type": "string"
+    },
+    "raw_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Original text before TTS normalization."
+    },
+    "spoken_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Gold TTS-ready spoken-form text."
+    },
+    "pronunciation_dict": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tone": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      },
+      "default": {"tone": []}
+    },
+    "pause_tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["tag", "position"],
+        "properties": {
+          "tag": {
+            "type": "string",
+            "pattern": "^<#\\d+(\\.\\d{1,2})?#>$"
+          },
+          "position": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "duration_seconds": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 99.99
+          }
+        }
+      },
+      "default": []
+    },
+    "risk_spans": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/risk_span"
+      }
+    },
+    "tts_asr_eval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tts_model": {"type": "string"},
+        "pipeline": {
+          "type": "string",
+          "enum": [
+            "raw",
+            "prompt",
+            "structured",
+            "polynorm",
+            "prompt_v3",
+            "structured_frontend",
+            "structured_frontend_retry"
+          ]
+        },
+        "pipeline_family": {
+          "type": "string",
+          "enum": ["raw", "llm_tn", "rule_structured", "hybrid", "other"]
+        },
+        "audio_path": {"type": "string"},
+        "audio_url": {"type": "string"},
+        "asr_model": {"type": "string"},
+        "asr_protocol": {
+          "type": "string",
+          "enum": [
+            "default",
+            "strict_prompt",
+            "strict_prompt_negative_reading",
+            "non_llm_asr",
+            "human"
+          ]
+        },
+        "asr_transcript": {"type": "string"},
+        "risk_span_audio_accuracy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "human_verified": {"type": "boolean"}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "resource_id": {"type": "string"},
+        "source_url": {"type": "string"},
+        "author": {"type": "string"},
+        "created_at": {"type": "string"},
+        "review_status": {
+          "type": "string",
+          "enum": ["unreviewed", "llm_labeled", "human_reviewed", "double_checked", "rejected"]
+        },
+        "reviewer": {"type": "string"},
+        "reviewer_note": {"type": "string"}
+      }
+    }
+  },
+  "$defs": {
+    "risk_span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["span", "type", "reading"],
+      "properties": {
+        "span": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional character start offset in raw_text."
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional character end offset in raw_text."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "pause_tag_passthrough",
+            "year_with_suffix",
+            "year_bare",
+            "generation_label",
+            "vehicle_model_number",
+            "quantity_number",
+            "decimal_number",
+            "percentage",
+            "negative_number",
+            "sports_score_colon",
+            "sports_score_hyphen",
+            "range_hyphen",
+            "year_range_hyphen",
+            "military_model_hyphen",
+            "version_number",
+            "quarter_finance",
+            "quarter_product",
+            "fixed_abbreviation",
+            "tech_unit",
+            "proper_name_boundary",
+            "foreign_name_pronunciation",
+            "polyphone_disambiguation",
+            "title_pause",
+            "quote_book_symbol",
+            "other"
+          ]
+        },
+        "reading": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Correct spoken reading for this span."
+        },
+        "normalized_span": {
+          "type": "string",
+          "description": "Replacement text in spoken_text if different from reading."
+        },
+        "wrong_readings": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": []
+        },
+        "context_evidence": {
+          "type": "string",
+          "description": "Short evidence explaining why this reading is correct."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "pronunciation_required": {
+          "type": "boolean",
+          "default": false
+        },
+        "pronunciation_entry": {
+          "type": "string",
+          "description": "Optional MiniMax pronunciation_dict tone entry, e.g. 查尔斯/(cha2)(er3)(si1)."
+        }
+      }
+    }
+  }
+}

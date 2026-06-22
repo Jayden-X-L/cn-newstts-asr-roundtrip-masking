@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "CN-NewsTTS ASR-Roundtrip Supporting Materials"
+message: "If you use these supporting materials, please cite the accompanying paper."
+type: dataset
+authors:
+  - family-names: Luo
+    given-names: Shijun
+  - family-names: Wan
+    given-names: Lizhi
+date-released: "2026-06-16"
+version: "v1-preprint"
+repository-code: "https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval"
+abstract: "Supporting materials for a study of ASR-roundtrip false negatives for context- and convention-dependent reading errors in Chinese news TTS."

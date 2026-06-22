@@ -1,0 +1,65 @@
+version: "0.1.0"
+name: "CDRD vs non-CDRD Binary Mapping for CN-NewsTTS"
+description: |
+  Binary classification mapping each risk_spans type from rules.yaml v0.2.0
+  into CDRD (Context-Dependent Reading Decision) vs non-CDRD.
+
+  CDRD definition (strict):
+    Same surface form has multiple valid readings that differ based on
+    entity-level context (domain, entity type, surrounding semantic role).
+    Reading the wrong form would cause a SEMANTIC error in the news context.
+
+  non-CDRD:
+    Reading is canonical and unambiguous given the surface form alone.
+    Wrong readings are either style variants (e.g., 两千零二十五年 vs 二零二五年)
+    or G2P knowledge issues (foreign names) or segmentation issues — not
+    multiple valid readings competing under a shared LM prior.
+
+  POLYPHONE (sub-class of CDRD):
+    Character-level CDRD (e.g., 银行 / 行动). Distinct from entity-level CDRD
+    (e.g., 117-116 in sports vs range). Tagged separately for ablation.
+
+updated: "2026-05-28"
+
+mapping:
+  # ===== entity-level CDRD (我们的核心 thesis) =====
+  year_bare:                  cdrd_entity
+  generation_label:           cdrd_entity
+  vehicle_model_number:       cdrd_entity
+  sports_score_colon:         cdrd_entity
+  sports_score_hyphen:        cdrd_entity
+  range_hyphen:               cdrd_entity
+  year_range_hyphen:          cdrd_entity
+  military_model_hyphen:      cdrd_entity
+  quarter_finance:            cdrd_entity
+  quarter_product:            cdrd_entity
+
+  # ===== character-level CDRD (classical polyphone) =====
+  polyphone_disambiguation:   cdrd_polyphone
+
+  # ===== non-CDRD (standard text normalization) =====
+  year_with_suffix:           non_cdrd
+  quantity_number:            non_cdrd
+  decimal_number:             non_cdrd
+  percentage:                 non_cdrd
+  negative_number:            non_cdrd
+  version_number:             non_cdrd
+  fixed_abbreviation:         non_cdrd
+  tech_unit:                  non_cdrd
+  proper_name_boundary:       non_cdrd
+  foreign_name_pronunciation: non_cdrd
+  title_pause:                non_cdrd
+  quote_book_symbol:          non_cdrd
+
+  # ===== technical control (not a reading issue) =====
+  pause_tag_passthrough:      not_applicable
+
+# Per-case label aggregation rule:
+#   If a case has ANY span in cdrd_entity            → case label = "cdrd_entity"
+#   Else if has ANY span in cdrd_polyphone           → case label = "cdrd_polyphone"
+#   Else                                              → case label = "non_cdrd"
+# (entity-level dominates because that's our thesis core)
+case_label_priority:
+  - cdrd_entity
+  - cdrd_polyphone
+  - non_cdrd

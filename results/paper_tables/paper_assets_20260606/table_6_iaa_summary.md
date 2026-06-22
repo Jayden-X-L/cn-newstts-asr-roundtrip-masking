@@ -1,0 +1,13 @@
+# IAA Summary
+
+| metric | pair | n_cases | exact_agreement | mae | pearson | notes |
+|---|---|---|---|---|---|---|
+| raw_correct_count | primary vs iaa_r2 | 30 | 0.9000 | 0.1333 | 0.9099 | 30-case IAA subset, clamped counts where applicable |
+| raw_correct_count | primary vs iaa_r3 | 30 | 0.9000 | 0.1667 | 0.8480 | 30-case IAA subset, clamped counts where applicable |
+| raw_correct_count | iaa_r2 vs iaa_r3 | 30 | 0.9333 | 0.1000 | 0.9443 | 30-case IAA subset, clamped counts where applicable |
+| structured_correct_count | primary vs iaa_r2 | 30 | 0.8667 | 0.1333 | 0.9241 | 30-case IAA subset, clamped counts where applicable |
+| structured_correct_count | primary vs iaa_r3 | 30 | 0.8333 | 0.1667 | 0.9066 | 30-case IAA subset, clamped counts where applicable |
+| structured_correct_count | iaa_r2 vs iaa_r3 | 30 | 0.9000 | 0.1000 | 0.9478 | 30-case IAA subset, clamped counts where applicable |
+| better_pipeline | primary vs iaa_r2 | 30 | 0.5000 | NA | NA | 30-case IAA subset, clamped counts where applicable |
+| better_pipeline | primary vs iaa_r3 | 30 | 0.9000 | NA | NA | 30-case IAA subset, clamped counts where applicable |
+| better_pipeline | iaa_r2 vs iaa_r3 | 30 | 0.4667 | NA | NA | 30-case IAA subset, clamped counts where applicable |

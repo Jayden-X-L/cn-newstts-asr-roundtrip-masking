@@ -1,0 +1,25 @@
+{
+  "rows": 110,
+  "smoke_rows": 3,
+  "manifest": "PROJECT_ROOT_PLACEHOLDER/mvp_eval/cosyvoice_targeted_20260608/cosyvoice_targeted_raw_110_manifest_20260608.jsonl",
+  "smoke_manifest": "PROJECT_ROOT_PLACEHOLDER/mvp_eval/cosyvoice_targeted_20260608/cosyvoice_targeted_raw_smoke3_manifest_20260608.jsonl",
+  "primary_type_counts": {
+    "sports_score": 28,
+    "hyphen_range": 24,
+    "kw_kwh": 15,
+    "quarter": 12,
+    "military_model": 9,
+    "voltage": 8,
+    "tops_compute": 8,
+    "generation_label": 5,
+    "vip88": 1
+  },
+  "planned_tts": {
+    "system": "CosyVoice",
+    "model": "CosyVoice-300M-SFT",
+    "speaker": "中文女",
+    "mode": "sft",
+    "pipeline": "raw_only"
+  },
+  "source_pool": "same 110-case targeted high-risk audit pool used for the final MiMo audit; final MiMo labels are released separately under labels/targeted_audit_110/"
+}
