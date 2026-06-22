@@ -1,8 +1,9 @@
-# CN-NewsTTS ASR-Roundtrip Supporting Materials
+# Manuscript: ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS
 
-This repository accompanies the preprint / conference submission:
+This private repository contains the lightweight supporting package for the manuscript and conference submission.
 
-**ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS**
+**Paper:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.pdf)  
+**Source:** [main.tex](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-eval/blob/main/paper/main.tex)
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
