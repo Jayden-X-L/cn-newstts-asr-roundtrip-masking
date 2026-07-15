@@ -37,6 +37,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `rules_and_schema/`: 规则、标注 schema、提示词和打分 schema 快照。
 - `labels/human_200/`: 200 例 human listening audit 的匿名标注和 IAA 文件。
 - `labels/targeted_audit_110/`: MiMo targeted masked-error audit 的标注和汇总表。
+- `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_summary_20260620.md`: 30 例独立盲复标的一致性摘要。
 - `labels/cosyvoice_110/`: CosyVoice Raw-only 110 例人工审计标注和汇总。
 - `results/p1p2/`: 自动 TTS/ASR 结果表、ASR protocol ablation、Whisper 和 Edge TTS 控制实验。
 - `results/span_isolation/`: span-isolation manifest、ASR 输出、人工复核摘要和表格。
@@ -49,16 +50,19 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 
 - 完整的 108K 原始新闻导出。
 - API key 或任何 provider credentials。
+- Provider 原始响应 payload，包括 response ID 和 reasoning trace。发布记录保留审计所需的最终转写、模型与协议标识、错误和耗时元数据。
 - 快照备份与中间工作目录。
 - 大体量生成音频文件。音频包将通过配套 Zenodo 包归档。
 
 ## 复现说明
 
-MiMo ASR 结果可使用开源的 MiMo-V2.5-ASR 复现。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice 和 Whisper 输出来自开源组件。
+论文中报告的 MiMo 转写由支持音频输入的 MiMo `mimo-v2.5` API 在本仓库所含 strict transcription prompt 下生成；`mimo-v2-omni` 用作 fallback 和 protocol-ablation 路线。本材料包提供 API 模型标识、prompt、协议设置、转写和评分脚本，用于审计已报告输出并重新运行 API 协议。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice 和 Whisper 输出来自开源组件。
 
 论文中 targeted audit yield 相关数字可从以下文件开始核对：
 
 - `labels/targeted_audit_110/targeted_masked_error_audit_yield_review_results_final_20260612.csv`
+- `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_summary_20260620.md`
+- `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_20260620.csv`
 - `labels/cosyvoice_110/cosyvoice_raw_110_human_review_labels_final_20260614.csv`
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
 

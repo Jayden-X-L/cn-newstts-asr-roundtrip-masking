@@ -18,12 +18,13 @@ import torch
 from transformers import pipeline
 
 
-ROOT = Path(os.environ.get("SPAN_ALIGN_ROOT", "/data/ai/workspace/cn_newstts/span_alignment_probe_20260612"))
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT = Path(os.environ.get("SPAN_ALIGN_ROOT", str(SCRIPT_DIR.parent / "results" / "span_isolation")))
 MANIFEST = Path(os.environ.get("SPAN_ALIGN_MANIFEST", str(ROOT / "manifest_span_iso_6s_46.jsonl")))
 OUT_DIR = Path(os.environ.get("SPAN_ALIGN_OUT_DIR", str(ROOT / "aligned_whisper_ts")))
 AUDIO_BASE = Path(os.environ.get("SPAN_ALIGN_AUDIO_BASE", str(ROOT / "local_project_files")))
 MODEL_ID = os.environ.get("WHISPER_MODEL_ID", "openai/whisper-small")
-HF_HOME = os.environ.get("HF_HOME", "/data/ai/hf_cache")
+HF_HOME = os.environ.get("HF_HOME", str(Path.home() / ".cache" / "huggingface"))
 PADDING_SECONDS = float(os.environ.get("SPAN_ALIGN_PADDING_SECONDS", "0.8"))
 MIN_CLIP_SECONDS = float(os.environ.get("SPAN_ALIGN_MIN_CLIP_SECONDS", "3.0"))
 

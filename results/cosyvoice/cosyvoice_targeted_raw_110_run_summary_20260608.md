@@ -32,7 +32,7 @@ PCP2_0020, PCP2_0044, PCP2_0068, PCP2_0071, PCP2_0073, PCP2_0089, PCP2_0095, PCP
 
 ## Remote Audio
 
-- Remote wav directory: `/data/ai/workspace/cn_newstts/cosyvoice_targeted_20260608/audio/raw_110`
+- Remote wav directory: `PROJECT_ROOT_PLACEHOLDER/cosyvoice_targeted_20260608/audio/raw_110`
 - Wav files: 110
 - Total audio duration: about 68.395 minutes
 - Local machine currently stores JSONL outputs only; wav sync was skipped because rsync over the current link was too slow.

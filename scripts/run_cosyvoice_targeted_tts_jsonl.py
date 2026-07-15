@@ -21,7 +21,7 @@ import torchaudio
 INPUT = Path(os.environ["COSYVOICE_JSONL_INPUT"])
 OUTPUT = Path(os.environ["COSYVOICE_JSONL_OUTPUT"])
 AUDIO_DIR = Path(os.environ["COSYVOICE_AUDIO_DIR"])
-REPO_DIR = Path(os.environ.get("COSYVOICE_REPO_DIR", "/data/ai/workspace/cn_newstts/CosyVoice"))
+REPO_DIR = Path(os.environ["COSYVOICE_REPO_DIR"])
 MODEL_DIR = Path(os.environ.get("COSYVOICE_MODEL_DIR", str(REPO_DIR / "pretrained_models/CosyVoice-300M-SFT")))
 MODE = os.environ.get("COSYVOICE_MODE", "sft")
 SPEAKER = os.environ.get("COSYVOICE_SPEAKER", "中文女")
