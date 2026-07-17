@@ -8,6 +8,8 @@
 
 **论文 PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 
+**扩展预印本 PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
+
 ## 研究问题
 
 ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成语音，再用 ASR 转写，最后比较转写文本和参考文本。但对中文新闻中的短文本风险片段，这种方法可能误判。
@@ -25,15 +27,17 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 
 - 在 110 个高风险候选样本的 audio-first targeted audit 中，确认 46 个 `confirmed masked` 案例：Raw TTS 读错，但至少一条 ASR 路径输出了预期或表面正确文本。
 - 同一审计还完整报告了分母：9 个 `exposed TTS error`，55 个 `no Raw TTS error`，避免只报告阳性案例。
-- span-isolation 诊断在 46 个 confirmed masked 案例中重新暴露 19 个错误，支持“句子上下文会帮助 ASR 遮蔽局部读法错误”的机制解释。
+- span-isolation 诊断在 46 个 confirmed masked 案例中重新暴露 18 个错误；其 full-context 路线按 case 变化，因此定位为 cross-route 机制诊断。Qwen 同模型 full-to-aligned 对照中，19 条 full-context recovery 有 12 条在切片后转为错误或非规范读法。
 - 在同一高风险池上，用 CosyVoice 做 Raw-only 第二 TTS 验证，确认 51 个 masked cases，说明这种遮蔽现象不是单一 TTS 系统的偶然结果。
-- 开源 ASR 对照形成了清晰反差：Qwen3-ASR-1.7B 在 97 条人耳确认的错误读法音频中恢复表面正确形式 40 条，Paraformer-zh 仅恢复 2 条。Qwen 在完整上下文中恢复的 19 条 MiMo 音频里，切出对齐风险片段后有 12 条重新暴露错误或非规范读法。这说明 masking 能在 MiMo 之外复现，但强烈依赖 ASR 与转写协议。
+- 开源 ASR 对照形成了清晰反差：分母是两套 TTS 人审中原先标为 `confirmed masked` 的 97 条音频，不是全部错读音频。Qwen3-ASR-1.7B 恢复表面正确形式 40 条，Paraformer-zh 仅恢复 2 条。
 - 结论边界：110 个样本是 targeted audit yield，不是生产环境自然发生率；span-isolation 是机制诊断，不是替代评估指标。
+- `737-8` 的冻结元数据事后补充为“七三七减八 / 七三七杠八”均可接受；“七三七负八”和区间式“七百三十七到八”仍判错。该补充不改变 200 例人评和 110 例主审计数，但会将一条 aligned-isolation 标签从 exposed 改为 still masked。
 
 ## 仓库内容
 
 - `paper/`: 编译后的论文 PDF 快照。
 - `metadata/frozen_benchmark/`: 冻结的 200 例评估元数据，以及 Raw/Structured 输入矩阵。
+- `metadata/annotation_clarifications/`: 冻结后的可接受读法补充与结果影响记录。
 - `metadata/candidate_pools/`: 500 条真实新闻候选池和 5K 合成 hard-case 候选池。
 - `rules_and_schema/`: 规则、标注 schema、提示词和打分 schema 快照。
 - `labels/human_200/`: 200 例 human listening audit 的匿名标注和 IAA 文件。
@@ -66,8 +70,11 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `labels/targeted_audit_110/targeted_masked_error_audit_yield_review_results_final_20260612.csv`
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_summary_20260620.md`
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_20260620.csv`
+- `metadata/annotation_clarifications/accepted_reading_clarifications_20260717.md`
 - `labels/cosyvoice_110/cosyvoice_raw_110_human_review_labels_final_20260614.csv`
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
+- `results/span_isolation/mimo_strict_aligned_46_reviewed.csv`
+- `results/span_isolation/mimo_strict_rough_6s_46_reviewed.csv`
 - `results/paraformer/paraformer_targeted_control_summary.md`
 - `results/paraformer/paraformer_confirmed_97_transcript_audit.csv`
 - `results/paraformer/paraformer_itn_toggle_summary.md`

@@ -72,7 +72,10 @@ REVIEW = {
     "PCP2_0043": ("no_output", "empty isolated ASR output"),
     "PCP2_0056": ("other_transcript", "does not clearly recover 190N·M or 190牛·米"),
     "PCP2_0062": ("exposed", "outputs 七百五十兆W"),
-    "PCP2_0064": ("exposed", "outputs 七三七杠八 rather than 七百三十八"),
+    "PCP2_0064": (
+        "still_masked",
+        "outputs accepted aircraft-model variant 七三七杠八 rather than the human-heard 七三七负八",
+    ),
     "PCP2_0079": ("no_output", "empty isolated ASR output"),
     "PCP2_0081": ("still_masked", "outputs 一百零五千瓦"),
     "PCP2_0082": ("still_masked", "outputs 二百千瓦"),
@@ -195,9 +198,9 @@ def main() -> None:
         "",
         "## Scope",
         "",
-        "- Pool: 46 MiMo `confirmed masked` cases.",
+        "- Pool: 46 prior MiMo `confirmed masked` cases.",
         "- Alignment: Whisper-small word/chunk timestamps on the workstation, then aligned clips were transcribed by MiMo strict ASR.",
-        "- Control: full-sentence MiMo strict/default ASR had masked all 46 cases by construction.",
+        "- Control: each full sentence was masked by at least one case-specific ASR route; all isolated clips use MiMo strict ASR.",
         "",
         "## Alignment",
         "",
@@ -227,17 +230,17 @@ def main() -> None:
             "",
             "## Interpretation",
             "",
-            "Aligned slicing reduces no-output cases compared with the rough 6s heuristic and surfaces more masked errors.",
-            "The result supports the hypothesis that sentence context contributes to ASR masking: when the high-risk span is isolated, MiMo strict ASR often stops normalizing the reading back to the expected surface.",
-            "This remains a targeted probe rather than a main accuracy metric, because some aligned clips are still too short or acoustically ambiguous.",
+            "Aligned slicing reduces no-output cases compared with the rough 6s heuristic and surfaces more wrong-reading evidence.",
+            "The transition is consistent with a contextual contribution to masking, but the full-context masking route is case-specific whereas all isolated clips use MiMo strict ASR.",
+            "This is therefore a cross-route mechanism probe, not a protocol-matched accuracy metric; some aligned clips are also too short or acoustically ambiguous.",
             "",
             "Recommended next step: rerun the aligned clips with a slightly wider minimum window/padding, or move to forced-choice acoustic scoring for expected vs. negative readings.",
             "",
             "## Outputs",
             "",
-            f"- Reviewed JSONL: `{ALIGNED_REVIEWED_JSONL}`",
-            f"- Reviewed CSV: `{ALIGNED_REVIEWED_CSV}`",
-            f"- Aligned clips: `{PROBE_DIR / 'aligned_whisper_ts' / 'clips'}`",
+            "- Reviewed JSONL: `outputs/mimo_strict_aligned_whisper_ts_results.reviewed.jsonl`",
+            "- Reviewed CSV: `outputs/mimo_strict_aligned_whisper_ts_results.reviewed.csv`",
+            "- Aligned clips: `aligned_whisper_ts/clips/`",
         ]
     )
     SUMMARY_MD.write_text("\n".join(summary) + "\n", encoding="utf-8")
@@ -248,9 +251,9 @@ def main() -> None:
         "",
         "| setting | exposed | still_masked | no_output | other_transcript | note |",
         "|---|---:|---:|---:|---:|---|",
-        "| Full-sentence ASR | "
+        "| Full sentence, original audit route | "
         + " | ".join(str(full_counts.get(label, 0)) for label in labels)
-        + " | MiMo confirmed-masked pool; all 46 masked in context |",
+        + " | Case-specific full-context route; all 46 masked by construction |",
         "| Rough 6s span-isolated ASR | "
         + " | ".join(str(rough_counts.get(label, 0)) for label in labels)
         + " | Text-ratio approximate window |",

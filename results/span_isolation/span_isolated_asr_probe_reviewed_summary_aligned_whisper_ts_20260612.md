@@ -4,7 +4,7 @@
 
 - Pool: 46 prior MiMo `confirmed masked` cases.
 - Alignment: Whisper-small word/chunk timestamps on the workstation, then aligned clips were transcribed by MiMo strict ASR.
-- Control: full-sentence MiMo strict/default ASR had masked all 46 cases by construction.
+- Control: each full sentence was masked by at least one case-specific ASR route; all isolated clips use MiMo strict ASR.
 
 ## Alignment
 
@@ -46,27 +46,27 @@
 
 | label | count | percent |
 |---|---:|---:|
-| exposed | 19 | 41.3% |
-| still_masked | 11 | 23.9% |
+| exposed | 18 | 39.1% |
+| still_masked | 12 | 26.1% |
 | no_output | 13 | 28.3% |
 | other_transcript | 3 | 6.5% |
 
 ## Exposure Strength
 
-- Strong exposed cases: 17/46 (37.0%).
+- Strong exposed cases: 16/46 (34.8%).
 - Partial unit-letter exposed cases: 2/46 (4.3%).
-- Total reviewed exposed cases including partial: 19/46 (41.3%).
+- Total reviewed exposed cases including partial: 18/46 (39.1%).
 
 ## Interpretation
 
-Aligned slicing reduces no-output cases compared with the rough 6s heuristic and surfaces more masked errors.
-The result supports the hypothesis that sentence context contributes to ASR masking: when the high-risk span is isolated, MiMo strict ASR often stops normalizing the reading back to the expected surface.
-This remains a targeted probe rather than a main accuracy metric, because some aligned clips are still too short or acoustically ambiguous.
+Aligned slicing reduces no-output cases compared with the rough 6s heuristic and surfaces more wrong-reading evidence.
+The transition is consistent with a contextual contribution to masking, but the full-context masking route is case-specific whereas all isolated clips use MiMo strict ASR.
+This is therefore a cross-route mechanism probe, not a protocol-matched accuracy metric; some aligned clips are also too short or acoustically ambiguous.
 
 Recommended next step: rerun the aligned clips with a slightly wider minimum window/padding, or move to forced-choice acoustic scoring for expected vs. negative readings.
 
 ## Outputs
 
-- Reviewed JSONL: `PROJECT_ROOT_PLACEHOLDER/mvp_eval/span_isolated_asr_probe_20260612/outputs/mimo_strict_aligned_whisper_ts_results.reviewed.jsonl`
-- Reviewed CSV: `PROJECT_ROOT_PLACEHOLDER/mvp_eval/span_isolated_asr_probe_20260612/outputs/mimo_strict_aligned_whisper_ts_results.reviewed.csv`
-- Aligned clips: `PROJECT_ROOT_PLACEHOLDER/mvp_eval/span_isolated_asr_probe_20260612/aligned_whisper_ts/clips`
+- Reviewed JSONL: `outputs/mimo_strict_aligned_whisper_ts_results.reviewed.jsonl`
+- Reviewed CSV: `outputs/mimo_strict_aligned_whisper_ts_results.reviewed.csv`
+- Aligned clips: `aligned_whisper_ts/clips/`

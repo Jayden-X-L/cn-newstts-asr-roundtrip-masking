@@ -96,7 +96,7 @@ produced identical outputs for this Paraformer route; it is therefore not
 interpreted as an ITN ablation.
 
 - Full Raw audio: 220/220 transcripts, zero inference errors.
-- Previously human-confirmed wrong-and-masked subset: 97 cases.
+- Previously labeled confirmed-masked subset: 97 cases.
 - Occurrence-aware surface-correct recovery under the released equivalence
   rules: 0/46 MiMo and 2/51 CosyVoice cases.
 - Aligned MiMo clips: 46/46 transcripts, zero inference errors and zero

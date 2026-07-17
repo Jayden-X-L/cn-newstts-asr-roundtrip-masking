@@ -49,9 +49,9 @@ def compare(off_path: Path, on_path: Path) -> dict[str, Any]:
         "on_errors": sum(bool(text(row.get("error"))) for row in on.values()),
         "transcript_changed_rows": len(changed),
         "changed_item_ids": changed,
-        "human_confirmed_wrong_rows": len(confirmed),
-        "human_confirmed_changed_rows": len(confirmed_changed),
-        "human_confirmed_changed_item_ids": confirmed_changed,
+        "confirmed_masked_rows": len(confirmed),
+        "confirmed_masked_changed_rows": len(confirmed_changed),
+        "confirmed_masked_changed_item_ids": confirmed_changed,
     }
 
 
@@ -84,7 +84,7 @@ def main() -> None:
         "# Paraformer `use_itn` Toggle Check",
         "",
         f"- Full-audio transcripts changed: **{full['transcript_changed_rows']}/{full['rows']}**",
-        f"- Human-confirmed wrong-reading transcripts changed: **{full['human_confirmed_changed_rows']}/{full['human_confirmed_wrong_rows']}**",
+        f"- Confirmed-masked subset transcripts changed: **{full['confirmed_masked_changed_rows']}/{full['confirmed_masked_rows']}**",
         f"- Aligned-clip transcripts changed: **{aligned['transcript_changed_rows']}/{aligned['rows']}**",
         "",
         "The flag toggle produced identical transcripts in this Paraformer route. "

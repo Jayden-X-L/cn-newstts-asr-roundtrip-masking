@@ -8,9 +8,9 @@
     "on_errors": 0,
     "transcript_changed_rows": 0,
     "changed_item_ids": [],
-    "human_confirmed_wrong_rows": 97,
-    "human_confirmed_changed_rows": 0,
-    "human_confirmed_changed_item_ids": []
+    "confirmed_masked_rows": 97,
+    "confirmed_masked_changed_rows": 0,
+    "confirmed_masked_changed_item_ids": []
   },
   "aligned_clips": {
     "rows": 46,
@@ -18,9 +18,9 @@
     "on_errors": 0,
     "transcript_changed_rows": 0,
     "changed_item_ids": [],
-    "human_confirmed_wrong_rows": 46,
-    "human_confirmed_changed_rows": 0,
-    "human_confirmed_changed_item_ids": []
+    "confirmed_masked_rows": 46,
+    "confirmed_masked_changed_rows": 0,
+    "confirmed_masked_changed_item_ids": []
   },
   "interpretation": "The toggle produced identical transcripts in this Paraformer route. It is therefore a no-effect parameter check, not evidence that active inverse text normalization causes or prevents masking."
 }

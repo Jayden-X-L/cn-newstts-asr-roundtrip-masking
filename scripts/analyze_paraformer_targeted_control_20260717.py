@@ -287,7 +287,7 @@ def main() -> None:
         "full_audio": {
             "all_rows": len(full),
             "errors": sum(bool(text(row.get("error"))) for row in full),
-            "previously_human_confirmed_wrong_and_masked_rows": len(confirmed),
+            "previously_labeled_confirmed_masked_rows": len(confirmed),
             "confirmed_relation_counts": relation_counts(confirmed),
             "occurrence_reviewed_counts": dict(
                 Counter(row["reviewed_paraformer_relation"] for row in confirmed)
@@ -345,7 +345,7 @@ def main() -> None:
         "# Paraformer-zh Targeted ASR Control",
         "",
         f"- Full audio transcribed: **{len(full)}**",
-        f"- Previously human-confirmed wrong-and-masked cases analyzed: **{len(confirmed)}**",
+        f"- Previously labeled confirmed-masked cases analyzed: **{len(confirmed)}**",
         f"- Aligned MiMo clips transcribed: **{len(aligned)}**",
         "",
         "## Conservative Automatic Relation Counts",

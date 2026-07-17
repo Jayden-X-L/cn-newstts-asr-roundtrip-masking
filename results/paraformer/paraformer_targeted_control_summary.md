@@ -1,7 +1,7 @@
 # Paraformer-zh Targeted ASR Control
 
 - Full audio transcribed: **220**
-- Previously human-confirmed wrong-and-masked cases analyzed: **97**
+- Previously labeled confirmed-masked cases analyzed: **97**
 - Aligned MiMo clips transcribed: **46**
 
 ## Conservative Automatic Relation Counts
@@ -12,7 +12,7 @@
   "full_audio": {
     "all_rows": 220,
     "errors": 0,
-    "previously_human_confirmed_wrong_and_masked_rows": 97,
+    "previously_labeled_confirmed_masked_rows": 97,
     "confirmed_relation_counts": {
       "negative_only": 66,
       "surface_correct_only": 3,

@@ -1,6 +1,6 @@
 # Targeted audit 110 blind relabel 30 agreement summary
 
-Blind relabel export: `targeted_audit_110_blind_relabel_30_export_20260616.json` from the local blind relabel annotation package.
+Blind relabel source: `targeted_audit_110_blind_relabel_30_export_20260616.json` (private annotation export; anonymized agreement records are released separately).
 
 - N: 30
 - Original label counts: {'no Raw TTS error': 8, 'exposed TTS error': 7, 'confirmed masked': 15}
@@ -10,7 +10,7 @@ Blind relabel export: `targeted_audit_110_blind_relabel_30_export_20260616.json`
 - Exact agreement, three-way excluding uncertain/not judgeable rows: 23/29 = 0.793
 - Cohen kappa, three-way excluding uncertain/not judgeable rows: 0.665
 - Exact agreement, confirmed-masked vs other: 27/30 = 0.900; kappa = 0.800
-- Exact agreement, Raw-wrong vs Raw-correct: 26/30 = 0.867; kappa = 0.706
+- Exact agreement, Raw-wrong vs Raw-correct, using the blind reviewer's explicit `blind_raw_span_correctness` field: 27/30 = 0.900; kappa = 0.772
 
 ## Confusion matrix: original primary/adjudicated label x blind relabel
 

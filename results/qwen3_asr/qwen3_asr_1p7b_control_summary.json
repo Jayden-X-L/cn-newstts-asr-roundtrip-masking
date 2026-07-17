@@ -3,7 +3,7 @@
   "full_audio_rows": 220,
   "aligned_clip_rows": 46,
   "errors": 0,
-  "human_confirmed_wrong_rows": 97,
+  "previously_labeled_confirmed_masked_rows": 97,
   "automatic_relation_counts": {
     "negative_only": 43,
     "surface_correct_only": 29,

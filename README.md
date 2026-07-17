@@ -6,9 +6,11 @@ This private repository contains the lightweight supporting package for the manu
 
 **Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 
+**Extended preprint PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
+
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
-The open-source ASR controls are deliberately contrastive. Occurrence-aware review finds surface-correct recovery in 40/97 human-confirmed wrong-reading files for Qwen3-ASR-1.7B, but only 2/97 for Paraformer-zh. On the 19 MiMo files surface-recovered by Qwen in full context, aligned-span transcription re-exposes a wrong or noncanonical form in 12. This shows that masking is reproducible outside MiMo yet strongly ASR- and protocol-dependent.
+The open-source ASR controls are deliberately contrastive. The denominator is the 97 files previously labeled `confirmed masked` across the MiMo and CosyVoice audits, not all wrong-reading audio. Occurrence-aware review finds surface-correct recovery in 40/97 for Qwen3-ASR-1.7B, but only 2/97 for Paraformer-zh. On the 19 MiMo files surface-recovered by Qwen in full context, aligned-span transcription re-exposes a wrong or noncanonical form in 12. This shows that masking is reproducible outside MiMo yet strongly ASR- and protocol-dependent.
 
 Large generated audio files are not stored in this GitHub package. They are prepared in the companion Zenodo package.
 
@@ -16,6 +18,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 
 - `paper/`: compiled PDF manuscript snapshot.
 - `metadata/frozen_benchmark/`: frozen 200-case benchmark metadata and Raw/Structured input matrices.
+- `metadata/annotation_clarifications/`: post-freeze accepted-reading clarifications and documented result impact.
 - `metadata/candidate_pools/`: 500 real-news candidate pool and 5K synthetic hard-case pool.
 - `rules_and_schema/`: rules, label schema, prompt, and scoring schema snapshot.
 - `labels/human_200/`: anonymized human listening labels and IAA files for the 200-case benchmark.
@@ -48,8 +51,11 @@ For audit-yield numbers reported in the paper, start from:
 - `labels/targeted_audit_110/targeted_masked_error_audit_yield_review_results_final_20260612.csv`
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_summary_20260620.md`
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_20260620.csv`
+- `metadata/annotation_clarifications/accepted_reading_clarifications_20260717.md`
 - `labels/cosyvoice_110/cosyvoice_raw_110_human_review_labels_final_20260614.csv`
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
+- `results/span_isolation/mimo_strict_aligned_46_reviewed.csv`
+- `results/span_isolation/mimo_strict_rough_6s_46_reviewed.csv`
 - `results/paraformer/paraformer_targeted_control_summary.md`
 - `results/paraformer/paraformer_confirmed_97_transcript_audit.csv`
 - `results/paraformer/paraformer_itn_toggle_summary.md`

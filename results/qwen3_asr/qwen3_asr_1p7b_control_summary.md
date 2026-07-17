@@ -1,7 +1,7 @@
 # Qwen3-ASR-1.7B Targeted Control
 
 - Full audio: **220**
-- Human-confirmed wrong-reading subset: **97**
+- Previously labeled confirmed-masked subset: **97**
 - Aligned clips: **46**
 - Transcript review complete: **True**
 
@@ -27,7 +27,7 @@ Qwen3-ASR receives no source text, expected reading, negative reading, or target
   "full_audio_rows": 220,
   "aligned_clip_rows": 46,
   "errors": 0,
-  "human_confirmed_wrong_rows": 97,
+  "previously_labeled_confirmed_masked_rows": 97,
   "automatic_relation_counts": {
     "negative_only": 43,
     "surface_correct_only": 29,

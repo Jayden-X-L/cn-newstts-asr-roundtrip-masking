@@ -87,7 +87,7 @@ No source text, expected reading, negative reading, hotword, or target-specific
 hint is supplied to the model.
 
 - Full Raw audio: 220/220 transcripts, zero inference errors.
-- Human-confirmed wrong-reading subset: 97 files.
+- Previously labeled confirmed-masked subset: 97 files.
 - Occurrence-aware surface-correct recovery: 19/46 MiMo, 21/51 CosyVoice, and
   40/97 overall.
 - On the 19 full-context MiMo surface recoveries, aligned-span transcription

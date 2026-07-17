@@ -1,0 +1,2 @@
+freeze_id,probe_candidate_id,case_id,target_span,original_metadata_reading,accepted_readings_after_review,readings_still_treated_as_errors,reason,source_1,source_2,result_impact
+P1P2_027,PCP2_0064,real_news_000140,737-8,七百三十七到八,七三七减八 | 七三七杠八,七三七负八 | 七百三十七到八,公开航空资料表明减是行业内部传统读法且杠也有公开使用依据,https://m.news.cctv.com/2019/03/18/ARTI02dD4o3KY1mQD6HXyLyJ190318.shtml,https://www.163.com/air/article/EAKFBSQA000181O6.html,"200-case human counts unchanged; MiMo 110 audit outcome unchanged; aligned-isolation label changed from exposed to still_masked"
