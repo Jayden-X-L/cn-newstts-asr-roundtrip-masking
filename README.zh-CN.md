@@ -27,6 +27,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - 同一审计还完整报告了分母：9 个 `exposed TTS error`，55 个 `no Raw TTS error`，避免只报告阳性案例。
 - span-isolation 诊断在 46 个 confirmed masked 案例中重新暴露 19 个错误，支持“句子上下文会帮助 ASR 遮蔽局部读法错误”的机制解释。
 - 在同一高风险池上，用 CosyVoice 做 Raw-only 第二 TTS 验证，确认 51 个 masked cases，说明这种遮蔽现象不是单一 TTS 系统的偶然结果。
+- 新增 Paraformer-zh 对照后，逐 occurrence 转写复核只在 MiMo 0/46、CosyVoice 2/51 条既有人耳确认错误中发现精确表面恢复。这说明 masking 强烈依赖 ASR 与转写协议，并非所有 ASR 都同样发生，进一步支持“不应把单一路 ASR-roundtrip 当作独立真值”的结论。
 - 结论边界：110 个样本是 targeted audit yield，不是生产环境自然发生率；span-isolation 是机制诊断，不是替代评估指标。
 
 ## 仓库内容
@@ -39,9 +40,10 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `labels/targeted_audit_110/`: MiMo targeted masked-error audit 的标注和汇总表。
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_summary_20260620.md`: 30 例独立盲复标的一致性摘要。
 - `labels/cosyvoice_110/`: CosyVoice Raw-only 110 例人工审计标注和汇总。
-- `results/p1p2/`: 自动 TTS/ASR 结果表、ASR protocol ablation、Whisper 和 Edge TTS 控制实验。
+- `results/p1p2/`: 自动 TTS/ASR 结果表与协议对照。其中保留的 Edge TTS 仅是辅助自动对照，未进行 targeted human masking audit，也不进入论文核心证据链。
 - `results/span_isolation/`: span-isolation manifest、ASR 输出、人工复核摘要和表格。
 - `results/cosyvoice/`: CosyVoice TTS/ASR 输出和运行摘要。
+- `results/paraformer/`: 清除本机/工作站绝对路径后的 Paraformer-zh manifest、266 条完整转写、逐 occurrence 转写复核表和结果摘要。
 - `manifests/`: 生成与转写 manifest。
 - `scripts/`: 构造样本、运行 ASR/TTS 评估、合并标注、生成审计表的脚本。
 - `docs/`: 标注规范与项目评估说明。
@@ -56,7 +58,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 
 ## 复现说明
 
-论文中报告的 MiMo 转写由支持音频输入的 MiMo `mimo-v2.5` API 在本仓库所含 strict transcription prompt 下生成；`mimo-v2-omni` 用作 fallback 和 protocol-ablation 路线。本材料包提供 API 模型标识、prompt、协议设置、转写和评分脚本，用于审计已报告输出并重新运行 API 协议。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice 和 Whisper 输出来自开源组件。
+论文中报告的 MiMo 转写由支持音频输入的 MiMo `mimo-v2.5` API 在本仓库所含 strict transcription prompt 下生成；`mimo-v2-omni` 用作 fallback 和 protocol-ablation 路线。本材料包提供 API 模型标识、prompt、协议设置、转写和评分脚本，用于审计已报告输出并重新运行 API 协议。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice、Whisper 和 Paraformer 输出来自开源组件。Paraformer 对照使用 `paraformer-zh` v2.0.4 与 FSMN-VAD v2.0.4，关闭 inverse text normalization，且不使用标点模型、热词或外部语言模型。
 
 论文中 targeted audit yield 相关数字可从以下文件开始核对：
 
@@ -65,6 +67,8 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `results/paper_tables/paper_assets_20260608/targeted_audit_110_blind_relabel_30_agreement_20260620.csv`
 - `labels/cosyvoice_110/cosyvoice_raw_110_human_review_labels_final_20260614.csv`
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
+- `results/paraformer/paraformer_targeted_control_summary.md`
+- `results/paraformer/paraformer_confirmed_97_transcript_audit.csv`
 
 ## 引用
 

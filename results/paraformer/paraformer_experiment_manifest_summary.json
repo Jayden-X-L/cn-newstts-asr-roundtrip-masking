@@ -1,0 +1,45 @@
+{
+  "purpose": "Independent Paraformer-zh ASR control on existing human-audited MiMo and CosyVoice Raw audio.",
+  "full_manifest": {
+    "rows": 220,
+    "tts_systems": {
+      "MiMo-V2.5-TTS API": 110,
+      "CosyVoice-300M-SFT": 110
+    },
+    "audio_scopes": {
+      "full_sentence": 220
+    },
+    "human_audit_outcomes": {
+      "confirmed masked": 97,
+      "exposed TTS error": 36,
+      "no Raw TTS error": 85,
+      "not judgeable": 1,
+      "uncertain": 1
+    },
+    "confirmed_with_target_and_expected": 97
+  },
+  "aligned_manifest": {
+    "rows": 46,
+    "tts_systems": {
+      "MiMo-V2.5-TTS API": 46
+    },
+    "audio_scopes": {
+      "aligned_span_clip": 46
+    },
+    "human_audit_outcomes": {
+      "confirmed masked": 46
+    },
+    "confirmed_with_target_and_expected": 46
+  },
+  "primary_analysis_boundary": "Cross-ASR masking recurrence is evaluated on the 97 full-audio cases previously confirmed by human listening to contain a wrong TTS reading. All 220 transcripts are retained for audit.",
+  "asr_protocol": {
+    "model_alias": "paraformer-zh",
+    "model_revision": "v2.0.4",
+    "vad_model": "fsmn-vad",
+    "vad_revision": "v2.0.4",
+    "inverse_text_normalization": false,
+    "punctuation_model": null,
+    "hotword": null,
+    "external_language_model": null
+  }
+}

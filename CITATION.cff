@@ -7,7 +7,7 @@ authors:
     given-names: Shijun
   - family-names: Wan
     given-names: Lizhi
-date-released: "2026-06-16"
-version: "v1-preprint"
+date-released: "2026-07-17"
+version: "v1-preprint-20260717"
 repository-code: "https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking"
 abstract: "Supporting materials for a study of ASR-roundtrip false negatives for context- and convention-dependent reading errors in Chinese news TTS."
