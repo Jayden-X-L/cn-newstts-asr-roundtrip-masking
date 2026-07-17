@@ -279,8 +279,10 @@ def main() -> None:
 
     summary = {
         "asr_control": (
-            "Paraformer-zh v2.0.4 with FSMN-VAD v2.0.4, use_itn=False, "
-            "no punctuation model, no hotword, and no external language model"
+            "Paraformer-zh v2.0.4 with FSMN-VAD v2.0.4, no punctuation "
+            "model, no hotword, and no external language model. The original "
+            "call used use_itn=False; a paired flag toggle produced identical "
+            "transcripts and is not interpreted as an ITN ablation"
         ),
         "full_audio": {
             "all_rows": len(full),

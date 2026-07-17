@@ -24,6 +24,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-revision", default="v2.0.4")
     parser.add_argument("--vad-model", default="fsmn-vad")
     parser.add_argument("--vad-revision", default="v2.0.4")
+    parser.add_argument(
+        "--use-itn",
+        action="store_true",
+        help=(
+            "Pass use_itn=True to FunASR. Behavior is model-dependent; the "
+            "paired Paraformer check in this project produced no transcript change."
+        ),
+    )
     parser.add_argument("--batch-size-s", type=int, default=120)
     parser.add_argument("--max-retries", type=int, default=2)
     return parser.parse_args()
@@ -85,7 +93,7 @@ def main() -> None:
         "vad_model": args.vad_model,
         "vad_model_revision": args.vad_revision,
         "device": args.device,
-        "use_itn": False,
+        "use_itn": args.use_itn,
         "punctuation_model": None,
         "hotword": None,
         "external_language_model": None,
@@ -138,7 +146,7 @@ def main() -> None:
                         result = model.generate(
                             input=str(audio_path),
                             batch_size_s=args.batch_size_s,
-                            use_itn=False,
+                            use_itn=args.use_itn,
                         )
                         asr_text = extract_text(result)
                         timestamps = extract_timestamps(result)
@@ -154,7 +162,11 @@ def main() -> None:
             record = {
                 **row,
                 **protocol,
-                "asr_protocol": "paraformer_plain_no_itn",
+                "asr_protocol": (
+                    "paraformer_plain_itn"
+                    if args.use_itn
+                    else "paraformer_plain_no_itn"
+                ),
                 "asr_text": asr_text,
                 "asr_timestamps": timestamps,
                 "attempts": attempts,

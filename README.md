@@ -8,7 +8,7 @@ This private repository contains the lightweight supporting package for the manu
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
-The added Paraformer-zh control is deliberately contrastive: occurrence-aware transcript review finds exact annotated surface recovery in 0/46 human-confirmed MiMo cases and 2/51 human-confirmed CosyVoice cases. This shows that masking is ASR- and protocol-dependent rather than universal, reinforcing the paper's warning against treating any single ASR-roundtrip route as standalone ground truth.
+The open-source ASR controls are deliberately contrastive. Occurrence-aware review finds surface-correct recovery in 40/97 human-confirmed wrong-reading files for Qwen3-ASR-1.7B, but only 2/97 for Paraformer-zh. On the 19 MiMo files surface-recovered by Qwen in full context, aligned-span transcription re-exposes a wrong or noncanonical form in 12. This shows that masking is reproducible outside MiMo yet strongly ASR- and protocol-dependent.
 
 Large generated audio files are not stored in this GitHub package. They are prepared in the companion Zenodo package.
 
@@ -26,6 +26,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 - `results/span_isolation/`: span-isolation manifests, ASR outputs, reviewed summaries, and tables.
 - `results/cosyvoice/`: CosyVoice TTS/ASR outputs and run summaries.
 - `results/paraformer/`: publication-safe Paraformer-zh manifests, all 266 transcripts, occurrence-aware transcript audits, and result summaries.
+- `results/qwen3_asr/`: publication-safe Qwen3-ASR manifests, 266 transcripts, occurrence-aware review overrides/audits, and full-to-aligned summaries.
 - `manifests/`: generation and transcription manifests.
 - `scripts/`: scripts used to construct benchmarks, run ASR/TTS evaluations, merge labels, and build audit tables.
 - `docs/`: annotation guidelines and project evaluation notes.
@@ -40,7 +41,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 
 ## Reproducibility Notes
 
-The reported MiMo transcripts were generated with the audio-capable MiMo `mimo-v2.5` API using the included strict transcription prompt; `mimo-v2-omni` served as a fallback and protocol-ablation route. This package includes the API model identifiers, prompts, protocol settings, transcripts, and scoring scripts needed to audit the reported outputs and rerun the API-based protocols. MiMo TTS audio was generated through the MiMo-V2.5-TTS API with fixed settings. CosyVoice, Whisper, and Paraformer outputs were generated with open-source components. The Paraformer control uses `paraformer-zh` v2.0.4 with FSMN-VAD v2.0.4, inverse text normalization disabled, and no punctuation model, hotwords, or external language model.
+The reported MiMo transcripts were generated with the audio-capable MiMo `mimo-v2.5` API using the included strict transcription prompt; `mimo-v2-omni` served as a fallback and protocol-ablation route. This package includes the API model identifiers, prompts, protocol settings, transcripts, and scoring scripts needed to audit the reported outputs and rerun the API-based protocols. MiMo TTS audio was generated through the MiMo-V2.5-TTS API with fixed settings. CosyVoice, Whisper, Paraformer, and Qwen outputs were generated with open-source components. Paraformer uses `paraformer-zh` v2.0.4 with FSMN-VAD v2.0.4 and no punctuation model, hotwords, or external language model. Its paired `use_itn` flag toggle changed none of 220 full-file or 46 aligned-clip transcripts, so it is not interpreted as an ITN ablation. Qwen3-ASR-1.7B uses an empty context and automatic language detection; it receives no source text or target-reading hint.
 
 For audit-yield numbers reported in the paper, start from:
 
@@ -51,6 +52,10 @@ For audit-yield numbers reported in the paper, start from:
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
 - `results/paraformer/paraformer_targeted_control_summary.md`
 - `results/paraformer/paraformer_confirmed_97_transcript_audit.csv`
+- `results/paraformer/paraformer_itn_toggle_summary.md`
+- `results/qwen3_asr/qwen3_asr_1p7b_control_summary.md`
+- `results/qwen3_asr/qwen3_confirmed_97_transcript_audit.csv`
+- `results/qwen3_asr/qwen3_aligned_46_transcript_audit.csv`
 
 ## Citation
 

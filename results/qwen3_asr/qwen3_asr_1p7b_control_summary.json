@@ -1,0 +1,73 @@
+{
+  "asr_control": "Qwen/Qwen3-ASR-1.7B, local transformers backend, empty context, automatic language detection",
+  "full_audio_rows": 220,
+  "aligned_clip_rows": 46,
+  "errors": 0,
+  "human_confirmed_wrong_rows": 97,
+  "automatic_relation_counts": {
+    "negative_only": 43,
+    "surface_correct_only": 29,
+    "no_predefined_form": 24,
+    "surface_and_negative": 1
+  },
+  "review_complete": true,
+  "missing_review_item_ids": [],
+  "reviewed_relation_counts": {
+    "wrong_or_noncanonical_form_preserved": 56,
+    "exact_surface_correct_recovery": 40,
+    "other_no_exact_surface_recovery": 1
+  },
+  "by_tts": {
+    "CosyVoice-300M-SFT": {
+      "rows": 51,
+      "automatic_relation_counts": {
+        "negative_only": 22,
+        "no_predefined_form": 14,
+        "surface_correct_only": 14,
+        "surface_and_negative": 1
+      },
+      "reviewed_relation_counts": {
+        "wrong_or_noncanonical_form_preserved": 30,
+        "exact_surface_correct_recovery": 21
+      }
+    },
+    "MiMo-V2.5-TTS API": {
+      "rows": 46,
+      "automatic_relation_counts": {
+        "negative_only": 21,
+        "surface_correct_only": 15,
+        "no_predefined_form": 10
+      },
+      "reviewed_relation_counts": {
+        "wrong_or_noncanonical_form_preserved": 26,
+        "exact_surface_correct_recovery": 19,
+        "other_no_exact_surface_recovery": 1
+      }
+    }
+  },
+  "aligned_automatic_relation_counts": {
+    "negative_only": 24,
+    "no_predefined_form": 17,
+    "surface_correct_only": 5
+  },
+  "aligned_review_complete": true,
+  "aligned_missing_review_item_ids": [],
+  "aligned_reviewed_relation_counts": {
+    "wrong_or_noncanonical_form_preserved": 35,
+    "other_no_exact_surface_recovery": 4,
+    "exact_surface_correct_recovery": 7
+  },
+  "full_to_aligned_transitions": {
+    "paired_rows": 46,
+    "transition_counts": {
+      "wrong_or_noncanonical_form_preserved -> wrong_or_noncanonical_form_preserved": 23,
+      "exact_surface_correct_recovery -> wrong_or_noncanonical_form_preserved": 12,
+      "wrong_or_noncanonical_form_preserved -> other_no_exact_surface_recovery": 3,
+      "exact_surface_correct_recovery -> exact_surface_correct_recovery": 7,
+      "other_no_exact_surface_recovery -> other_no_exact_surface_recovery": 1
+    },
+    "full_surface_recovery_rows": 19,
+    "full_surface_to_aligned_wrong_rows": 12
+  },
+  "interpretation_boundary": "The same human-audited audio and occurrence-aware surface-recovery criterion are used. No source text, expected reading, negative reading, or context hint is supplied to Qwen3-ASR."
+}

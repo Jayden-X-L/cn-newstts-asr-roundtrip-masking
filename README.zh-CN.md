@@ -27,7 +27,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - 同一审计还完整报告了分母：9 个 `exposed TTS error`，55 个 `no Raw TTS error`，避免只报告阳性案例。
 - span-isolation 诊断在 46 个 confirmed masked 案例中重新暴露 19 个错误，支持“句子上下文会帮助 ASR 遮蔽局部读法错误”的机制解释。
 - 在同一高风险池上，用 CosyVoice 做 Raw-only 第二 TTS 验证，确认 51 个 masked cases，说明这种遮蔽现象不是单一 TTS 系统的偶然结果。
-- 新增 Paraformer-zh 对照后，逐 occurrence 转写复核只在 MiMo 0/46、CosyVoice 2/51 条既有人耳确认错误中发现精确表面恢复。这说明 masking 强烈依赖 ASR 与转写协议，并非所有 ASR 都同样发生，进一步支持“不应把单一路 ASR-roundtrip 当作独立真值”的结论。
+- 开源 ASR 对照形成了清晰反差：Qwen3-ASR-1.7B 在 97 条人耳确认的错误读法音频中恢复表面正确形式 40 条，Paraformer-zh 仅恢复 2 条。Qwen 在完整上下文中恢复的 19 条 MiMo 音频里，切出对齐风险片段后有 12 条重新暴露错误或非规范读法。这说明 masking 能在 MiMo 之外复现，但强烈依赖 ASR 与转写协议。
 - 结论边界：110 个样本是 targeted audit yield，不是生产环境自然发生率；span-isolation 是机制诊断，不是替代评估指标。
 
 ## 仓库内容
@@ -44,6 +44,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `results/span_isolation/`: span-isolation manifest、ASR 输出、人工复核摘要和表格。
 - `results/cosyvoice/`: CosyVoice TTS/ASR 输出和运行摘要。
 - `results/paraformer/`: 清除本机/工作站绝对路径后的 Paraformer-zh manifest、266 条完整转写、逐 occurrence 转写复核表和结果摘要。
+- `results/qwen3_asr/`: 清除本机/工作站绝对路径后的 Qwen3-ASR manifest、266 条转写、逐 occurrence 复核 override/审计表和 full-to-aligned 汇总。
 - `manifests/`: 生成与转写 manifest。
 - `scripts/`: 构造样本、运行 ASR/TTS 评估、合并标注、生成审计表的脚本。
 - `docs/`: 标注规范与项目评估说明。
@@ -58,7 +59,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 
 ## 复现说明
 
-论文中报告的 MiMo 转写由支持音频输入的 MiMo `mimo-v2.5` API 在本仓库所含 strict transcription prompt 下生成；`mimo-v2-omni` 用作 fallback 和 protocol-ablation 路线。本材料包提供 API 模型标识、prompt、协议设置、转写和评分脚本，用于审计已报告输出并重新运行 API 协议。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice、Whisper 和 Paraformer 输出来自开源组件。Paraformer 对照使用 `paraformer-zh` v2.0.4 与 FSMN-VAD v2.0.4，关闭 inverse text normalization，且不使用标点模型、热词或外部语言模型。
+论文中报告的 MiMo 转写由支持音频输入的 MiMo `mimo-v2.5` API 在本仓库所含 strict transcription prompt 下生成；`mimo-v2-omni` 用作 fallback 和 protocol-ablation 路线。本材料包提供 API 模型标识、prompt、协议设置、转写和评分脚本，用于审计已报告输出并重新运行 API 协议。MiMo TTS 音频通过固定设置的 MiMo-V2.5-TTS API 生成。CosyVoice、Whisper、Paraformer 和 Qwen 输出来自开源组件。Paraformer 对照使用 `paraformer-zh` v2.0.4 与 FSMN-VAD v2.0.4，不使用标点模型、热词或外部语言模型；`use_itn` 开关在 220 条完整音频和 46 条对齐片段上都没有改变任何转写，因此不作为 ITN 因果消融。Qwen3-ASR-1.7B 使用空 context 和自动语言识别，不接收原文或目标读法提示。
 
 论文中 targeted audit yield 相关数字可从以下文件开始核对：
 
@@ -69,6 +70,10 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - `results/span_isolation/table_full_vs_rough_vs_aligned_asr_probe_20260612.md`
 - `results/paraformer/paraformer_targeted_control_summary.md`
 - `results/paraformer/paraformer_confirmed_97_transcript_audit.csv`
+- `results/paraformer/paraformer_itn_toggle_summary.md`
+- `results/qwen3_asr/qwen3_asr_1p7b_control_summary.md`
+- `results/qwen3_asr/qwen3_confirmed_97_transcript_audit.csv`
+- `results/qwen3_asr/qwen3_aligned_46_transcript_audit.csv`
 
 ## 引用
 
