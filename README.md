@@ -2,7 +2,7 @@
 
 [中文说明](README.zh-CN.md)
 
-This private repository contains the lightweight supporting package for the manuscript and conference submission.
+This repository contains the lightweight supporting package for the manuscript and conference submission.
 
 **Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 

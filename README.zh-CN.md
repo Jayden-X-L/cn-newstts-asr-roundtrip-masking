@@ -2,7 +2,7 @@
 
 [English README](README.md)
 
-本私有仓库是论文 **ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS** 的轻量级支撑材料包，用于论文投稿与复现实验说明。
+本仓库是论文 **ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS** 的轻量级支撑材料包，用于论文投稿与复现实验说明。
 
 这项工作的核心不是提出一个通用 TTS benchmark，而是研究一种具体的评估失效形式：在中文新闻 TTS 中，TTS 音频已经把某些上下文/行业规范依赖的文本读错了，但 ASR 回环转写可能恢复成“表面正确”的文本，从而把听感上真实存在的读法错误遮蔽为自动评估中的假阴性。
 
