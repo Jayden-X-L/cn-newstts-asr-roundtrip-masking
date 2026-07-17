@@ -10,6 +10,8 @@ This repository contains the lightweight supporting package for the manuscript a
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
+The source pool comprises 108,124 company-produced Chinese news scripts used in a production TTS workflow. This repository releases the 500 company-authorized production news scripts selected for the real-news candidate pool and 5,000 synthetic hard cases; it does not release the complete 108,124-item source export.
+
 The open-source ASR controls are deliberately contrastive. The denominator is the 97 files previously labeled `confirmed masked` across the MiMo and CosyVoice audits, not all wrong-reading audio. Occurrence-aware review finds surface-correct recovery in 40/97 for Qwen3-ASR-1.7B, but only 2/97 for Paraformer-zh. On the 19 MiMo files surface-recovered by Qwen in full context, aligned-span transcription re-exposes a wrong or noncanonical form in 12. This shows that masking is reproducible outside MiMo yet strongly ASR- and protocol-dependent.
 
 Large generated audio files are not stored in this GitHub package. They are prepared in the companion Zenodo package.
@@ -36,7 +38,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 
 ## What Is Not Included Here
 
-- Full raw 108K news export.
+- Full 108,124-item company-produced news-script source export.
 - API keys or provider credentials.
 - Raw provider response payloads, including response identifiers and reasoning traces. Released records retain the final transcript, model and protocol identifiers, errors, and timing metadata needed for audit.
 - Snapshot backups and intermediate working directories.
@@ -66,3 +68,8 @@ For audit-yield numbers reported in the paper, start from:
 ## Citation
 
 See `CITATION.cff`.
+
+## Licenses
+
+- Code and scripts: [MIT License](LICENSE).
+- Released company-authorized production news scripts, synthetic cases, generated TTS audio in the companion archive, annotations, human labels, ASR transcripts, audit tables, and derived metadata: [CC BY 4.0](DATA_LICENSE.md).

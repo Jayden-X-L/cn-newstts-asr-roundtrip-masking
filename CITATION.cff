@@ -1,13 +1,16 @@
 cff-version: 1.2.0
-title: "CN-NewsTTS ASR-Roundtrip Masking Supporting Materials"
+title: "Supporting Materials for ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS"
 message: "If you use these supporting materials, please cite the accompanying paper."
 type: dataset
 authors:
   - family-names: Luo
     given-names: Shijun
+    affiliation: "NetEase Cloud Music, Hangzhou, China"
+    orcid: "https://orcid.org/0009-0005-3836-1148"
   - family-names: Wan
     given-names: Lizhi
-date-released: "2026-07-17"
-version: "v1-preprint-20260717"
+    affiliation: "NetEase Cloud Music, Hangzhou, China"
+date-released: "2026-07-18"
+version: "1.0.0"
 repository-code: "https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking"
 abstract: "Supporting materials for a study of ASR-roundtrip false negatives for context- and convention-dependent reading errors in Chinese news TTS."
