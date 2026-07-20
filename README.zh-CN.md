@@ -2,6 +2,8 @@
 
 [English README](README.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21454402.svg)](https://doi.org/10.5281/zenodo.21454402)
+
 本仓库是论文 **ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS** 的轻量级支撑材料包，用于论文投稿与复现实验说明。
 
 源数据池由 108,124 条在生产 TTS 流程中使用的公司自产中文新闻文稿组成。本仓库公开其中进入真实新闻候选池的 500 条公司授权生产新闻文稿，以及 5,000 条合成 hard cases；不公开完整的 108,124 条源数据导出。
@@ -11,6 +13,8 @@
 **论文 PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 
 **扩展预印本 PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
+
+**Zenodo 完整归档数据集:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
 
 ## 研究问题
 
@@ -61,7 +65,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 - API key 或任何 provider credentials。
 - Provider 原始响应 payload，包括 response ID 和 reasoning trace。发布记录保留审计所需的最终转写、模型与协议标识、错误和耗时元数据。
 - 快照备份与中间工作目录。
-- 大体量生成音频文件。音频包将通过配套 Zenodo 包归档。
+- 大体量生成音频文件。音频包通过 [Zenodo 完整归档数据集](https://doi.org/10.5281/zenodo.21454402) 发布。
 
 ## 复现说明
 

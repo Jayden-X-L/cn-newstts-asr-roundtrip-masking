@@ -10,7 +10,9 @@ authors:
   - family-names: Wan
     given-names: Lizhi
     affiliation: "NetEase Cloud Music, Hangzhou, China"
-date-released: "2026-07-18"
+date-released: "2026-07-20"
 version: "1.0.0"
+doi: "10.5281/zenodo.21454402"
+url: "https://doi.org/10.5281/zenodo.21454402"
 repository-code: "https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking"
 abstract: "Supporting materials for a study of ASR-roundtrip false negatives for context- and convention-dependent reading errors in Chinese news TTS."

@@ -2,11 +2,15 @@
 
 [中文说明](README.zh-CN.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21454402.svg)](https://doi.org/10.5281/zenodo.21454402)
+
 This repository contains the lightweight supporting package for the manuscript and conference submission.
 
 **Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
 
 **Extended preprint PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
+
+**Zenodo archival dataset:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
@@ -14,7 +18,7 @@ The source pool comprises 108,124 company-produced Chinese news scripts used in 
 
 The open-source ASR controls are deliberately contrastive. The denominator is the 97 files previously labeled `confirmed masked` across the MiMo and CosyVoice audits, not all wrong-reading audio. Occurrence-aware review finds surface-correct recovery in 40/97 for Qwen3-ASR-1.7B, but only 2/97 for Paraformer-zh. On the 19 MiMo files surface-recovered by Qwen in full context, aligned-span transcription re-exposes a wrong or noncanonical form in 12. This shows that masking is reproducible outside MiMo yet strongly ASR- and protocol-dependent.
 
-Large generated audio files are not stored in this GitHub package. They are prepared in the companion Zenodo package.
+Large generated audio files are not stored in this GitHub package. They are archived in the [companion Zenodo dataset](https://doi.org/10.5281/zenodo.21454402).
 
 ## Contents
 
@@ -42,7 +46,7 @@ Large generated audio files are not stored in this GitHub package. They are prep
 - API keys or provider credentials.
 - Raw provider response payloads, including response identifiers and reasoning traces. Released records retain the final transcript, model and protocol identifiers, errors, and timing metadata needed for audit.
 - Snapshot backups and intermediate working directories.
-- Large audio bundles. These are prepared for Zenodo archival release.
+- Large audio bundles. These are distributed through the [Zenodo archival release](https://doi.org/10.5281/zenodo.21454402).
 
 ## Reproducibility Notes
 
