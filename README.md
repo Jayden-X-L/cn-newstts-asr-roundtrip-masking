@@ -12,6 +12,10 @@ This repository contains the lightweight supporting package for the manuscript a
 
 **Zenodo archival dataset:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
 
+## Manuscript Status
+
+The extended preprint was submitted to arXiv on July 22, 2026 and is currently pending category moderation. Supporting materials were publicly released on July 26, 2026. The arXiv identifier will be added after announcement.
+
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
 The source pool comprises 108,124 company-produced Chinese news scripts used in a production TTS workflow. This repository releases the 500 company-authorized production news scripts selected for the real-news candidate pool and 5,000 synthetic hard cases; it does not release the complete 108,124-item source export.
