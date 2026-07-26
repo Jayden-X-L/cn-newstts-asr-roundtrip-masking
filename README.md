@@ -1,10 +1,10 @@
-# Manuscript: ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS
+# ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS
 
 [中文说明](README.zh-CN.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21454402.svg)](https://doi.org/10.5281/zenodo.21454402)
 
-This repository contains the lightweight supporting package for the extended preprint.
+This repository provides the data, annotations, ASR outputs, and evaluation tools supporting our study of ASR-roundtrip false negatives in Chinese news TTS.
 
 **Extended preprint PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
 
