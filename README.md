@@ -4,9 +4,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21454402.svg)](https://doi.org/10.5281/zenodo.21454402)
 
-This repository contains the lightweight supporting package for the manuscript and conference submission.
-
-**Paper PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
+This repository contains the lightweight supporting package for the extended preprint.
 
 **Extended preprint PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
 
@@ -26,7 +24,7 @@ Large generated audio files are not stored in this GitHub package. They are arch
 
 ## Contents
 
-- `paper/`: compiled PDF manuscript snapshot.
+- `paper/`: compiled extended-preprint PDF snapshot.
 - `metadata/frozen_benchmark/`: frozen 200-case benchmark metadata and Raw/Structured input matrices.
 - `metadata/annotation_clarifications/`: post-freeze accepted-reading clarifications and documented result impact.
 - `metadata/candidate_pools/`: 500 real-news candidate pool and 5K synthetic hard-case pool.

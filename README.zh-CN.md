@@ -10,8 +10,6 @@
 
 这项工作的核心不是提出一个通用 TTS benchmark，而是研究一种具体的评估失效形式：在中文新闻 TTS 中，TTS 音频已经把某些上下文/行业规范依赖的文本读错了，但 ASR 回环转写可能恢复成“表面正确”的文本，从而把听感上真实存在的读法错误遮蔽为自动评估中的假阴性。
 
-**论文 PDF:** [main.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/main.pdf)
-
 **扩展预印本 PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
 
 **Zenodo 完整归档数据集:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
@@ -45,7 +43,7 @@ ASR roundtrip evaluation 通常用于低成本评估 TTS 可懂度：先合成�
 
 ## 仓库内容
 
-- `paper/`: 编译后的论文 PDF 快照。
+- `paper/`: 编译后的扩展预印本 PDF 快照。
 - `metadata/frozen_benchmark/`: 冻结的 200 例评估元数据，以及 Raw/Structured 输入矩阵。
 - `metadata/annotation_clarifications/`: 冻结后的可接受读法补充与结果影响记录。
 - `metadata/candidate_pools/`: 500 条真实新闻候选池和 5K 合成 hard-case 候选池。
