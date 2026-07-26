@@ -10,9 +10,14 @@ This repository contains the lightweight supporting package for the extended pre
 
 **Zenodo archival dataset:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
 
-## Manuscript Status
+## Development and Release Timeline
 
-The extended preprint was submitted to arXiv on July 22, 2026 and is currently pending category moderation. This repository was created as a private repository on June 22, 2026 while the prerequisite review and release procedures were completed; it was made public, together with the supporting materials, on July 26, 2026. The arXiv identifier will be added after announcement.
+- **June 22, 2026:** The completed project materials were uploaded to GitHub in a private repository, creating a timestamped internal record.
+- **July 16, 2026:** A corresponding Chinese patent application was formally filed, providing a formal priority record; the filing itself was not a public release.
+- **July 22, 2026:** The extended preprint was submitted to arXiv and is currently pending category moderation. The submission history is expected to retain this date after announcement.
+- **July 26, 2026:** The repository and supporting materials were publicly released on GitHub, establishing the first public disclosure. Zenodo DOI [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402) has been reserved for the archival dataset and will become part of the public record when that record is published.
+
+The arXiv identifier will be added after announcement.
 
 It contains the lightweight, GitHub-friendly release package: paper snapshot, frozen case metadata, risk-span annotations, ASR prompts and settings, ASR outputs, scoring scripts, anonymized human labels, targeted-audit tables, and span-isolation summaries.
 
