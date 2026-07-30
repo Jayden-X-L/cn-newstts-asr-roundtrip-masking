@@ -6,6 +6,8 @@
 
 This repository provides the data, annotations, ASR outputs, and evaluation tools supporting our study of ASR-roundtrip false negatives in Chinese news TTS.
 
+**TL;DR.** ASR-roundtrip evaluation can return a surface-correct transcript for audio that a listener hears as wrong, when the correct spoken form depends on discourse context or domain convention (sports scores, aircraft models, technical units, membership names). In a 110-case targeted MiMo audit, **46 cases are confirmed masked, 9 are exposed, and 55 have no Raw TTS error**. Context isolation re-exposes local wrong-reading evidence in 18/46. A CosyVoice audit on the same candidates confirms 51 masked cases. On the 97 confirmed-masked files, **Qwen3-ASR-1.7B surface-recovers 40/97 while Paraformer-zh recovers only 2/97**. Use ASR roundtrip for screening, not as standalone ground truth.
+
 **Extended preprint PDF:** [extended_preprint.pdf](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/blob/main/paper/extended_preprint.pdf)
 
 **Zenodo archival dataset:** [10.5281/zenodo.21454402](https://doi.org/10.5281/zenodo.21454402)
