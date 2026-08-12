@@ -29,3 +29,18 @@ keywords:
   - human listening audit
   - automatic speech recognition
   - evaluation false negatives
+preferred-citation:
+  type: article
+  title: "ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS"
+  authors:
+    - family-names: Luo
+      given-names: Shijun
+      affiliation: "NetEase Cloud Music, Hangzhou, China"
+      orcid: "https://orcid.org/0009-0005-3836-1148"
+    - family-names: Wan
+      given-names: Lizhi
+      affiliation: "NetEase Cloud Music, Hangzhou, China"
+  year: 2026
+  journal: arXiv
+  doi: "10.48550/arXiv.2608.10606"
+  url: "https://arxiv.org/abs/2608.10606"

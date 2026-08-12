@@ -13,7 +13,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULT_DIR = ROOT / "mvp_eval/paraformer_targeted_20260717"
+RESULT_DIR = ROOT / "results/paraformer"
 FULL_RESULTS = RESULT_DIR / "paraformer_full_220_results.jsonl"
 ALIGNED_RESULTS = RESULT_DIR / "paraformer_aligned_46_results.jsonl"
 

@@ -13,7 +13,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULT_DIR = ROOT / "mvp_eval/paraformer_itn_qwen3_20260717"
+RESULT_DIR = ROOT / "results/qwen3_asr"
 FULL_RESULTS = RESULT_DIR / "qwen3_asr_1p7b_full_220_results.jsonl"
 ALIGNED_RESULTS = RESULT_DIR / "qwen3_asr_1p7b_aligned_46_results.jsonl"
 REVIEW_PATH = RESULT_DIR / "qwen3_confirmed_97_review_overrides.json"
