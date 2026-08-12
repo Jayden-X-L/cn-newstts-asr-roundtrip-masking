@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/badge/Release-v1.0.1-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.1)
 
-[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.0)
+[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.1)
 
 </div>
 
@@ -48,6 +48,8 @@ The 110 cases form a deliberately targeted high-risk audit pool. These counts ch
 | Qwen3-ASR control | [results/qwen3_asr/](results/qwen3_asr/) | Transcripts, occurrence-aware reviews, and full-to-aligned comparisons |
 | Full audio archive | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | Generated audio and the complete archival package |
 | Paper | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | Methods, experiments, results, and limitations |
+
+GitHub release `v1.0.1` adds documentation and automated verification updates. The archived Zenodo dataset remains `v1.0.0`.
 
 The source pool contains 108,124 company-produced Chinese news scripts used in a production TTS workflow. The complete source export is not released. The public package contains the 500 company-authorized scripts selected for the real-news candidate pool and 5,000 synthetic hard cases.
 
