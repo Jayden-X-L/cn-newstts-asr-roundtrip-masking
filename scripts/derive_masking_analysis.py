@@ -8,6 +8,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import re
 import unicodedata
 import zipfile
@@ -37,6 +38,8 @@ RESULT_FILES = (
     "sample_flow_200_to_110.csv", "prior_work_comparison.json",
     "blind_label_sensitivity.csv", "variant_scope_audit_97.csv",
     "qwen_paired_transition_matrix.csv", "masking_only_results.json",
+    "strict_score_marker_counts.csv", "strict_score_scope_summary.json",
+    "qwen_surface_paired_test.json",
 )
 MASKED = "confirmed masked"
 SURFACE = "exact_surface_correct_recovery"
@@ -88,6 +91,15 @@ def text_norm(value):
 
 def compact(value):
     return "".join(str(value).split())
+
+
+def exact_mcnemar_p(forward, reverse):
+    """Two-sided conditional binomial test on discordant paired outcomes."""
+    require(all(isinstance(n, int) and n >= 0 for n in (forward, reverse)), "Invalid discordant counts")
+    n = forward + reverse
+    if n == 0:
+        return 1.0
+    return min(1.0, 2 * sum(math.comb(n, k) for k in range(min(forward, reverse) + 1)) / (2 ** n))
 
 
 def score_relation_check(target, expected, heard):
@@ -238,6 +250,33 @@ def derive(root, out, archive=None, audio_root=None):
     transition_rows = [{"full_outcome": a, "clip_outcome": b, "count": transitions[(a, b)]}
                        for a in (SURFACE, WRONG, OTHER) for b in (SURFACE, WRONG, OTHER)]
     require(sum(r["count"] for r in transition_rows) == 46, "Unknown Qwen outcome")
+    score_rows = [r for r in variants if r["retained_in_restricted_score_check"]]
+    marker_counts = Counter((r["tts"], next(c for c in "至到减负" if c in r["heard_record"])) for r in score_rows)
+    markers = [{"tts": system, "heard_relation_marker": marker, "recordings": marker_counts[(system, marker)]}
+               for system in ("MiMo", "CosyVoice") for marker in "至到减负"]
+    score_scripts = {system: {r["case_id"] for r in score_rows if r["tts"] == system}
+                     for system in ("MiMo", "CosyVoice")}
+    score_scope = {"recordings": len(score_rows), "unique_scripts": len(set.union(*score_scripts.values())),
+                   "unique_scripts_by_tts": {k: len(v) for k, v in score_scripts.items()},
+                   "scripts_with_both_tts": len(set.intersection(*score_scripts.values())),
+                   "exclusion_of_marker_dao_changes_count": any(r["heard_relation_marker"] == "到" and r["recordings"] for r in markers),
+                   "interpretation": "Two TTS recordings of the same script are not two independent text samples; the selection rule and listening labels are unchanged."}
+    full_s_clip_s = transitions[(SURFACE, SURFACE)]
+    s_to_non_s = sum(n for (a, b), n in transitions.items() if a == SURFACE and b != SURFACE)
+    non_s_to_s = sum(n for (a, b), n in transitions.items() if a != SURFACE and b == SURFACE)
+    paired_test = {"test": "two-sided exact McNemar (conditional binomial)", "analysis_status": "exploratory",
+                   "endpoint": "surface-correct (S) versus non-S; W and O are combined as non-S",
+                   "sampling_scope": "46 selected primary route-union masked MiMo recordings, one per script",
+                   "paired_recordings": len(clips), "unique_scripts": len(mi_ids := {r["case_id"] for r in primary if r["public_audit_outcome"] == MASKED}),
+                   "matrix_rows_full_columns_clip_S_nonS": [[full_s_clip_s, s_to_non_s],
+                                                            [non_s_to_s, len(clips) - full_s_clip_s - s_to_non_s - non_s_to_s]],
+                   "full_surface": full_s_clip_s + s_to_non_s, "clip_surface": full_s_clip_s + non_s_to_s,
+                   "surface_proportion_change_clip_minus_full": (non_s_to_s - s_to_non_s) / len(clips),
+                   "discordant_full_S_to_clip_nonS": s_to_non_s, "discordant_full_nonS_to_clip_S": non_s_to_s,
+                   "p_value": exact_mcnemar_p(s_to_non_s, non_s_to_s),
+                   "null": "Conditional on discordance, both directions have equal probability; pairs are treated as independent across scripts.",
+                   "interpretation": "An exploratory paired association in this selected pool, not population prevalence, proof of a language-model mechanism, or validation of clip boundaries."}
+    require(len(mi_ids) == len(clips), "Paired test requires distinct scripts")
     restricted_asr = {}
     for name, rows, label in [("Qwen3-ASR", qwen, "reviewed_qwen_relation"),
                               ("Paraformer", paraformer, "reviewed_paraformer_relation")]:
@@ -266,6 +305,9 @@ def derive(root, out, archive=None, audio_root=None):
         write_csv(out / name, rows)
     write_json(out / "prior_work_comparison.json", overlap)
     write_json(out / "masking_only_results.json", summary)
+    write_csv(out / "strict_score_marker_counts.csv", markers)
+    write_json(out / "strict_score_scope_summary.json", score_scope)
+    write_json(out / "qwen_surface_paired_test.json", paired_test)
     write_json(out / "audio_verification.json", verification)
     write_csv(out / "input_checksums.csv", [{"repository_relative_path": name, "bytes": (root / name).stat().st_size,
                                             "sha256": sha256(root / name)} for name in INPUTS.values()])
@@ -276,7 +318,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--output-dir", type=Path, required=True, help="Directory for generated tables and provenance")
-    parser.add_argument("--check", action="store_true", help="Compare six derived tables against results/masking_revision")
+    parser.add_argument("--check", action="store_true", help="Compare derived result files against results/masking_revision")
     audio = parser.add_mutually_exclusive_group()
     audio.add_argument("--zenodo-zip", type=Path, help="Verify original Zenodo ZIP and all 200 Raw WAV digests")
     audio.add_argument("--audio-root", type=Path, help="Extracted audio/mimo_v25_tts_p1p2_200/raw directory")

@@ -1,0 +1,26 @@
+{
+  "test": "two-sided exact McNemar (conditional binomial)",
+  "analysis_status": "exploratory",
+  "endpoint": "surface-correct (S) versus non-S; W and O are combined as non-S",
+  "sampling_scope": "46 selected primary route-union masked MiMo recordings, one per script",
+  "paired_recordings": 46,
+  "unique_scripts": 46,
+  "matrix_rows_full_columns_clip_S_nonS": [
+    [
+      7,
+      12
+    ],
+    [
+      0,
+      27
+    ]
+  ],
+  "full_surface": 19,
+  "clip_surface": 7,
+  "surface_proportion_change_clip_minus_full": -0.2608695652173913,
+  "discordant_full_S_to_clip_nonS": 12,
+  "discordant_full_nonS_to_clip_S": 0,
+  "p_value": 0.00048828125,
+  "null": "Conditional on discordance, both directions have equal probability; pairs are treated as independent across scripts.",
+  "interpretation": "An exploratory paired association in this selected pool, not population prevalence, proof of a language-model mechanism, or validation of clip boundaries."
+}

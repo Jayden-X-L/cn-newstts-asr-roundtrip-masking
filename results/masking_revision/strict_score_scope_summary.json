@@ -1,0 +1,11 @@
+{
+  "recordings": 41,
+  "unique_scripts": 24,
+  "unique_scripts_by_tts": {
+    "MiMo": 18,
+    "CosyVoice": 23
+  },
+  "scripts_with_both_tts": 17,
+  "exclusion_of_marker_dao_changes_count": false,
+  "interpretation": "Two TTS recordings of the same script are not two independent text samples; the selection rule and listening labels are unchanged."
+}

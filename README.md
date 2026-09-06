@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.2-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
+[![Release](https://img.shields.io/badge/Release-v1.0.3-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.3)
 
-[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Reproduce analyses](docs/masking_analysis.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
+[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Reproduce analyses](docs/masking_analysis.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.3)
 
 </div>
 
@@ -42,13 +42,18 @@ The 110 cases form a deliberately targeted high-risk audit pool. These counts ch
 python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --check
 ```
 
-Run from a clone of this repository or the extracted `v1.0.2` analysis bundle.
+Run from a clone of this repository or the extracted `v1.0.3` analysis bundle.
 Python 3.10+ is sufficient; no third-party packages or private directories are needed.
 The command reproduces sample selection, prior-work overlap, blind-label sensitivity,
 the restricted score check, and paired Qwen transitions. The default checks the
 published audio inventory; add `--zenodo-zip /path/to/archive.zip` to verify the
 original Zenodo ZIP and all 200 Raw WAV hashes. This distinction is recorded in
 `audio_verification.json`.
+
+Release v1.0.3 also reports the observed score markers (18 MiMo 至, 23 CosyVoice 减),
+the 24 distinct scripts underlying those 41 recordings, and an exploratory exact
+McNemar test on the 46 Qwen pairs (`p = 0.00048828125`, S versus non-S).
+This paired association does not establish a specific mechanism or certify clip boundaries.
 
 ## Released Resources
 
@@ -67,7 +72,7 @@ original Zenodo ZIP and all 200 Raw WAV hashes. This distinction is recorded in
 | Full audio archive | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | Generated audio and the complete archival package |
 | Paper | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | Methods, experiments, results, and limitations |
 
-GitHub release `v1.0.2` adds public reproduction inputs, analyses, and automated checks for the 2026-09-06 manuscript revision. The arXiv PDF and the Zenodo `v1.0.0` archive are unchanged by this repository release. The analysis ZIP contains no manuscript PDF or source.
+GitHub release `v1.0.3` adds public reproduction inputs, analyses, and automated checks for the 2026-09-06 manuscript revision. The arXiv PDF and the Zenodo `v1.0.0` archive are unchanged by this repository release. The analysis ZIP contains no manuscript PDF or source.
 
 The source pool contains 108,124 company-produced Chinese news scripts used in a production TTS workflow. The complete source export is not released. The public package contains the 500 company-authorized scripts selected for the real-news candidate pool and 5,000 synthetic hard cases.
 

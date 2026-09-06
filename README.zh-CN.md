@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.2-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
+[![Release](https://img.shields.io/badge/Release-v1.0.3-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.3)
 
-[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [分析复现](docs/masking_analysis.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
+[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [分析复现](docs/masking_analysis.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.3)
 
 </div>
 
@@ -42,10 +42,12 @@ ASR 回环评估常被用作低成本的 TTS 可懂度代理。本研究发现�
 python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --check
 ```
 
-在仓库根目录或解压后的 `v1.0.2` 分析包中运行。仅需 Python 3.10+，不依赖第三方包、私有项目目录或另一个仓库。
+在仓库根目录或解压后的 `v1.0.3` 分析包中运行。仅需 Python 3.10+，不依赖第三方包、私有项目目录或另一个仓库。
 该入口重算 200→110 样本流程、前作全文重合检查、盲标敏感性、严格比分子集与 Qwen 配对转移。
 默认核对公开音频清单，不读取 WAV；增加 `--zenodo-zip /path/to/archive.zip` 后，才会核验原始 Zenodo ZIP 和全部 200 个 Raw WAV 的哈希。
 实际核验模式写入 `audio_verification.json`。排除于严格子集之外的 56 条音频不会被重新标成正确。
+
+v1.0.3 同时报告严格子集的实际构成：MiMo 18 条「至」、CosyVoice 23 条「减」，共 41 条录音、24 个不同脚本。46 对 Qwen 输出的探索性精确 McNemar 检验按 S/非 S 比较，`p = 0.00048828125`；该结果不替代人工边界核验，也不单独证明具体遮蔽机制。
 
 ## 发布内容
 
@@ -64,7 +66,7 @@ python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --
 | 完整音频归档 | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | 生成音频与完整归档包 |
 | 论文 | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | 方法、实验、结果与局限性 |
 
-GitHub `v1.0.2` 补齐 2026-09-06 修订稿的公开复现输入、分析与自动核验。本次仓库发布不修改 arXiv PDF 或 Zenodo `v1.0.0` 归档；分析 ZIP 不包含论文 PDF 或论文源文件。
+GitHub `v1.0.3` 补齐 2026-09-06 修订稿的公开复现输入、分析与自动核验。本次仓库发布不修改 arXiv PDF 或 Zenodo `v1.0.0` 归档；分析 ZIP 不包含论文 PDF 或论文源文件。
 
 源数据池包含 108,124 条在生产 TTS 流程中使用的公司自产中文新闻文稿。完整源数据导出不对外发布；公开包包含进入真实新闻候选池的 500 条公司授权文稿和 5,000 条合成 hard cases。
 

@@ -14,7 +14,7 @@ From the repository root (or the extracted analysis release bundle):
 python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --check
 ```
 
-`--check` compares six regenerated result files against
+`--check` compares nine regenerated result files against
 [`results/masking_revision/`](../results/masking_revision/). It fails on a changed
 result. The output directory must differ from the reference directory.
 `--data-root /path/to/repository` selects another public data root.
@@ -52,6 +52,9 @@ file in the full archive, are covered by this analysis check.
 | `variant_scope_audit_97.csv` | Per-file decisions for the restricted value-preserving score-relation check |
 | `qwen_paired_transition_matrix.csv` | All nine Qwen full-recording-to-clip transition cells for 46 MiMo files |
 | `masking_only_results.json` | The above counts, restricted ASR outcomes, and TTS case-ID overlap |
+| `strict_score_marker_counts.csv` | Counts for all four eligible heard markers, including zeros |
+| `strict_score_scope_summary.json` | 41 recordings, 24 scripts, and 17 scripts represented by both TTS systems |
+| `qwen_surface_paired_test.json` | Exploratory exact McNemar test, binary endpoint, full 2-by-2 table, and interpretation |
 | `input_checksums.csv` | Relative paths, byte sizes, and SHA-256 of the public analysis inputs |
 | `audio_verification.json` | Whether this run checked an inventory or actual audio bytes |
 
@@ -61,6 +64,25 @@ and 41 restricted score files (18 MiMo, 23 CosyVoice), with 16 Qwen surface
 recoveries and zero Paraformer recoveries. Excluding the other 56 files from the
 restricted analysis does not label them correct. This check uses saved listening
 notes; it is not a new blind listening study or a universal pronunciation rule.
+
+All 18 retained MiMo recordings use the heard marker 至; all 23 retained
+CosyVoice recordings use 减. No retained recording uses 到 or 负. These are
+observed counts under the unchanged selection rule, not a revised filter.
+
+The exploratory paired test groups W and O as non-S on the 46 selected MiMo
+recordings (46 distinct scripts). With rows denoting full and columns denoting
+clip outcomes in S/non-S order, the matrix is `[[7, 12], [0, 27]]`. The exact
+two-sided conditional binomial probability for 12 versus zero discordant pairs
+is `0.00048828125`. This test treats pairs as independent across scripts and
+supports a directional association in the selected pool. It does not validate
+clip boundaries, establish population prevalence, or isolate a language-model
+mechanism.
+
+The MiMo annotation roles are a primary annotator for 110 recordings, a second
+reviewer for non-blind full-pool quality control, and a third reviewer for the
+30-case label-blind relabel. The reported agreement compares the third
+reviewer's labels only with the corresponding frozen primary labels. Source
+text and expected readings remain visible in the blind task.
 
 The primary labels are the frozen route-union audit labels, not single-recognizer
 error rates. The MiMo input field is `public_audit_outcome`; the CosyVoice field

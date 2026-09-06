@@ -1,11 +1,11 @@
-# ASR Masking: Public Analysis Bundle v1.0.2
+# ASR Masking: Public Analysis Bundle v1.0.3
 
 This self-contained bundle reproduces the 2026-09-06 revision analyses using
 public text records, labels, and transcripts. It contains no manuscript PDF,
 manuscript source, audio files, or model weights.
 
 - Paper: https://arxiv.org/abs/2608.10606
-- Repository release: https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2
+- Repository release: https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.3
 - Original audio archive: https://doi.org/10.5281/zenodo.21454402
 
 From this directory, using Python 3.10+ (standard library only):
