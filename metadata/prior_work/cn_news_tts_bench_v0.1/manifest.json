@@ -1,0 +1,15 @@
+{
+  "release": "v0.1",
+  "commit": "599a4adc299140966fcbfa0412fbfb52dab19a73",
+  "repository": "https://github.com/Jayden-X-L/cn-news-tts-bench",
+  "paper": "https://arxiv.org/abs/2606.24714v1",
+  "license": "CC-BY-4.0",
+  "original_paths": [
+    "data/dev.jsonl",
+    "data/test_public.jsonl"
+  ],
+  "sha256": {
+    "dev": "f36164a2e580114faee019e5e994460dea4b4417cef273a42489d414b546122a",
+    "test_public": "857f5f5caaab223c0a00ebded18eafec0ebeefca1afb67ad71c7eac4750e4afa"
+  }
+}

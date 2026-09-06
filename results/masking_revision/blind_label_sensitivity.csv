@@ -1,0 +1,4 @@
+﻿scenario,n,masked,exposed,no_error,unresolved
+MiMo frozen primary,110,46,9,55,0
+MiMo replace 30 blind-subset labels,110,45,6,58,1
+MiMo exclude 7 discordant cases,103,44,4,55,0

@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.1-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.1)
+[![Release](https://img.shields.io/badge/Release-v1.0.2-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
 
-[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.1)
+[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [分析复现](docs/masking_analysis.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.2)
 
 </div>
 
@@ -30,26 +30,41 @@ ASR 回环评估常被用作低成本的 TTS 可懂度代理。本研究发现�
 | Qwen3-ASR-1.7B 对照 | 40/97 表面正确恢复 | MiMo 之外的 ASR 同样会发生遮蔽 |
 | Paraformer-zh 对照 | 2/97 表面正确恢复 | 遮蔽强烈依赖 ASR 系统与评估协议 |
 | 30 例独立盲复标 | 遮蔽 vs. 其他的 Cohen's kappa = 0.800 | 为主审计标签提供独立一致性证据 |
+| 严格比分关系子集 | Qwen 16/41、Paraformer 0/41 表面正确恢复 | 从既有听评记录筛选数值不变、中文关系词读错的样本 |
 
-110 个样本是按规则构建的高风险定向审计池。这些数字表示审计产出和机制证据，不表示生产环境自然发生率。
+110 个样本是按规则构建的高风险定向审计池。这些数字表示审计产出和机制证据，不表示生产环境自然发生率。主遮蔽标签汇总可用 ASR 路线中的出现情况，不是单个识别器的错误率。
+
+## 公开分析入口
+
+[复现说明](docs/masking_analysis.md) · [派生表与来源记录](results/masking_revision/) · [可独立运行的脚本](scripts/derive_masking_analysis.py)
+
+```bash
+python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --check
+```
+
+在仓库根目录或解压后的 `v1.0.2` 分析包中运行。仅需 Python 3.10+，不依赖第三方包、私有项目目录或另一个仓库。
+该入口重算 200→110 样本流程、前作全文重合检查、盲标敏感性、严格比分子集与 Qwen 配对转移。
+默认核对公开音频清单，不读取 WAV；增加 `--zenodo-zip /path/to/archive.zip` 后，才会核验原始 Zenodo ZIP 和全部 200 个 Raw WAV 的哈希。
+实际核验模式写入 `audio_verification.json`。排除于严格子集之外的 56 条音频不会被重新标成正确。
 
 ## 发布内容
 
 | 资源 | 位置 | 用途 |
 |---|---|---|
-| 冻结 200 例 benchmark | [metadata/frozen_benchmark/](metadata/frozen_benchmark/) | case metadata 与配对 Raw/Structured 条件 |
+| 冻结 200 例 benchmark | [metadata/frozen_benchmark/](metadata/frozen_benchmark/) | 用于复现 110 例审计池筛选的 metadata |
 | 候选池 | [metadata/candidate_pools/](metadata/candidate_pools/) | 500 条公司授权生产新闻文稿与 5,000 条合成 hard cases |
 | 风险规则与 schema | [rules_and_schema/](rules_and_schema/) | 风险 span 规则、标签、提示词和评分 schema |
-| 200 例人工标注 | [labels/human_200/](labels/human_200/) | 主听评标签和 IAA 记录 |
+| 历史 200 例人工标注 | [labels/human_200/](labels/human_200/) | 保留供追溯的辅助诊断，不属于当前会议稿实验线 |
 | MiMo 110 例审计 | [labels/targeted_audit_110/](labels/targeted_audit_110/) | 完整分母 masked-error audit |
 | CosyVoice 110 例审计 | [labels/cosyvoice_110/](labels/cosyvoice_110/) | Raw-only 跨 TTS 人工审计 |
 | span-isolation 证据 | [results/span_isolation/](results/span_isolation/) | 切片 manifest、ASR 输出、复核标签和汇总 |
 | Paraformer 对照 | [results/paraformer/](results/paraformer/) | 转写、逐 occurrence 复核和结果汇总 |
 | Qwen3-ASR 对照 | [results/qwen3_asr/](results/qwen3_asr/) | 转写、逐 occurrence 复核和 full-to-aligned 对照 |
+| 修订分析 | [results/masking_revision/](results/masking_revision/) | 公开输入驱动的样本流程、前作比较、敏感性与配对转移 |
 | 完整音频归档 | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | 生成音频与完整归档包 |
 | 论文 | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | 方法、实验、结果与局限性 |
 
-GitHub `v1.0.1` 是文档与自动核验更新；Zenodo 数据归档版本仍为 `v1.0.0`。
+GitHub `v1.0.2` 补齐 2026-09-06 修订稿的公开复现输入、分析与自动核验。本次仓库发布不修改 arXiv PDF 或 Zenodo `v1.0.0` 归档；分析 ZIP 不包含论文 PDF 或论文源文件。
 
 源数据池包含 108,124 条在生产 TTS 流程中使用的公司自产中文新闻文稿。完整源数据导出不对外发布；公开包包含进入真实新闻候选池的 500 条公司授权文稿和 5,000 条合成 hard cases。
 
@@ -63,7 +78,7 @@ cd cn-newstts-asr-roundtrip-masking
 python3 scripts/verify_paper_claims.py
 ```
 
-该脚本会核验 MiMo 与 CosyVoice 审计计数、span-isolation 结果、Qwen3-ASR 与 Paraformer 对照、盲复标一致性计数，以及 200 例 Raw/Structured 人评结果。
+这是已有的原始结果核验脚本，包含 MiMo/CosyVoice 计数、切片与 ASR 对照、盲标一致性和历史 200 例诊断。新增修订分析请使用上方公开分析入口。
 
 也可以在公开目录中重新生成两个 ASR 对照分析：
 
@@ -79,7 +94,7 @@ python3 scripts/analyze_qwen3_asr_control_20260717.py
 - CosyVoice、Whisper、Paraformer 与 Qwen 输出来自开源组件。
 - Paraformer 使用 `paraformer-zh` v2.0.4 与 FSMN-VAD v2.0.4，不使用标点模型、热词或外部语言模型。`use_itn` 开关没有改变 220 条完整音频和 46 条对齐片段中的任何转写，因此不把它解释为 ITN 因果消融。
 - Qwen3-ASR-1.7B 使用空 context 和自动语言识别，不接收原文、预期读法、负例读法或目标提示。
-- Raw/Structured 对照是 oracle-style diagnostic，不是可部署前端的公平系统比较；Structured 显式实例化了预先标注的预期读法。
+- 历史 Raw/Structured 诊断保留于归档供追溯，但已从当前会议稿及新增分析入口中移出。
 
 ## 仓库结构
 

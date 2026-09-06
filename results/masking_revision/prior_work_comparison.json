@@ -1,0 +1,16 @@
+{
+  "prior_release": "v0.1",
+  "prior_commit": "599a4adc299140966fcbfa0412fbfb52dab19a73",
+  "prior_data_sha256": {
+    "dev": "f36164a2e580114faee019e5e994460dea4b4417cef273a42489d414b546122a",
+    "test_public": "857f5f5caaab223c0a00ebded18eafec0ebeefca1afb67ad71c7eac4750e4afa"
+  },
+  "prior_records": 1000,
+  "current_frozen_records": 200,
+  "frozen_normalized_full_text_matches": 0,
+  "current_candidate_records": 5500,
+  "candidate_normalized_full_text_matches": 0,
+  "comparison": "NFKC, lowercase, remove Unicode punctuation and whitespace; full-text equality only",
+  "shared_elements": "Reading-risk motifs, expected/negative reading annotations, and transcript pattern matching",
+  "different_experimental_evidence": "The cited v1 paper reports a seven-product automatic leaderboard; this manuscript reports audio-first labels, route-union masking, and full-to-clip diagnostics."
+}

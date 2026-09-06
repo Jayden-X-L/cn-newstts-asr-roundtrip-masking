@@ -1,0 +1,12 @@
+{
+  "doi": "10.5281/zenodo.21454402",
+  "archive_filename": "zenodo_cn_newstts_supporting_package_v1.0.0.zip",
+  "archive_bytes": 1470912179,
+  "archive_sha256": "72f5552c06023d7a199c7d50cf47f8631a9d4f6937fb7f8c04a22ff373fe2573",
+  "archive_md5": "00ec9c8bc4e95af8c487c7ce5ce9e98c",
+  "raw_recordings": 200,
+  "checksum_manifest_sha256": "f797878300b71d2bf8609f5b089ecdd938b0f826e08fd9e130c14815319af1b2",
+  "production_text_workbook": "metadata/candidate_pools/cn_newstts_real_500_candidates.xlsx",
+  "production_text_workbook_sha256": "8450243118ec66701e0d6a3e1957da542225881235071be208b49c8311db30ea",
+  "inventory_sha256": "29776341f407c7306244f4487fe81e0a88e24e57343d416a3375354243b07bd5"
+}

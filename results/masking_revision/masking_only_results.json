@@ -1,0 +1,140 @@
+{
+  "sample_flow": {
+    "frozen": 200,
+    "included": 110,
+    "included_sources": {
+      "real_news": 108,
+      "synthetic": 2
+    },
+    "excluded_sources": {
+      "real_news": 47,
+      "synthetic": 43
+    },
+    "raw_audio_available": 200
+  },
+  "prior_work": {
+    "prior_release": "v0.1",
+    "prior_commit": "599a4adc299140966fcbfa0412fbfb52dab19a73",
+    "prior_data_sha256": {
+      "dev": "f36164a2e580114faee019e5e994460dea4b4417cef273a42489d414b546122a",
+      "test_public": "857f5f5caaab223c0a00ebded18eafec0ebeefca1afb67ad71c7eac4750e4afa"
+    },
+    "prior_records": 1000,
+    "current_frozen_records": 200,
+    "frozen_normalized_full_text_matches": 0,
+    "current_candidate_records": 5500,
+    "candidate_normalized_full_text_matches": 0,
+    "comparison": "NFKC, lowercase, remove Unicode punctuation and whitespace; full-text equality only",
+    "shared_elements": "Reading-risk motifs, expected/negative reading annotations, and transcript pattern matching",
+    "different_experimental_evidence": "The cited v1 paper reports a seven-product automatic leaderboard; this manuscript reports audio-first labels, route-union masking, and full-to-clip diagnostics."
+  },
+  "blind_sensitivity": [
+    {
+      "scenario": "MiMo frozen primary",
+      "n": 110,
+      "masked": 46,
+      "exposed": 9,
+      "no_error": 55,
+      "unresolved": 0
+    },
+    {
+      "scenario": "MiMo replace 30 blind-subset labels",
+      "n": 110,
+      "masked": 45,
+      "exposed": 6,
+      "no_error": 58,
+      "unresolved": 1
+    },
+    {
+      "scenario": "MiMo exclude 7 discordant cases",
+      "n": 103,
+      "masked": 44,
+      "exposed": 4,
+      "no_error": 55,
+      "unresolved": 0
+    }
+  ],
+  "variant_scope": {
+    "n_primary_masked_files": 97,
+    "retained_by_tts": {
+      "MiMo": 18,
+      "CosyVoice": 23
+    },
+    "excluded_from_restricted_check": 56,
+    "restricted_asr": {
+      "Qwen3-ASR": {
+        "n": 41,
+        "surface": 16,
+        "outcomes": {
+          "wrong_or_noncanonical_form_preserved": 25,
+          "exact_surface_correct_recovery": 16
+        }
+      },
+      "Paraformer": {
+        "n": 41,
+        "surface": 0,
+        "outcomes": {
+          "wrong_or_noncanonical_form_preserved": 41
+        }
+      }
+    },
+    "restricted_qwen_transitions": {
+      "wrong_or_noncanonical_form_preserved -> wrong_or_noncanonical_form_preserved": 9,
+      "exact_surface_correct_recovery -> wrong_or_noncanonical_form_preserved": 6,
+      "wrong_or_noncanonical_form_preserved -> other_no_exact_surface_recovery": 1,
+      "exact_surface_correct_recovery -> exact_surface_correct_recovery": 2
+    }
+  },
+  "masked_case_id_overlap": {
+    "both": 30,
+    "mimo_only": 16,
+    "cosyvoice_only": 21
+  },
+  "qwen_paired_transitions": [
+    {
+      "full_outcome": "exact_surface_correct_recovery",
+      "clip_outcome": "exact_surface_correct_recovery",
+      "count": 7
+    },
+    {
+      "full_outcome": "exact_surface_correct_recovery",
+      "clip_outcome": "wrong_or_noncanonical_form_preserved",
+      "count": 12
+    },
+    {
+      "full_outcome": "exact_surface_correct_recovery",
+      "clip_outcome": "other_no_exact_surface_recovery",
+      "count": 0
+    },
+    {
+      "full_outcome": "wrong_or_noncanonical_form_preserved",
+      "clip_outcome": "exact_surface_correct_recovery",
+      "count": 0
+    },
+    {
+      "full_outcome": "wrong_or_noncanonical_form_preserved",
+      "clip_outcome": "wrong_or_noncanonical_form_preserved",
+      "count": 23
+    },
+    {
+      "full_outcome": "wrong_or_noncanonical_form_preserved",
+      "clip_outcome": "other_no_exact_surface_recovery",
+      "count": 3
+    },
+    {
+      "full_outcome": "other_no_exact_surface_recovery",
+      "clip_outcome": "exact_surface_correct_recovery",
+      "count": 0
+    },
+    {
+      "full_outcome": "other_no_exact_surface_recovery",
+      "clip_outcome": "wrong_or_noncanonical_form_preserved",
+      "count": 0
+    },
+    {
+      "full_outcome": "other_no_exact_surface_recovery",
+      "clip_outcome": "other_no_exact_surface_recovery",
+      "count": 1
+    }
+  ]
+}
