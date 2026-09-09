@@ -24,6 +24,16 @@ def rehash(root):
 
 
 class ClipRevisionTests(unittest.TestCase):
+    def test_public_label_terms_and_assessment_scope(self):
+        guide = (ROOT / "docs/clip_revision.md").read_text()
+        self.assertIn("W denotes wrong or noncanonical output", guide)
+        self.assertNotIn("W preserved wrong reading", guide)
+        self.assertNotIn("by Codex", guide)
+        assessment = json.loads((PACKAGE / "mimo/transcript_assessments.json").read_text())[0]
+        self.assertEqual(assessment["assessment_method"], "automated_transcript_review")
+        self.assertFalse(assessment["human_relabel"])
+        self.assertFalse(assessment["author_confirmation"])
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

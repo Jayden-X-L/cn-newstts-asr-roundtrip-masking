@@ -5,7 +5,7 @@
     "asr_text": "同比大增百分之五十六为",
     "selected_label": "other_transcript",
     "selected_exposure_strength": "",
-    "assessor": "Codex",
+    "assessment_method": "automated_transcript_review",
     "basis": "The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
     "human_relabel": false,
     "author_confirmation": false,

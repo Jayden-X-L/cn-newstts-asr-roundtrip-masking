@@ -60,6 +60,6 @@
     "42 historical clips and 2 newly transcribed effective clips; not a fresh run of 44 clips",
     "Full-sentence masking used case-specific ASR routes; clips use MiMo strict",
     "Hosted API backend revision is not pinned; no same-input controls in this run",
-    "New labels use original exact matching/no-output rules and recorded Codex transcript assessment; none is a new blind human label"
+    "New labels use original exact matching/no-output rules and recorded automated transcript assessment; none is a new human listening label"
   ]
 }

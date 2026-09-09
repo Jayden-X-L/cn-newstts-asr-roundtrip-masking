@@ -1,11 +1,11 @@
 {
   "date": "2026-09-09",
-  "status": "GitHub supporting-analysis release v1.0.4, exported from the local 2026-09-09 revision",
+  "status": "GitHub supporting-analysis release v1.0.5; terminology-only update to v1.0.4",
   "source_output_sha256": "91c6a77d0f43be13711ecc1b8970a32234a7d8bb2994971d7d6cac3fc34b1b7b",
   "source_46_records_sha256": "d125b932a2e2d908df0924f89ab615d9ea8dae86754c055f060f863ff99f2473",
   "source_protocol_sha256": "216958ef13e17e45e3a87ba425222f9fc5215ce73460c23cdcab49a186b0a4bd",
   "source_validation_sha256": "b043155e31ca93f3d8751e23fb1b852dd67cf4be2c018155c416cca672979c5f",
-  "transformations": "Whitelist exports omit workstation paths, provider request IDs, raw response reasoning fields and internal audit comments. Transcripts, labels, audio hashes and parameters are unchanged.",
+  "transformations": "Whitelist exports omit workstation paths, provider request IDs, raw response reasoning fields and internal audit comments. The v1.0.5 export uses a generic automated assessment method instead of a tool-specific assessor name. Transcripts, labels, audio hashes and parameters are unchanged; original private provenance is retained.",
   "historical_full_audio_evidence": "Case-specific route-union evidence remains in the original release; these clip records are not a matched full/clip MiMo experiment.",
-  "new_annotation_scope": "Original exact matches plus a Codex transcript-level target-omission assessment; no new blind human labels"
+  "new_annotation_scope": "Original exact matches plus an automated transcript-level target-omission assessment; no new human listening labels"
 }

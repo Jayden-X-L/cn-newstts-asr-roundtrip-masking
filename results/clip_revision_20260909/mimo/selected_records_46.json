@@ -335,7 +335,7 @@
     "selected_transcript": "同比大增百分之五十六为",
     "selected_label": "other_transcript",
     "selected_exposure_strength": "",
-    "label_basis": "Codex transcript assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
+    "label_basis": "Transcript-level assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
     "historical_clip_label": "other_transcript",
     "historical_clip_transcript": "同比大增百分之五十六 助力八十八分"
   },

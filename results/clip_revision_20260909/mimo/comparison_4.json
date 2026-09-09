@@ -149,7 +149,7 @@
     },
     "selected_label": "other_transcript",
     "selected_exposure_strength": "",
-    "label_basis": "Codex transcript assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
+    "label_basis": "Transcript-level assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
     "response_model": "mimo-v2.5",
     "completed_at_utc": "2026-09-09T03:37:54.417629+00:00"
   }

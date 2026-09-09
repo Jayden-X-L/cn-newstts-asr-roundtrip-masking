@@ -1,11 +1,15 @@
 # Boundary-corrected Qwen analysis and MiMo diagnostic
 
-GitHub supporting-analysis release v1.0.4, based on the 2026-09-09 local r2
-revision. Run `python3 -B -S verify.py` here or after extracting the release ZIP.
+GitHub supporting-analysis release v1.0.5 clarifies the terminology of v1.0.4;
+audio, transcripts, labels, protocols and statistics are unchanged.
+Run `python3 -B -S verify.py` here or after extracting the release ZIP.
 Verification uses only the Python standard library, without API calls.
 The arXiv PDF, Zenodo v1.0.0 and earlier GitHub releases remain unchanged.
 
 ## Qwen: Main Paired Experiment
+
+S denotes surface-correct recovery, W denotes wrong or noncanonical output,
+and O denotes other outcomes.
 
 The 44-pair S/W/O matrix is [[8,11,0],[0,22,2],[0,0,1]]. Surface recovery falls
 from 19 to 8, with 11 S-to-W and zero reverse transitions; exact two-sided
@@ -39,8 +43,9 @@ B001 and B014 are byte-identical to their full recordings, so they are excluded
 from both effective-crop analyses. Qwen returns W for these inputs; MiMo returns
 the expected unit reading. B013 returns F-15E with both recognizers. Qwen's
 B017 output is W following the author's transcript-specific decision, whereas
-MiMo omits the target. The latter is recorded as other_transcript by Codex under
-the original definition. That assessment is not a new blind listening label.
+MiMo omits the target and is classified as other_transcript under the original
+definition. This is a transcript-level target-omission assessment, not a new
+human listening label.
 
 Full-context masking was established across case-specific routes, whereas these
 clips use MiMo strict. This diagnostic is descriptive, not the protocol-matched

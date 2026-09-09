@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.4-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.4)
+[![Release](https://img.shields.io/badge/Release-v1.0.5-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.5)
 
-[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [修正后分析](docs/clip_revision.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.4)
+[English README](README.md) | [论文](https://arxiv.org/abs/2608.10606) | [数据归档](https://doi.org/10.5281/zenodo.21454402) | [修正后分析](docs/clip_revision.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.5)
 
 </div>
 
@@ -45,10 +45,10 @@ python3 -B -S scripts/verify_clip_revision.py
 
 当前入口核验 46 条目标完整性记录、4 条修正 WAV、Qwen 重跑及 8 条复现对照、配对统计和 MiMo 补充诊断。
 B001、B014 修正后与完整录音逐字节相同，因此从两套有效切片分析中排除，分母为 44。
-B013 从 S→W 改为 S→S，其余 11 条 S→W 保持。S 为表面正确转写，W 为保留错误读音，O 为其他结果。
+B013 从 S→W 改为 S→S，其余 11 条 S→W 保持。S 表示表面正确恢复，W 表示错误或非规范输出，O 表示其他结果。
 
 仅需 Python 3.10+，不依赖第三方包，也不会调用 ASR。
-8 条原音频复现对照仅属于 Qwen。B017 的 Qwen 标签由作者裁决为 W；MiMo 转写遗漏目标，由 Codex 按原定义判为 other_transcript。这些不是新增的盲听标签。
+8 条原音频复现对照仅属于 Qwen。B017 的 Qwen 标签由作者裁决为 W；MiMo 转写遗漏目标，按原定义归为 other_transcript。MiMo 的判定依据是转录文本遗漏目标，不是新增的人工听评标签；两项判定均不属于新增盲听标签。
 
 以下原入口继续复现样本流程、前作重合、盲标敏感性、严格比分子集，以及**修正前的历史 Qwen 配对结果**：
 
@@ -61,7 +61,7 @@ python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --
 默认核对公开音频清单，不读取 WAV；增加 `--zenodo-zip /path/to/archive.zip` 后，才会核验原始 Zenodo ZIP 和全部 200 个 Raw WAV 的哈希。
 实际核验模式写入 `audio_verification.json`。排除于严格子集之外的 56 条音频不会被重新标成正确。
 
-严格子集构成不变：MiMo 18 条「至」、CosyVoice 23 条「减」，共 41 条录音、24 个不同脚本。v1.0.3 的配对结果及原 MiMo 18/46 诊断保留供追溯，当前切片结果以 v1.0.4 为准。修正后的配对结果不单独定位 ASR 内部组件，也未排除一般短语音识别退化。
+严格子集构成不变：MiMo 18 条「至」、CosyVoice 23 条「减」，共 41 条录音、24 个不同脚本。v1.0.3 的配对结果及原 MiMo 18/46 诊断保留供追溯，当前切片结果以 v1.0.5 为准。修正后的配对结果不单独定位 ASR 内部组件，也未排除一般短语音识别退化。
 
 ## 发布内容
 
@@ -81,7 +81,7 @@ python3 scripts/derive_masking_analysis.py --output-dir /tmp/masking-analysis --
 | 完整音频归档 | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | 生成音频与完整归档包 |
 | 论文 | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | 方法、实验、结果与局限性 |
 
-GitHub `v1.0.4` 提供 2026-09-09 修订稿的边界修正分析。本次不修改 arXiv PDF、Zenodo `v1.0.0` 或旧 GitHub Release。新 ZIP 包含 4 条修正 WAV、分析记录和核验代码，不包含论文 PDF 或论文源文件。
+GitHub `v1.0.5` 提供 2026-09-09 修订稿的边界修正分析，仅修订说明，实验数值与 v1.0.4 相同。本次不修改 arXiv PDF、Zenodo `v1.0.0` 或旧 GitHub Release。新 ZIP 包含 4 条修正 WAV、分析记录和核验代码，不包含论文 PDF 或论文源文件。
 
 源数据池包含 108,124 条在生产 TTS 流程中使用的公司自产中文新闻文稿。完整源数据导出不对外发布；公开包包含进入真实新闻候选池的 500 条公司授权文稿和 5,000 条合成 hard cases。
 
@@ -127,7 +127,7 @@ cn-newstts-asr-roundtrip-masking/
   docs/                      # 标注规范和协议说明
 ```
 
-大体量生成音频通过 [Zenodo 归档](https://doi.org/10.5281/zenodo.21454402) 发布。4 条小体积修正 WAV 随 GitHub v1.0.4 切片包提供，原始归档不变。
+大体量生成音频通过 [Zenodo 归档](https://doi.org/10.5281/zenodo.21454402) 发布。4 条小体积修正 WAV 随 GitHub v1.0.5 切片包提供，原始归档不变。
 
 ## 引用
 

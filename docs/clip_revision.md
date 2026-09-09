@@ -1,6 +1,7 @@
 # Boundary-Corrected Clip Analysis
 
-GitHub v1.0.4 accompanies the 2026-09-09 manuscript revision. The arXiv PDF,
+GitHub v1.0.5 clarifies the terminology of the v1.0.4 analysis without changing
+audio, transcripts, labels, protocols or statistics. The arXiv PDF,
 Zenodo v1.0.0 archive and earlier GitHub releases are unchanged. Paper access
 remains through [arXiv:2608.10606](https://arxiv.org/abs/2608.10606).
 
@@ -13,7 +14,7 @@ python3 -B -S scripts/verify_clip_revision.py
 python3 -B -S scripts/test_clip_revision.py
 ```
 
-Or extract the v1.0.4 release asset and run `python3 -B -S verify.py` inside
+Or extract the v1.0.5 release asset and run `python3 -B -S verify.py` inside
 the extracted folder. Both paths verify the same records with the Python 3.10+
 standard library. No network, credentials, model weights or private files are
 required. Do not use Python's `-O` option, which disables assertions.
@@ -46,8 +47,9 @@ Zenodo archive, with per-recording hashes and intervals in the new records.
 
 ## Qwen: Main Paired Result
 
-S means surface-correct recovery, W preserved wrong reading, and O another
-outcome. Rows denote full recordings; columns denote selected clips.
+S denotes surface-correct recovery, W denotes wrong or noncanonical output,
+and O denotes other outcomes. Rows denote full recordings; columns denote
+selected clips.
 
 | Full / clip | S | W | O |
 |---|---:|---:|---:|
@@ -85,8 +87,9 @@ The effective set combines 42 retained historical outputs and two effective
 repaired-crop outputs. All 16 exposed outputs are from the integrity-accepted
 historical clips. This is not a fresh 44-input replication.
 
-The MiMo B017 transcript omits the target and is recorded as other_transcript
-by Codex under the original definition. It does not inherit the author's
+The MiMo B017 transcript omits the target and is classified as other_transcript
+under the original definition. This is a transcript-level target-omission
+assessment, not a new human listening label. It does not inherit the author's
 Qwen-specific W decision. Neither is an additional blind human label.
 The eight reproducibility controls belong only to Qwen; no corresponding
 MiMo controls were run. The hosted MiMo backend revision cannot be pinned.
@@ -117,7 +120,7 @@ short-utterance recognition degradation.
 ## Files and Releases
 
 See [the package README](../results/clip_revision_20260909/README.md) for the
-file inventory. The v1.0.4 asset contains this standalone package plus the
+file inventory. The v1.0.5 asset contains this standalone package plus the
 code/data licenses. For the unchanged pool and sensitivity analyses, use the
 [earlier reproduction guide](masking_analysis.md) or the v1.0.3 analysis asset.
 The dataset DOI in CITATION.cff continues to identify Zenodo v1.0.0, not this

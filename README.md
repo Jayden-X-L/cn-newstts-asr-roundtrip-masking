@@ -6,9 +6,9 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2608.10606-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2608.10606)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.21454402-1682D4?style=for-the-badge)](https://doi.org/10.5281/zenodo.21454402)
-[![Release](https://img.shields.io/badge/Release-v1.0.4-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.4)
+[![Release](https://img.shields.io/badge/Release-v1.0.5-16A34A?style=for-the-badge)](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.5)
 
-[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Corrected analysis](docs/clip_revision.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.4)
+[中文说明](README.zh-CN.md) | [Paper](https://arxiv.org/abs/2608.10606) | [Data archive](https://doi.org/10.5281/zenodo.21454402) | [Corrected analysis](docs/clip_revision.md) | [Release](https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking/releases/tag/v1.0.5)
 
 </div>
 
@@ -47,13 +47,16 @@ The current entrypoint checks all 46 accepted target-integrity records, the four
 repaired WAVs, Qwen reruns and eight reproducibility controls, paired statistics,
 and the MiMo diagnostic. B001 and B014 became full-recording byte identities after
 repair and are excluded from both effective-crop analyses. B013 changes from
-S-to-W to S-to-S; the other 11 S-to-W transitions remain. S denotes a
-surface-correct transcript, W a preserved wrong reading, and O another outcome.
+S-to-W to S-to-S; the other 11 S-to-W transitions remain. S denotes
+surface-correct recovery, W denotes wrong or noncanonical output, and O denotes
+other outcomes.
 
 Python 3.10+ is sufficient; no external packages or ASR calls are needed.
 The eight unchanged-input controls are Qwen-only. B017 is W for Qwen following
-author adjudication, but MiMo omits the target and is assessed as other_transcript
-by Codex. Neither decision is a new label-blind listening judgment.
+author adjudication, but MiMo omits the target and is classified as other_transcript
+under the original definition. The MiMo decision is a transcript-level
+target-omission assessment, not a new human listening label. Neither decision
+is a new label-blind listening judgment.
 
 The existing entrypoint remains available for sample selection, prior-work
 overlap, blind-label sensitivity, the restricted score check, and the
@@ -73,7 +76,7 @@ original Zenodo ZIP and all 200 Raw WAV hashes. This distinction is recorded in
 
 The score-marker counts remain 18 MiMo 至 and 23 CosyVoice 减, covering 24
 distinct scripts. The v1.0.3 paired result and original MiMo 18/46 diagnostic are
-retained as historical records, superseded for current clip analysis by v1.0.4.
+retained as historical records, superseded for current clip analysis by v1.0.5.
 The corrected pairing does not isolate an internal ASR component or rule out
 generic short-utterance recognition degradation.
 
@@ -95,8 +98,9 @@ generic short-utterance recognition degradation.
 | Full audio archive | [Zenodo](https://doi.org/10.5281/zenodo.21454402) | Generated audio and the complete archival package |
 | Paper | [arXiv:2608.10606](https://arxiv.org/abs/2608.10606) | Methods, experiments, results, and limitations |
 
-GitHub release `v1.0.4` supplies the boundary-corrected analyses for the
-2026-09-09 manuscript revision. The arXiv PDF, Zenodo `v1.0.0` archive and earlier
+GitHub release `v1.0.5` supplies the boundary-corrected analyses for the
+2026-09-09 manuscript revision. It updates terminology only; experimental
+values are identical to v1.0.4. The arXiv PDF, Zenodo `v1.0.0` archive and earlier
 GitHub releases are unchanged. The new release ZIP contains four repaired WAVs,
 analysis records and verification code, but no manuscript PDF or source.
 
@@ -146,7 +150,7 @@ cn-newstts-asr-roundtrip-masking/
   docs/                      # annotation guidelines and protocol notes
 ```
 
-Large generated-audio bundles are distributed through the [Zenodo archival release](https://doi.org/10.5281/zenodo.21454402). The four small corrected WAVs are included in the GitHub v1.0.4 clip package; the original archive is unchanged.
+Large generated-audio bundles are distributed through the [Zenodo archival release](https://doi.org/10.5281/zenodo.21454402). The four small corrected WAVs are included in the GitHub v1.0.5 clip package; the original archive is unchanged.
 
 ## Citation
 

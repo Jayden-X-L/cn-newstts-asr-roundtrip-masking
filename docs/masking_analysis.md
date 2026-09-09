@@ -1,6 +1,6 @@
 # Reproduce the Masking Analyses
 
-**Current clip results:** use the [boundary-corrected v1.0.4 analysis](clip_revision.md).
+**Current clip results:** use the [boundary-corrected v1.0.5 analysis](clip_revision.md).
 The 46-pair results below are the historical, pre-repair v1.0.3 results.
 Sample selection, overlap, blind sensitivity and score-subset analyses remain applicable.
 
