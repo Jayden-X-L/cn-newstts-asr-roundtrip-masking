@@ -1,0 +1,14 @@
+[
+  {
+    "review_id": "B017",
+    "audio_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+    "asr_text": "同比大增百分之五十六为",
+    "selected_label": "other_transcript",
+    "selected_exposure_strength": "",
+    "assessor": "Codex",
+    "basis": "The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
+    "human_relabel": false,
+    "author_confirmation": false,
+    "note": "Transcript-level assessment, not a new blind listening label. The author's W decision for the different Qwen transcript is not transferred to this MiMo output."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "recorded_date": "2026-09-09",
+  "source": "Explicit author reply in the current conversation",
+  "review_id": "B017",
+  "probe_candidate_id": "PCP2_0094",
+  "input_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+  "asr_text": "同比大增百分之五十六，助力八十八服复发一复会员数超五千。",
+  "author_reply_verbatim": "保留了实际错误读音（W）",
+  "label": "W",
+  "label_long": "wrong_or_noncanonical_form_preserved",
+  "scope": "Semantic adjudication of the new repaired-clip ASR transcript only",
+  "not_new_blind_listening_annotation": true,
+  "original_listening_labels_unchanged": true
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "case_id": "synthetic_004984",
+    "selected_clip_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "original_clip_sha256": "7fdaf43b04d49ef34172ab0d355a0b10c636c340fd3bbe34ec81b1c012b15626",
+    "raw_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "selected_interval_seconds": [
+      0.0,
+      3.52
+    ],
+    "selected_duration_seconds": 3.52,
+    "effective_context_reduction": false,
+    "is_identical_to_full_recording": true,
+    "audio_path": "audio/B001_repaired_r1.wav",
+    "target_span": "500kW",
+    "expected_reading": "五百千瓦",
+    "raw_tts_actual_reading": "五百kw",
+    "negative_readings": [
+      "五百kw"
+    ],
+    "old_transcript": "新车关键参数达到五百K D",
+    "old_reviewed_label": "exposed",
+    "old_exposure_strength": "partial",
+    "new_transcript": "新车关键参数达到五百千瓦",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": true,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "response_model": "mimo-v2.5",
+    "completed_at_utc": "2026-09-09T03:34:36.275542+00:00"
+  },
+  {
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "case_id": "real_news_000473",
+    "selected_clip_sha256": "5a504c6c9d4ca63fcbe7dedbc29bd02ced0ca3afd8ea5190834824fcbc1d63a9",
+    "original_clip_sha256": "f37942b6f719ab9aad04752cfd54d2b689f6a18a0900ebfaf89665b1e7502b13",
+    "raw_sha256": "08ae907b568a5d3ac2235c1c6cfd44dea074eb54a66a686de588ac1a43c07a99",
+    "selected_interval_seconds": [
+      4.78,
+      12.42
+    ],
+    "selected_duration_seconds": 7.64,
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "audio_path": "audio/B013_repaired_r1.wav",
+    "target_span": "F-15E",
+    "expected_reading": "F一五E",
+    "raw_tts_actual_reading": "F杠一五E",
+    "negative_readings": [
+      "F杠一五E",
+      "F负十五",
+      "F到十五",
+      "F至15E",
+      "F到15E",
+      "F负15E",
+      "F减15E"
+    ],
+    "old_transcript": "",
+    "old_reviewed_label": "no_output",
+    "old_exposure_strength": "",
+    "new_transcript": "美军营救被击落F-15E战斗机第二名飞行员的行动持续五十多小时，出动",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": false,
+      "matched_surface": true,
+      "matched_negative": []
+    },
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "response_model": "mimo-v2.5",
+    "completed_at_utc": "2026-09-09T03:35:40.741547+00:00"
+  },
+  {
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "case_id": "synthetic_004931",
+    "selected_clip_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "original_clip_sha256": "d7386cdbd29d8e94b535d969c8d2eed4e670852b03f51d69912b3ceb64263255",
+    "raw_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "selected_interval_seconds": [
+      0.0,
+      3.84
+    ],
+    "selected_duration_seconds": 3.84,
+    "effective_context_reduction": false,
+    "is_identical_to_full_recording": true,
+    "audio_path": "audio/B014_repaired_r1.wav",
+    "target_span": "500kW",
+    "expected_reading": "五百千瓦",
+    "raw_tts_actual_reading": "五百kw",
+    "negative_readings": [
+      "五百kw"
+    ],
+    "old_transcript": "新车关键参数达到五百K",
+    "old_reviewed_label": "exposed",
+    "old_exposure_strength": "partial",
+    "new_transcript": "新车关键参数达到五百千瓦",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": true,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "response_model": "mimo-v2.5",
+    "completed_at_utc": "2026-09-09T03:36:46.815590+00:00"
+  },
+  {
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "case_id": "real_news_000243",
+    "selected_clip_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+    "original_clip_sha256": "84414d023c2c4e0fe7cb986d279e2b967c9ecaf982a76eb5f04ff7db8ec670ac",
+    "raw_sha256": "6db4d7cef5203257b0c62f5e3f4afc89131dc21ff8418010cbbc9b00e220b9e8",
+    "selected_interval_seconds": [
+      24.88,
+      29.96
+    ],
+    "selected_duration_seconds": 5.08,
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "audio_path": "audio/B017_repaired_r1.wav",
+    "target_span": "88VIP",
+    "expected_reading": "八十八VIP",
+    "raw_tts_actual_reading": "八十八伏IP",
+    "negative_readings": [
+      "八十八伏IP"
+    ],
+    "old_transcript": "同比大增百分之五十六 助力八十八分",
+    "old_reviewed_label": "other_transcript",
+    "old_exposure_strength": "",
+    "new_transcript": "同比大增百分之五十六为",
+    "automatic_label": "other_transcript",
+    "automatic_match": {
+      "matched_expected": false,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "selected_label": "other_transcript",
+    "selected_exposure_strength": "",
+    "label_basis": "Codex transcript assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
+    "response_model": "mimo-v2.5",
+    "completed_at_utc": "2026-09-09T03:37:54.417629+00:00"
+  }
+]

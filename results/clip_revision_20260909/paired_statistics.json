@@ -1,0 +1,522 @@
+{
+  "analyzed_at_utc": "2026-09-09T00:19:01.768386+00:00",
+  "analysis_status": "Complete; B017 classified W following explicit author transcript adjudication",
+  "protocol_all_fields_match": true,
+  "repaired_ASR_runs": 4,
+  "reproducibility_control_runs": 8,
+  "reproducibility_exact_text_matches": 8,
+  "summaries": {
+    "historical_original_46": {
+      "n": 46,
+      "unique_scripts": 46,
+      "full_surface": 19,
+      "clip_surface": 7,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          7,
+          12
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          7,
+          12,
+          0
+        ],
+        [
+          0,
+          23,
+          3
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          7,
+          12,
+          0,
+          0
+        ],
+        [
+          0,
+          23,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 12,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 12,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.00048828125,
+      "surface_proportion_change_clip_minus_full": -0.2608695652173913,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "unchanged_integrity_passed_42_sensitivity": {
+      "n": 42,
+      "unique_scripts": 42,
+      "full_surface": 18,
+      "clip_surface": 7,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          7,
+          11
+        ],
+        [
+          0,
+          24
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          7,
+          11,
+          0
+        ],
+        [
+          0,
+          21,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          7,
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          21,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 11,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 11,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.0009765625,
+      "surface_proportion_change_clip_minus_full": -0.2619047619047619,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "repaired_selected_46_descriptive": {
+      "n": 46,
+      "unique_scripts": 46,
+      "full_surface": 19,
+      "clip_surface": 8,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          8,
+          11
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          8,
+          11,
+          0
+        ],
+        [
+          0,
+          24,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          8,
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          24,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 11,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 11,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.0009765625,
+      "surface_proportion_change_clip_minus_full": -0.2391304347826087,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "effective_context_reduction_44_primary": {
+      "n": 44,
+      "unique_scripts": 44,
+      "full_surface": 19,
+      "clip_surface": 8,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          8,
+          11
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          8,
+          11,
+          0
+        ],
+        [
+          0,
+          22,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          8,
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 11,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 11,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.0009765625,
+      "surface_proportion_change_clip_minus_full": -0.25,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "identity_2_descriptive": {
+      "n": 2,
+      "unique_scripts": 2,
+      "full_surface": 0,
+      "clip_surface": 0,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 0,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 0,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 1.0,
+      "surface_proportion_change_clip_minus_full": 0.0,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "strict_score_18_nested_sensitivity": {
+      "n": 18,
+      "unique_scripts": 18,
+      "full_surface": 8,
+      "clip_surface": 2,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 6,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 6,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.03125,
+      "surface_proportion_change_clip_minus_full": -0.3333333333333333,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    }
+  },
+  "B017_W_or_O_sensitivity_on_effective_44": {
+    "W": {
+      "n": 44,
+      "unique_scripts": 44,
+      "full_surface": 19,
+      "clip_surface": 8,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          8,
+          11
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          8,
+          11,
+          0
+        ],
+        [
+          0,
+          22,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          8,
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 11,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 11,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.0009765625,
+      "surface_proportion_change_clip_minus_full": -0.25,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    },
+    "O": {
+      "n": 44,
+      "unique_scripts": 44,
+      "full_surface": 19,
+      "clip_surface": 8,
+      "matrix_rows_full_columns_clip_S_nonS": [
+        [
+          8,
+          11
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "matrix_rows_full_columns_clip_S_W_O": [
+        [
+          8,
+          11,
+          0
+        ],
+        [
+          0,
+          21,
+          3
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+        [
+          8,
+          11,
+          0,
+          0
+        ],
+        [
+          0,
+          21,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "full_S_to_clip_W": 11,
+      "pending_W_or_O_review_ids": [],
+      "discordant_full_S_to_clip_nonS": 11,
+      "discordant_full_nonS_to_clip_S": 0,
+      "p_value": 0.0009765625,
+      "surface_proportion_change_clip_minus_full": -0.25,
+      "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+      "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+    }
+  },
+  "effective_clip_duration_range_seconds": [
+    3.0,
+    7.64
+  ],
+  "identity_review_ids": [
+    "B001",
+    "B014"
+  ],
+  "changed_S_transition": {
+    "review_id": "B013",
+    "original": "S -> W",
+    "repaired": "S -> S"
+  },
+  "historical_weights_hash_available": false,
+  "untouched": [
+    "Historical ASR outputs",
+    "Frozen listening labels and review exports",
+    "Paper and submission archives",
+    "GitHub, Zenodo, arXiv"
+  ],
+  "scope_note": "Qwen paired statistics only. See mimo/diagnostic_statistics.json for the separate boundary-corrected MiMo descriptive diagnostic; Paraformer was not rerun on the repaired inputs.",
+  "interpretation": "This accepted-boundary analysis retains a within-recording context-reduction association. It does not isolate a specific ASR component or rule out general short-utterance recognition degradation."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "audio_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "asr_text": "新车关键参数达到五百千瓦",
+    "requested_model": "mimo-v2.5",
+    "response_model": "mimo-v2.5",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": true,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "error": "",
+    "elapsed_seconds": 61.992,
+    "http_attempts": 1,
+    "completed_at_utc": "2026-09-09T03:34:36.275542+00:00"
+  },
+  {
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "audio_sha256": "5a504c6c9d4ca63fcbe7dedbc29bd02ced0ca3afd8ea5190834824fcbc1d63a9",
+    "asr_text": "美军营救被击落F-15E战斗机第二名飞行员的行动持续五十多小时，出动",
+    "requested_model": "mimo-v2.5",
+    "response_model": "mimo-v2.5",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": false,
+      "matched_surface": true,
+      "matched_negative": []
+    },
+    "error": "",
+    "elapsed_seconds": 64.065,
+    "http_attempts": 1,
+    "completed_at_utc": "2026-09-09T03:35:40.741547+00:00"
+  },
+  {
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "audio_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "asr_text": "新车关键参数达到五百千瓦",
+    "requested_model": "mimo-v2.5",
+    "response_model": "mimo-v2.5",
+    "automatic_label": "still_masked",
+    "automatic_match": {
+      "matched_expected": true,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "error": "",
+    "elapsed_seconds": 65.674,
+    "http_attempts": 1,
+    "completed_at_utc": "2026-09-09T03:36:46.815590+00:00"
+  },
+  {
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "audio_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+    "asr_text": "同比大增百分之五十六为",
+    "requested_model": "mimo-v2.5",
+    "response_model": "mimo-v2.5",
+    "automatic_label": "other_transcript",
+    "automatic_match": {
+      "matched_expected": false,
+      "matched_surface": false,
+      "matched_negative": []
+    },
+    "error": "",
+    "elapsed_seconds": 67.202,
+    "http_attempts": 1,
+    "completed_at_utc": "2026-09-09T03:37:54.417629+00:00"
+  }
+]

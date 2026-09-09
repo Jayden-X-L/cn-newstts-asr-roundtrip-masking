@@ -1,0 +1,61 @@
+{
+  "n": 44,
+  "unique_scripts": 44,
+  "full_surface": 19,
+  "clip_surface": 8,
+  "matrix_rows_full_columns_clip_S_nonS": [
+    [
+      8,
+      11
+    ],
+    [
+      0,
+      25
+    ]
+  ],
+  "matrix_rows_full_columns_clip_S_W_O": [
+    [
+      8,
+      11,
+      0
+    ],
+    [
+      0,
+      22,
+      2
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "detailed_matrix_rows_full_S_W_O_columns_clip_S_W_O_pending": [
+    [
+      8,
+      11,
+      0,
+      0
+    ],
+    [
+      0,
+      22,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "full_S_to_clip_W": 11,
+  "pending_W_or_O_review_ids": [],
+  "discordant_full_S_to_clip_nonS": 11,
+  "discordant_full_nonS_to_clip_S": 0,
+  "p_value": 0.0009765625,
+  "surface_proportion_change_clip_minus_full": -0.25,
+  "test": "exploratory two-sided exact McNemar, conditional binomial; S versus non-S",
+  "sampling_scope": "Selected primary route-union masked MiMo recordings; not a population estimate"
+}

@@ -1,0 +1,922 @@
+[
+  {
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "case_id": "synthetic_004984",
+    "target": "500kW",
+    "audio_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "interval_seconds": [
+      0.0,
+      3.52
+    ],
+    "effective_context_reduction": false,
+    "is_identical_to_full_recording": true,
+    "result_origin": "repaired_rerun_20260909",
+    "selected_transcript": "新车关键参数达到五百千瓦",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "新车关键参数达到五百K D"
+  },
+  {
+    "review_id": "B002",
+    "probe_candidate_id": "PCP2_0056",
+    "case_id": "real_news_000285",
+    "target": "190N·m",
+    "audio_sha256": "8e64985b84047546f7705ecc25a922089059706cd8138786daa069cdba1371dd",
+    "interval_seconds": [
+      38.92,
+      42.5
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "是KW，最大扭矩一百九十人弹万，驾驶体",
+    "selected_label": "other_transcript",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "other_transcript",
+    "historical_clip_transcript": "是KW，最大扭矩一百九十人弹万，驾驶体"
+  },
+  {
+    "review_id": "B003",
+    "probe_candidate_id": "PCP2_0004",
+    "case_id": "real_news_000320",
+    "target": "4-3-3",
+    "audio_sha256": "1996867285b2f5890358aca7988295dbfc44053d00b9938d6f29a8cef8a472f6",
+    "interval_seconds": [
+      18.31,
+      21.31
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B004",
+    "probe_candidate_id": "PCP2_0035",
+    "case_id": "real_news_000405",
+    "target": "F-18",
+    "audio_sha256": "6e5cdf7943330d97642952096cfe0f4c086217203d35a54c4824cce20b4cfbf9",
+    "interval_seconds": [
+      41.634,
+      44.634
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "声称击落美军F-18战机，美军",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "声称击落美军F-18战机，美军"
+  },
+  {
+    "review_id": "B005",
+    "probe_candidate_id": "PCP2_0018",
+    "case_id": "real_news_000026",
+    "target": "11-7",
+    "audio_sha256": "b84da7e46b60cdea0fd0afd1d98de450934862d823b4a44470b322b90a07e2b2",
+    "interval_seconds": [
+      13.67,
+      16.67
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "八至十一，十一至七，十三至十一",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "八至十一，十一至七，十三至十一"
+  },
+  {
+    "review_id": "B006",
+    "probe_candidate_id": "PCP2_0062",
+    "case_id": "real_news_000335",
+    "target": "750MW",
+    "audio_sha256": "fd9d7fe0986173bac5c5f75b5a44e3d1559821c13bd9c5278ff22693c45db94a",
+    "interval_seconds": [
+      12.0,
+      15.0
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "七百五十兆W规模的SIRIBUS芯片",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "七百五十兆W规模的SIRIBUS芯片"
+  },
+  {
+    "review_id": "B007",
+    "probe_candidate_id": "PCP2_0084",
+    "case_id": "real_news_000182",
+    "target": "150kW",
+    "audio_sha256": "7a0857b4195e49703850856424fe414487123675187d40d5558e293ee6bed101",
+    "interval_seconds": [
+      16.15,
+      19.15
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B008",
+    "probe_candidate_id": "PCP2_0014",
+    "case_id": "real_news_000012",
+    "target": "11-7",
+    "audio_sha256": "dd5c20812e2ad8806c8cef4f5cf083846f2099dfef228aae2a9de194d7941865",
+    "interval_seconds": [
+      10.942791666666666,
+      13.942791666666666
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "李迪前三局以十一比七，十一比五。",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "李迪前三局以十一比七，十一比五。"
+  },
+  {
+    "review_id": "B009",
+    "probe_candidate_id": "PCP2_0029",
+    "case_id": "real_news_000415",
+    "target": "F-35",
+    "audio_sha256": "dc29dd67ba3cbd44ca6169817865d726eb54e65f2a8609997b2668772d08ab10",
+    "interval_seconds": [
+      22.038333333333334,
+      25.038333333333334
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "包括F杠三五、F杠一五",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "包括F杠三五、F杠一五"
+  },
+  {
+    "review_id": "B010",
+    "probe_candidate_id": "PCP2_0036",
+    "case_id": "real_news_000009",
+    "target": "伊尔-76",
+    "audio_sha256": "15d58abbaa71cafd9561081f7b66d10fc224f550313ca43964e44b1b28582258",
+    "interval_seconds": [
+      23.44,
+      28.8
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "二零一五年起，空军伊尔负七十六运输机连续五年接运，再到",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "二零一五年起，空军伊尔负七十六运输机连续五年接运，再到"
+  },
+  {
+    "review_id": "B011",
+    "probe_candidate_id": "PCP2_0102",
+    "case_id": "real_news_000272",
+    "target": "350Wh/kg",
+    "audio_sha256": "702502c4929a84a98dad33366b3ef07a4a8fbac9b61f9038d8184042dd146d3b",
+    "interval_seconds": [
+      31.94,
+      37.56
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "其中，固态电池能量密度将达三百五十瓦时每公斤，续航超一千公里，充电十二分钟达百分之八十。在零下三十度环境下仍能正常工作，安全性、成本、性能实现平衡。",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "其中，固态电池能量密度将达三百五十瓦时每公斤，续航超一千公里，充电十二分钟达百分之八十。在零下三十度环境下仍能正常工作，安全性、成本、性能实现平衡。"
+  },
+  {
+    "review_id": "B012",
+    "probe_candidate_id": "PCP2_0003",
+    "case_id": "real_news_000355",
+    "target": "6-2",
+    "audio_sha256": "1ee02075627bcd072c2a2ae06b8948efcb3b260974352d55e5e14554133fb6c4",
+    "interval_seconds": [
+      6.7625,
+      9.7625
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "种子心纳已六之二六之二横三",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "种子心纳已六之二六之二横三"
+  },
+  {
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "case_id": "real_news_000473",
+    "target": "F-15E",
+    "audio_sha256": "5a504c6c9d4ca63fcbe7dedbc29bd02ced0ca3afd8ea5190834824fcbc1d63a9",
+    "interval_seconds": [
+      4.78,
+      12.42
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "repaired_rerun_20260909",
+    "selected_transcript": "美军营救被击落F-15E战斗机第二名飞行员的行动持续五十多小时，出动",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "case_id": "synthetic_004931",
+    "target": "500kW",
+    "audio_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "interval_seconds": [
+      0.0,
+      3.84
+    ],
+    "effective_context_reduction": false,
+    "is_identical_to_full_recording": true,
+    "result_origin": "repaired_rerun_20260909",
+    "selected_transcript": "新车关键参数达到五百千瓦",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Original exact matcher or no-output rule; not new blind human annotation",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "新车关键参数达到五百K"
+  },
+  {
+    "review_id": "B015",
+    "probe_candidate_id": "PCP2_0023",
+    "case_id": "real_news_000341",
+    "target": "6-2",
+    "audio_sha256": "2dadb31ceb03361124e644928c2103c119cb12b9122ede9baabbb1785fe9e0ca",
+    "interval_seconds": [
+      0.8639583333333334,
+      3.8639583333333336
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B016",
+    "probe_candidate_id": "PCP2_0033",
+    "case_id": "real_news_000166",
+    "target": "运-20B",
+    "audio_sha256": "8e25332c05b6758c3a2e684a0b0de6df80d659235609e814e7c05fb52c2e8127",
+    "interval_seconds": [
+      0.0,
+      3.3
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "歼二零运辅二十B空中对话护送廖",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "歼二零运辅二十B空中对话护送廖"
+  },
+  {
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "case_id": "real_news_000243",
+    "target": "88VIP",
+    "audio_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+    "interval_seconds": [
+      24.88,
+      29.96
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "repaired_rerun_20260909",
+    "selected_transcript": "同比大增百分之五十六为",
+    "selected_label": "other_transcript",
+    "selected_exposure_strength": "",
+    "label_basis": "Codex transcript assessment: The transcript contains only the preceding growth-rate phrase and omits the membership target entirely. It neither restores the target nor exposes its erroneous reading. This matches the original definition of other_transcript: usable text that does not judge the target reading.",
+    "historical_clip_label": "other_transcript",
+    "historical_clip_transcript": "同比大增百分之五十六 助力八十八分"
+  },
+  {
+    "review_id": "B018",
+    "probe_candidate_id": "PCP2_0021",
+    "case_id": "real_news_000279",
+    "target": "21-17",
+    "audio_sha256": "5f49738d44a4b06ec70ce556c910c38aa89b53ffd44937518cc10829aaab6b6d",
+    "interval_seconds": [
+      16.19333333333333,
+      19.19333333333333
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "比赛中，以二十一至十七、二十一至十",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "比赛中，以二十一至十七、二十一至十"
+  },
+  {
+    "review_id": "B019",
+    "probe_candidate_id": "PCP2_0085",
+    "case_id": "real_news_000255",
+    "target": "15kW",
+    "audio_sha256": "5a0c5245c206ca7314fb238be00d2e042dc82501ff8244d1d17b316c1f56c196",
+    "interval_seconds": [
+      6.1,
+      9.1
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "供电功率达十五KW。",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "供电功率达十五KW。"
+  },
+  {
+    "review_id": "B020",
+    "probe_candidate_id": "PCP2_0024",
+    "case_id": "real_news_000349",
+    "target": "4-2",
+    "audio_sha256": "18fb93261102f5c82ae12c86f2cac571c798ad669d000df1bc41966ea7c5c695",
+    "interval_seconds": [
+      0.0,
+      3.0
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B021",
+    "probe_candidate_id": "PCP2_0028",
+    "case_id": "real_news_000439",
+    "target": "3-0",
+    "audio_sha256": "5293801a2e19ece3a9c0d8f09a405ac586b362e880e117f7774b877940f1a942",
+    "interval_seconds": [
+      7.827333333333334,
+      10.827333333333334
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "中国女足三至零完胜乌兹别克",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "中国女足三至零完胜乌兹别克"
+  },
+  {
+    "review_id": "B022",
+    "probe_candidate_id": "PCP2_0083",
+    "case_id": "real_news_000096",
+    "target": "230kW",
+    "audio_sha256": "11a27ca1e5f90f768f63471bccbdc65801a2cfbaea14e42542a2639b04739083",
+    "interval_seconds": [
+      30.353,
+      33.353
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "发动机和二百三十千瓦电动机",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "发动机和二百三十千瓦电动机"
+  },
+  {
+    "review_id": "B023",
+    "probe_candidate_id": "PCP2_0017",
+    "case_id": "real_news_000011",
+    "target": "4-3",
+    "audio_sha256": "07ef8d349737ee7507177ff0b1953bb59d9b83cef844ded406147ee530049910",
+    "interval_seconds": [
+      0.0,
+      3.0
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "张本美和四比三逆转蒯曼夺冠",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "张本美和四比三逆转蒯曼夺冠"
+  },
+  {
+    "review_id": "B024",
+    "probe_candidate_id": "PCP2_0026",
+    "case_id": "real_news_000413",
+    "target": "0-3",
+    "audio_sha256": "2abdd8b537cf439809054f4cb6b0ebb0abd27e4b8d72ad8f173d0ee727dc3f77",
+    "interval_seconds": [
+      6.54,
+      9.54
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "决赛首回合零至三惨败水晶宫",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "决赛首回合零至三惨败水晶宫"
+  },
+  {
+    "review_id": "B025",
+    "probe_candidate_id": "PCP2_0027",
+    "case_id": "real_news_000430",
+    "target": "96-113",
+    "audio_sha256": "e45bf55938fd1869cb95adc47926cdf7ad25731036324b695166557641d7f85d",
+    "interval_seconds": [
+      22.67866666666667,
+      25.67866666666667
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B026",
+    "probe_candidate_id": "PCP2_0011",
+    "case_id": "real_news_000041",
+    "target": "3-6",
+    "audio_sha256": "c07f1f22040c9419338cbff2a9262a564d0ffbbc55cb71e92c30d7f19f5ce851",
+    "interval_seconds": [
+      13.039,
+      16.039
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "本轮首盘状态不佳，三至六告负，第二盘",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "本轮首盘状态不佳，三至六告负，第二盘"
+  },
+  {
+    "review_id": "B027",
+    "probe_candidate_id": "PCP2_0034",
+    "case_id": "real_news_000421",
+    "target": "B-2",
+    "audio_sha256": "a1fe292a3a36241f65e597b5cac5dac42007944f4af6f9b66cd68bff584da52e",
+    "interval_seconds": [
+      37.63333333333333,
+      40.63333333333333
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "用F杠三五B杠二轰炸机等打击",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "用F杠三五B杠二轰炸机等打击"
+  },
+  {
+    "review_id": "B028",
+    "probe_candidate_id": "PCP2_0015",
+    "case_id": "real_news_000314",
+    "target": "2-1",
+    "audio_sha256": "3ebef624859ef2441d3dc4a93de5ed32084e0da1f5f5a5b4a7fdae8963858ce3",
+    "interval_seconds": [
+      30.871916666666667,
+      33.871916666666664
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "此前中国女足二比一逆转朝鲜女足",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "此前中国女足二比一逆转朝鲜女足"
+  },
+  {
+    "review_id": "B029",
+    "probe_candidate_id": "PCP2_0008",
+    "case_id": "real_news_000350",
+    "target": "10-10",
+    "audio_sha256": "896d3ce0b675f7f26e273b12077e3e42e26bf4deab8e79bd706db41a26c86ce8",
+    "interval_seconds": [
+      18.0875,
+      21.0875
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "两次关键分实至时候拿下比赛",
+    "selected_label": "other_transcript",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "other_transcript",
+    "historical_clip_transcript": "两次关键分实至时候拿下比赛"
+  },
+  {
+    "review_id": "B030",
+    "probe_candidate_id": "PCP2_0020",
+    "case_id": "real_news_000042",
+    "target": "4-3",
+    "audio_sha256": "c3b21896338cda322758f91f79e22c0c772ce9b5dd80bd6da2603f0130638d30",
+    "interval_seconds": [
+      14.015,
+      17.015
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "魔术大比分四至三晋级次轮成为",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "魔术大比分四至三晋级次轮成为"
+  },
+  {
+    "review_id": "B031",
+    "probe_candidate_id": "PCP2_0081",
+    "case_id": "real_news_000027",
+    "target": "105kW",
+    "audio_sha256": "7d7762afab7a506c6b768489255659360a5f614ebdd50bab525c56d33fcb364f",
+    "interval_seconds": [
+      29.88,
+      32.879999999999995
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "最大功率一百零五千瓦 最大扭",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "最大功率一百零五千瓦 最大扭"
+  },
+  {
+    "review_id": "B032",
+    "probe_candidate_id": "PCP2_0001",
+    "case_id": "real_news_000281",
+    "target": "13-11",
+    "audio_sha256": "43b9e4513331c7f4ec326ceba3e67ffc2d27b3370e128e62d5949756dbb0231e",
+    "interval_seconds": [
+      0.0,
+      3.0
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B033",
+    "probe_candidate_id": "PCP2_0009",
+    "case_id": "real_news_000236",
+    "target": "6-3",
+    "audio_sha256": "97d937de30777ba19acc92fc5b75d338bd93abb900431d674a049d6aca349f97",
+    "interval_seconds": [
+      20.637541666666667,
+      23.637541666666667
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "在第二阶段打出六比三的强势表现。",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "在第二阶段打出六比三的强势表现。"
+  },
+  {
+    "review_id": "B034",
+    "probe_candidate_id": "PCP2_0043",
+    "case_id": "real_news_000376",
+    "target": "58kW",
+    "audio_sha256": "7f71942f437c2f4cc0a54236ba180afec89354a70ba2cfd7f263ce0173314679",
+    "interval_seconds": [
+      24.44333333333333,
+      27.44333333333333
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B035",
+    "probe_candidate_id": "PCP2_0079",
+    "case_id": "real_news_000261",
+    "target": "640kW",
+    "audio_sha256": "2f9e6a57cd4ec2781e7f672537642497bd8cb8e64b047bf8b0327fafbfab3528",
+    "interval_seconds": [
+      19.226375,
+      22.226375
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B036",
+    "probe_candidate_id": "PCP2_0064",
+    "case_id": "real_news_000140",
+    "target": "737-8",
+    "audio_sha256": "8200fc5bb747cc3add17a60f03a15f78da0c5da94f738a3cbb043f6e55299ab4",
+    "interval_seconds": [
+      1.021375,
+      4.021375
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "五十架波音七三七杠八机队规模",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "五十架波音七三七杠八机队规模"
+  },
+  {
+    "review_id": "B037",
+    "probe_candidate_id": "PCP2_0037",
+    "case_id": "real_news_000322",
+    "target": "F-16",
+    "audio_sha256": "d23c4fd05242b40520f8a1fe9c92f748039bcf7b59310980ee5ae624da9b71bc",
+    "interval_seconds": [
+      19.756,
+      22.756
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "在中东F杠十六和A杠十",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "在中东F杠十六和A杠十"
+  },
+  {
+    "review_id": "B038",
+    "probe_candidate_id": "PCP2_0110",
+    "case_id": "real_news_000193",
+    "target": "6GW",
+    "audio_sha256": "34f6a175b3febf06b7bd432b420194137ee05f7ff298d1158dc96bfdbce6694e",
+    "interval_seconds": [
+      43.0525,
+      46.0525
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "算力规模约六G W已累计交付",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "算力规模约六G W已累计交付"
+  },
+  {
+    "review_id": "B039",
+    "probe_candidate_id": "PCP2_0082",
+    "case_id": "real_news_000299",
+    "target": "200kW",
+    "audio_sha256": "c9d13cc9046f100bd1795ffa3566d4be8d7dcb77331af5b6846f6c8a8a2a519f",
+    "interval_seconds": [
+      37.50825,
+      40.50825
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "系统提供二百千瓦和二百四十千瓦",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "系统提供二百千瓦和二百四十千瓦"
+  },
+  {
+    "review_id": "B040",
+    "probe_candidate_id": "PCP2_0090",
+    "case_id": "real_news_000289",
+    "target": "180kW",
+    "audio_sha256": "d5a85d7c0982f56b1470b34af12786ad6205273fccabc290bf05169cdb23284c",
+    "interval_seconds": [
+      20.4075,
+      23.4075
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B041",
+    "probe_candidate_id": "PCP2_0005",
+    "case_id": "real_news_000429",
+    "target": "13-9",
+    "audio_sha256": "b6ce3f7e213f82c4b1d5389c002316752903d5c3cd6f0887c03e523ce0a27d4c",
+    "interval_seconds": [
+      0.0,
+      3.0
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "赵心童十三比九淘汰丁俊晖VS",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "赵心童十三比九淘汰丁俊晖VS"
+  },
+  {
+    "review_id": "B042",
+    "probe_candidate_id": "PCP2_0007",
+    "case_id": "real_news_000447",
+    "target": "31-29",
+    "audio_sha256": "170964616f11811b861b86531143c99c034f177b2f294b082331ee3394dcfb9d",
+    "interval_seconds": [
+      12.606375,
+      15.606375
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B043",
+    "probe_candidate_id": "PCP2_0030",
+    "case_id": "real_news_000472",
+    "target": "F-15E",
+    "audio_sha256": "e8ad51609ff39178dfac5373cedd4a4b3c1353e175b66e9422fa6621efc268a6",
+    "interval_seconds": [
+      4.198,
+      7.198
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  },
+  {
+    "review_id": "B044",
+    "probe_candidate_id": "PCP2_0019",
+    "case_id": "real_news_000370",
+    "target": "2-1",
+    "audio_sha256": "daa441b0145fa543a1e6c5b9ad83c5350ac5f45e0378eb0bbc8eb1e2cccbe651",
+    "interval_seconds": [
+      18.115,
+      21.115
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "阿奎罗头球破门 帕雷霍和卡利亚里二之一取胜",
+    "selected_label": "exposed",
+    "selected_exposure_strength": "strong",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "exposed",
+    "historical_clip_transcript": "阿奎罗头球破门 帕雷霍和卡利亚里二之一取胜"
+  },
+  {
+    "review_id": "B045",
+    "probe_candidate_id": "PCP2_0032",
+    "case_id": "real_news_000435",
+    "target": "F-35",
+    "audio_sha256": "b35e170630a4a79da549f9f5759cb1fc4703ff7f7e5a79068f36f01a59861e4f",
+    "interval_seconds": [
+      37.78670833333333,
+      40.78670833333333
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "击落美军F-35战机及多架。",
+    "selected_label": "still_masked",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "still_masked",
+    "historical_clip_transcript": "击落美军F-35战机及多架。"
+  },
+  {
+    "review_id": "B046",
+    "probe_candidate_id": "PCP2_0087",
+    "case_id": "real_news_000368",
+    "target": "430kW",
+    "audio_sha256": "36fbebe69473238eebc07a077865c9984ee3f9569509a0b91b8e4db637a22eee",
+    "interval_seconds": [
+      25.764458333333334,
+      28.764458333333334
+    ],
+    "effective_context_reduction": true,
+    "is_identical_to_full_recording": false,
+    "result_origin": "historical_aligned_20260612",
+    "selected_transcript": "",
+    "selected_label": "no_output",
+    "selected_exposure_strength": "",
+    "label_basis": "Retained original reviewed label",
+    "historical_clip_label": "no_output",
+    "historical_clip_transcript": ""
+  }
+]

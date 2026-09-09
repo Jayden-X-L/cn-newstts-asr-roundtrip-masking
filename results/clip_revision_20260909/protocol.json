@@ -1,0 +1,20 @@
+{
+  "asr_model": "Qwen/Qwen3-ASR-1.7B",
+  "asr_model_source": "Qwen/Qwen3-ASR-1.7B",
+  "loaded_from_local_cache": true,
+  "backend": "qwen-asr-transformers",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "attention_implementation": "sdpa",
+  "context": "",
+  "language_constraint": null,
+  "return_time_stamps": false,
+  "decoding": "deterministic_package_default",
+  "input_batch_size": 4,
+  "inference_batch_size": 4,
+  "max_new_tokens": 1024,
+  "qwen_asr_version": "0.0.6",
+  "transformers_version": "4.57.6",
+  "torch_version": "2.13.0+cu130",
+  "python_version": "3.12.13"
+}

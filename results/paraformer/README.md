@@ -1,5 +1,9 @@
 # Paraformer-zh Targeted ASR Control
 
+Aligned-clip results here use the original boundaries. Paraformer has not been
+rerun on the four repaired inputs in [the v1.0.4 clip package](../clip_revision_20260909/).
+The full-recording 2/97 result is unchanged.
+
 This bundle contains the independent Paraformer ASR control reported in the
 paper. It uses FunASR `paraformer-zh` v2.0.4, which resolved to
 `iic/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch`,

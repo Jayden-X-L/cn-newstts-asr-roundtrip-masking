@@ -1,5 +1,10 @@
 # Masking Revision Analyses
 
+The clip-pair results in this directory are the **historical pre-repair** analysis.
+For the current 44 effective pairs and MiMo diagnostic, see
+[the corrected package](../clip_revision_20260909/) and
+[its reproduction guide](../../docs/clip_revision.md).
+
 See the [reproduction guide](../../docs/masking_analysis.md) for the public-only
 entrypoint, input provenance, and optional Zenodo audio verification.
 

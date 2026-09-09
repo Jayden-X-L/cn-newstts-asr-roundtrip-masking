@@ -1,0 +1,42 @@
+[
+  {
+    "review_id": "B001",
+    "attempt": 1,
+    "started_at_utc": "2026-09-09T03:33:34.421468+00:00",
+    "timeout_seconds": 180,
+    "request_body_sha256": "9ef4fa8076620be8f869030d7bbc398eb923dc119874cd964e26a743a37be5a6",
+    "status_code": 200,
+    "response_sha256": "d483997e3974932e0a8c2b46f42d412e724fd2859380d034cc6679ff16de12ad",
+    "elapsed_seconds": 61.851
+  },
+  {
+    "review_id": "B013",
+    "attempt": 1,
+    "started_at_utc": "2026-09-09T03:34:36.678179+00:00",
+    "timeout_seconds": 180,
+    "request_body_sha256": "292aade38b0af6f042e0bb1ea69f217398838ac4d3da8ceac4a6b024a37b7d13",
+    "status_code": 200,
+    "response_sha256": "0f5471ee23fdf15be40544c120a34ab6211113dc2e823fcc4d0c9a70da09d7ac",
+    "elapsed_seconds": 64.058
+  },
+  {
+    "review_id": "B014",
+    "attempt": 1,
+    "started_at_utc": "2026-09-09T03:35:41.142839+00:00",
+    "timeout_seconds": 180,
+    "request_body_sha256": "23cb48d4e10f5e2dc314e3a37e71f53f0590d358078740838595b2ffbdc60e72",
+    "status_code": 200,
+    "response_sha256": "b34fa4f6611f0cc1e801f62a6d71944b9edb43080a7b02cfdde4f7db8e569656",
+    "elapsed_seconds": 65.669
+  },
+  {
+    "review_id": "B017",
+    "attempt": 1,
+    "started_at_utc": "2026-09-09T03:36:47.217020+00:00",
+    "timeout_seconds": 180,
+    "request_body_sha256": "153d79edd06a95d7253c77f5509870906c48138600fd9d7afc71d41dbef2b62e",
+    "status_code": 200,
+    "response_sha256": "67e49a326744bb9b7163a5d1d2b0e569e4b75541ba10c397b493411226402f86",
+    "elapsed_seconds": 67.196
+  }
+]

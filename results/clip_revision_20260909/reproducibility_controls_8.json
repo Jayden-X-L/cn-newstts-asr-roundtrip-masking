@@ -1,0 +1,90 @@
+[
+  {
+    "item_id": "B013_original_clip_control",
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "condition": "original_clip_control",
+    "input_sha256": "f37942b6f719ab9aad04752cfd54d2b689f6a18a0900ebfaf89665b1e7502b13",
+    "baseline_item_id": "mimo_aligned_PCP2_0031",
+    "baseline_transcript": "美军营救被击落F杠幺五一。",
+    "rerun_transcript": "美军营救被击落F杠幺五一。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B014_original_clip_control",
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "condition": "original_clip_control",
+    "input_sha256": "d7386cdbd29d8e94b535d969c8d2eed4e670852b03f51d69912b3ceb64263255",
+    "baseline_item_id": "mimo_aligned_PCP2_0092",
+    "baseline_transcript": "新车关键参数达到五百k。",
+    "rerun_transcript": "新车关键参数达到五百k。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B001_original_clip_control",
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "condition": "original_clip_control",
+    "input_sha256": "7fdaf43b04d49ef34172ab0d355a0b10c636c340fd3bbe34ec81b1c012b15626",
+    "baseline_item_id": "mimo_aligned_PCP2_0093",
+    "baseline_transcript": "新车关键参数达到五百k。",
+    "rerun_transcript": "新车关键参数达到五百k。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B017_original_clip_control",
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "condition": "original_clip_control",
+    "input_sha256": "84414d023c2c4e0fe7cb986d279e2b967c9ecaf982a76eb5f04ff7db8ec670ac",
+    "baseline_item_id": "mimo_aligned_PCP2_0094",
+    "baseline_transcript": "同比大增百分之五十六，助力八十八。",
+    "rerun_transcript": "同比大增百分之五十六，助力八十八。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B013_full_control",
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "condition": "full_control",
+    "input_sha256": "08ae907b568a5d3ac2235c1c6cfd44dea074eb54a66a686de588ac1a43c07a99",
+    "baseline_item_id": "mimo_full_PCP2_0031",
+    "baseline_transcript": "美军营救飞行员，出动一百五十五架飞机，炸毁两架运输机。美军营救被击落 F-15E 战斗机第二名飞行员的行动持续五十多小时，出动一百五十五架各类飞机和数百名人员。特朗普透露，两架陷入沙地的运输机被迫炸毁，以防先进装备落入伊朗手中。此次行动中，美军一架 A-10 攻击机被击落，多架直升机受损。伊朗搜捕人员一度距飞行员藏身地不到三公里。保守估计，美军在此次行动中的飞机损失超过四亿美元，堪称美国历史上最大胆的搜救行动之一。",
+    "rerun_transcript": "美军营救飞行员，出动一百五十五架飞机，炸毁两架运输机。美军营救被击落 F-15E 战斗机第二名飞行员的行动持续五十多小时，出动一百五十五架各类飞机和数百名人员。特朗普透露，两架陷入沙地的运输机被迫炸毁，以防先进装备落入伊朗手中。此次行动中，美军一架 A-10 攻击机被击落，多架直升机受损。伊朗搜捕人员一度距飞行员藏身地不到三公里。保守估计，美军在此次行动中的飞机损失超过四亿美元，堪称美国历史上最大胆的搜救行动之一。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B014_full_control",
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "condition": "full_control",
+    "input_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "baseline_item_id": "mimo_full_PCP2_0092",
+    "baseline_transcript": "新车关键参数达到五百kW。",
+    "rerun_transcript": "新车关键参数达到五百kW。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B001_full_control",
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "condition": "full_control",
+    "input_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "baseline_item_id": "mimo_full_PCP2_0093",
+    "baseline_transcript": "新车关键参数达到五百kW。",
+    "rerun_transcript": "新车关键参数达到五百kW。",
+    "exact_text_match": true
+  },
+  {
+    "item_id": "B017_full_control",
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "condition": "full_control",
+    "input_sha256": "6db4d7cef5203257b0c62f5e3f4afc89131dc21ff8418010cbbc9b00e220b9e8",
+    "baseline_item_id": "mimo_full_PCP2_0094",
+    "baseline_transcript": "阿里外卖即时零售盈利目标锁定两年后，阿里巴巴发布二零二五年第四季度财报显示，收入两千八百四十八亿元，同比增长百分之二，该季度净利润一百五十六点三一亿元，同比下降百分之六十六，主要因即时零售投入增加。外卖即时零售业务收入二百零八点四二亿元，同比大增百分之五十六，助力八十八福发一福会员数超五千九百万，实现双位数增长。电商事业群CEO蒋凡表示，预计二零二九财年即时零售业务将实现整体盈利，这意味着阿里还将继续投入两年。阿里云和AI业务也是重点发展方向。集团CEO吴永明提出，未来五年年收入要突破一千亿美元的目标。",
+    "rerun_transcript": "阿里外卖即时零售盈利目标锁定两年后，阿里巴巴发布二零二五年第四季度财报显示，收入两千八百四十八亿元，同比增长百分之二，该季度净利润一百五十六点三一亿元，同比下降百分之六十六，主要因即时零售投入增加。外卖即时零售业务收入二百零八点四二亿元，同比大增百分之五十六，助力八十八福发一福会员数超五千九百万，实现双位数增长。电商事业群CEO蒋凡表示，预计二零二九财年即时零售业务将实现整体盈利，这意味着阿里还将继续投入两年。阿里云和AI业务也是重点发展方向。集团CEO吴永明提出，未来五年年收入要突破一千亿美元的目标。",
+    "exact_text_match": true
+  }
+]

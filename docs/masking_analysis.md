@@ -1,5 +1,9 @@
 # Reproduce the Masking Analyses
 
+**Current clip results:** use the [boundary-corrected v1.0.4 analysis](clip_revision.md).
+The 46-pair results below are the historical, pre-repair v1.0.3 results.
+Sample selection, overlap, blind sensitivity and score-subset analyses remain applicable.
+
 This entrypoint reproduces the 2026-09-06 conference-manuscript revision analyses
 from public records. It does not rerun TTS/ASR or generate new listening labels.
 The arXiv paper and Zenodo v1.0.0 archive are separate, unchanged releases.

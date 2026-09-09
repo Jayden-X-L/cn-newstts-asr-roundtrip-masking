@@ -1,0 +1,65 @@
+{
+  "original_46_historical": {
+    "n": 46,
+    "labels": {
+      "exposed": 18,
+      "still_masked": 12,
+      "no_output": 13,
+      "other_transcript": 3,
+      "pending_semantic_review": 0
+    },
+    "exposed_percent": 39.130434782608695
+  },
+  "unchanged_42_historical": {
+    "n": 42,
+    "labels": {
+      "exposed": 16,
+      "still_masked": 12,
+      "no_output": 12,
+      "other_transcript": 2,
+      "pending_semantic_review": 0
+    },
+    "exposed_percent": 38.095238095238095
+  },
+  "effective_44_mixed_date_descriptive": {
+    "n": 44,
+    "labels": {
+      "exposed": 16,
+      "still_masked": 13,
+      "no_output": 12,
+      "other_transcript": 3,
+      "pending_semantic_review": 0
+    },
+    "exposed_percent": 36.36363636363637
+  },
+  "all_46_mixed_date_descriptive": {
+    "n": 46,
+    "labels": {
+      "exposed": 16,
+      "still_masked": 15,
+      "no_output": 12,
+      "other_transcript": 3,
+      "pending_semantic_review": 0
+    },
+    "exposed_percent": 34.78260869565217
+  },
+  "identity_2_descriptive": {
+    "n": 2,
+    "labels": {
+      "exposed": 0,
+      "still_masked": 2,
+      "no_output": 0,
+      "other_transcript": 0,
+      "pending_semantic_review": 0
+    },
+    "exposed_percent": 0.0
+  },
+  "pending_semantic_review_ids": [],
+  "not_a_protocol_matched_paired_test": true,
+  "limitations": [
+    "42 historical clips and 2 newly transcribed effective clips; not a fresh run of 44 clips",
+    "Full-sentence masking used case-specific ASR routes; clips use MiMo strict",
+    "Hosted API backend revision is not pinned; no same-input controls in this run",
+    "New labels use original exact matching/no-output rules and recorded Codex transcript assessment; none is a new blind human label"
+  ]
+}

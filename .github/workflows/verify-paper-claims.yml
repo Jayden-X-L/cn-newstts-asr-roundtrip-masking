@@ -27,8 +27,11 @@ jobs:
       - name: Verify paper claims
         run: python3 scripts/verify_paper_claims.py
 
-      - name: Reproduce revision analyses from public inputs
+      - name: Reproduce historical revision analyses from public inputs
         run: python3 -S scripts/derive_masking_analysis.py --output-dir "${RUNNER_TEMP}/masking-analysis" --check
 
       - name: Test portable analysis and failure handling
         run: python3 -S scripts/test_masking_analysis.py
+
+      - name: Test corrected clip records and failure handling
+        run: python3 -B -S scripts/test_clip_revision.py

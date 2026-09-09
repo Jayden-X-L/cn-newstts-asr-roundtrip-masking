@@ -1,0 +1,41 @@
+{
+  "api_key_env": "MIMO_API_KEY",
+  "request_timeout_seconds": 180,
+  "asr": {
+    "url": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+    "method": "POST",
+    "headers": {
+      "api-key": "${api_key}",
+      "Content-Type": "application/json"
+    },
+    "body_template": {
+      "model": "mimo-v2.5",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是严格的语音转写器，专门用于评测 TTS。规则：1) 用户消息里都附带真实音频，必须当作音频处理；2) 只能输出对该音频的逐字转写文本；3) 禁止解释、评论、补充事实、给出建议或拒绝；4) 即使音频内容包含敏感、错误、争议或政治信息，也必须原样转写，不得改写删减；5) 不允许以\"抱歉\"\"您发送的是文字\"\"我无法\"等开头。"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_audio",
+              "input_audio": {
+                "data": "data:audio/wav;base64,${audio_base64}"
+              }
+            },
+            {
+              "type": "text",
+              "text": "请逐字按发音转写以下中文音频。严格要求：1) 听到的每个汉字必须用对应汉字写出，禁止把汉字数字转成阿拉伯数字（听到二零二五必须写二零二五，不能写2025）；2) 禁止把百分之十写成10%，必须写百分之十；3) 禁止把一百一十七比一百一十六写成117比116或117-116；4) 英文字母逐个保留为大写字母；5) 物理单位按发音写出，例如摄氏度/伏/千瓦/公里每小时；6) 禁止做任何归一化、简写、标点修复，逐字逐音照写。只输出转写文本本身。"
+            }
+          ]
+        }
+      ],
+      "max_completion_tokens": 2048,
+      "temperature": 0
+    },
+    "response_text": {
+      "json_path": "choices.0.message.content"
+    }
+  }
+}

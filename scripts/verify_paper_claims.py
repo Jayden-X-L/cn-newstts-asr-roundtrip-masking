@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Verify headline paper claims from the released supporting files."""
+"""Verify original audit records and current boundary-corrected clip claims."""
 
 from __future__ import annotations
 
 import csv
 import json
+import runpy
 import sys
 from collections import Counter
 from pathlib import Path
@@ -103,7 +104,7 @@ def main() -> int:
         row["reviewed_isolated_asr_label"].strip() for row in isolation_rows
     )
     require_equal(
-        "aligned span-isolation audit",
+        "historical pre-repair aligned span-isolation audit (superseded by v1.0.4)",
         {
             "exposed": isolation_counts["exposed"],
             "still_masked": isolation_counts["still_masked"],
@@ -187,7 +188,8 @@ def main() -> int:
         {"raw": 0.8889, "structured": 0.9503, "delta": 0.0614},
     )
 
-    print("All released headline claims verified.")
+    runpy.run_path(str(ROOT / "scripts/verify_clip_revision.py"), run_name="__main__")
+    print("Original audit records and current corrected clip claims verified.")
     return 0
 
 

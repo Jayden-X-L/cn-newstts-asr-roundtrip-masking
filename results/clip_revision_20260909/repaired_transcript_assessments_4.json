@@ -1,0 +1,102 @@
+[
+  {
+    "review_id": "B001",
+    "probe_candidate_id": "PCP2_0093",
+    "target": "500kW",
+    "input_sha256": "19a99b28b7ca4759c1aeb5e6a8f17dbd8327af3189146fd432832a545815fca7",
+    "transcript": "新车关键参数达到五百kW。",
+    "surface_forms": [
+      "500kW",
+      "五百千瓦"
+    ],
+    "negative_forms": [
+      "五百kw"
+    ],
+    "surface_hits": [],
+    "negative_hits": [
+      "五百kw"
+    ],
+    "automatic_asr_relation": "negative_only",
+    "selected_label": "W",
+    "binary_endpoint": "non-S",
+    "label_basis": "Original scoring rule: predefined negative-only match (no new human label)",
+    "author_transcript_adjudication": false,
+    "new_blind_listening_annotation": false
+  },
+  {
+    "review_id": "B013",
+    "probe_candidate_id": "PCP2_0031",
+    "target": "F-15E",
+    "input_sha256": "5a504c6c9d4ca63fcbe7dedbc29bd02ced0ca3afd8ea5190834824fcbc1d63a9",
+    "transcript": "美军营救被击落F-15E战斗机第二名飞行员的行动持续五十多小时，出。",
+    "surface_forms": [
+      "F-15E",
+      "F一五E"
+    ],
+    "negative_forms": [
+      "F杠一五E",
+      "F负十五",
+      "F到十五",
+      "F至15E",
+      "F到15E",
+      "F负15E",
+      "F减15E"
+    ],
+    "surface_hits": [
+      "F-15E"
+    ],
+    "negative_hits": [],
+    "automatic_asr_relation": "surface_correct_only",
+    "selected_label": "S",
+    "binary_endpoint": "S",
+    "label_basis": "Exact F-15E at the single target occurrence; assistant transcript check, not a new human listening label",
+    "author_transcript_adjudication": false,
+    "new_blind_listening_annotation": false
+  },
+  {
+    "review_id": "B014",
+    "probe_candidate_id": "PCP2_0092",
+    "target": "500kW",
+    "input_sha256": "a7c847201e964f496b9fc558b6f68f0489d76d752e67981e1c609c41f8b67a36",
+    "transcript": "新车关键参数达到五百kW。",
+    "surface_forms": [
+      "500kW",
+      "五百千瓦"
+    ],
+    "negative_forms": [
+      "五百kw"
+    ],
+    "surface_hits": [],
+    "negative_hits": [
+      "五百kw"
+    ],
+    "automatic_asr_relation": "negative_only",
+    "selected_label": "W",
+    "binary_endpoint": "non-S",
+    "label_basis": "Original scoring rule: predefined negative-only match (no new human label)",
+    "author_transcript_adjudication": false,
+    "new_blind_listening_annotation": false
+  },
+  {
+    "review_id": "B017",
+    "probe_candidate_id": "PCP2_0094",
+    "target": "88VIP",
+    "input_sha256": "fee0060f9c765e52ef65b8cbfc356ec8bbb16d4149e9274ba97a202b91400721",
+    "transcript": "同比大增百分之五十六，助力八十八服复发一复会员数超五千。",
+    "surface_forms": [
+      "88VIP",
+      "八十八VIP"
+    ],
+    "negative_forms": [
+      "八十八伏IP"
+    ],
+    "surface_hits": [],
+    "negative_hits": [],
+    "automatic_asr_relation": "no_predefined_form",
+    "selected_label": "W",
+    "binary_endpoint": "non-S",
+    "label_basis": "Author explicitly confirms preserved wrong reading (W) for this new transcript; not a new blind listening annotation",
+    "author_transcript_adjudication": true,
+    "new_blind_listening_annotation": false
+  }
+]

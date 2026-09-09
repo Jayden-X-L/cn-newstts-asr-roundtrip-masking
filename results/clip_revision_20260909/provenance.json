@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-09",
+  "status": "GitHub supporting-analysis release v1.0.4, exported from the local 2026-09-09 revision",
+  "source_raw_output_sha256": "410d7769411be389a9379945b09d6c757ad077c18828da7cf3586ac3e9828bec",
+  "accepted_manifest_sha256": "c6b3cad488d82618201f7ede19a28406784459cc0271e73e0d1b58fcfda23ed5",
+  "review_source_sha256": [
+    "872a5a3b7fa2178420048155b2edd9af800a99e33be91a87e1cf510e66bcaa1b",
+    "f5deaa4ae6e9f9c6fc893e0837efc68d1a72793017c086bfda46e061bc2539c6"
+  ],
+  "transformations": "Whitelisted fields remove workstation/local paths from portable records. Transcript strings, labels, intervals, hashes and protocol values are unchanged.",
+  "new_annotation_scope": "Integrity checks plus author adjudication of B017 transcript; not additional label-blind ground truth"
+}
